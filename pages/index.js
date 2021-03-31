@@ -4,11 +4,11 @@ import ReactMarkdown from 'react-markdown'
 
 const Card = ({ prompt, handleNext, handleBack }) => {
   return (
-    <div className="relative max-w-xs bg-black text-white rounded-md border border-gray-800 h-4/5 max-h-96">
+    <div className="relative bg-black text-white rounded-md border border-gray-800 h-full w-full sm:h-3/5 sm:min-h-96 sm:max-w-xs">
       <div className="p-10 flex flex-col justify-between overflow-auto h-full">
         <div className="mb-5">
-          { prompt.title && <h2 className="mb-6 pb-4 border-b border-green-200">{prompt.title}</h2>}
-          <ReactMarkdown className="mb-6">{prompt.prompt}</ReactMarkdown>
+          { prompt.title && <h2 className="mb-6 pb-4 border-b border-green-200 font-serif">{prompt.title}</h2>}
+          <ReactMarkdown className="mb-6 font-sans">{prompt.prompt}</ReactMarkdown>
           { prompt['help text'] && <small>{prompt['help text']}</small>}
         </div>
         <div className="flex justify-between">
