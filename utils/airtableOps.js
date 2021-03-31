@@ -8,7 +8,7 @@ const promptsTable = base('prompts');
 
 const getPrompts = async () => {
   const records = await promptsTable
-    .select({ filterByFormula: "{status} = 'published'" })
+    .select({ filterByFormula: "AND({status} = 'published', NOT({prompt} = ''))" })
     .firstPage();
 
   const prompts = records.map(r => ({ id: r.id, fields: r.fields }))
