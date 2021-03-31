@@ -1,8 +1,8 @@
 {
-  "name": "Next.JS Progressive Web App",
-  "short_name": "Next PWA",
-  "theme_color": "#ffffff",
-  "background_color": "#004740",
+  "name": "Digital and/as Public Space",
+  "short_name": "DaaPS",
+  "theme_color": "#000000",
+  "background_color": "#fcd108",
   "display": "fullscreen",
   "orientation": "portrait",
   "scope": "/",
