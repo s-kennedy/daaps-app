@@ -1,48 +1,52 @@
 import { getPrompts } from '../utils/airtableOps'
-import { useState } from 'react'
-import ReactMarkdown from 'react-markdown'
-
-const Card = ({ prompt, handleNext, handleBack }) => {
-  return (
-    <div className="relative bg-black text-white rounded-md border border-gray-800 h-full w-full sm:h-3/5 sm:min-h-96 sm:max-w-xs">
-      <div className="p-10 flex flex-col justify-between overflow-auto h-full">
-        <div className="mb-5">
-          { prompt.title && <h2 className="mb-6 pb-4 border-b border-green-200 font-serif">{prompt.title}</h2>}
-          <ReactMarkdown className="mb-6 font-sans">{prompt.prompt}</ReactMarkdown>
-          { prompt['help text'] && <small>{prompt['help text']}</small>}
-        </div>
-        <div className="flex justify-between">
-          <button className="bg-gray-700 px-2 py-1 rounded-md" onClick={handleBack}>Back</button>
-          <button className="bg-gray-700 px-2 py-1 rounded-md" onClick={handleNext}>Next</button>
-        </div>
-      </div>
-      <div className="absolute bottom-0 h-10 w-full bg-black"></div>
-    </div>
-  )
-}
+import Prompts from '../components/Prompts'
+import Doorways from '../components/Doorways'
 
 export default function Home({ prompts }) {
-  const [promptIndex, setIndex] = useState(0)
-
-  const nextPrompt = () => {
-    if (promptIndex === prompts.length - 1) {
-      return setIndex(0)
-    }
-    setIndex(promptIndex + 1)
-  }
-
-  const prevPrompt = () => {
-    if (promptIndex === 0) {
-      return setIndex(prompts.length - 1)
-    }
-    setIndex(promptIndex - 1)
-  }
-
-  const prompt = prompts[promptIndex]
-
   return (
-    <div className="relative flex justify-center items-center h-full bg-yellow-300">
-      <Card key={prompt.id} prompt={prompt.fields} handleNext={nextPrompt} handleBack={prevPrompt} />
+    <div>
+      <div className="daaps-yellow pt-10">
+        <div className="container mx-auto p-5 py-10">
+          <header className="grid grid-cols-8 items-end gap-6">
+            <div className="col-span-3">
+              <h1 className="text-5xl">Directions to Nowhere in Particular</h1>
+            </div>
+            <div className="col-span-5">
+              <p className="text-xl mb-1">Prompts for sensing, making, and navigating public space.</p>
+              <aside>#DirectionsToNowhere</aside>
+            </div>
+          </header>
+        </div>
+      </div>
+      <div className="daaps-yellow">
+        <div className="container mx-auto p-5 py-10">
+          <main className="relative flex justify-center items-center flex-col mb-20">
+            <p>Pick a card.</p>
+            <Prompts prompts={prompts} />
+          </main>
+        </div>
+      </div>
+      <div className="bg-white">
+        <div className="container mx-auto p-5 py-10">
+          <footer className="">
+            <div className="grid grid-cols-8 items-end gap-6">
+              <div className="col-span-3">
+                <p>Directions to Nowhere is part of The Bentway’s Digital and/as Public Space Initiative, a collaboration between The Bentway x From Later </p>
+                <p>Design by <a href="https://www.nomadiclabs.ca/">Nomadic Labs</a></p>
+              </div>
+              <div className="col-span-5">
+                <div className="flex items-center justify-end">
+                  <img className="w-24 mr-10" src="/daaps-logo.svg" alt="DaaPS" />
+                  <img className="w-32 mr-10" src="/Bentway-logo.jpg" alt="The Bentway" />
+                  <img className="w-32 mr-10" src="/from-later-logo.jpg" alt="From Later" />
+                </div>
+              </div>
+            </div>
+
+            <p>Have a prompt to add? <a href="https://airtable.com/shrf8TF1efRfZ3ZV6">Drop it here</a>.</p>
+          </footer>
+        </div>
+      </div>
     </div>
   )
 }
