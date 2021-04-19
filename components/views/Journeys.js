@@ -8,10 +8,9 @@ const Journey = ({ journey }) => {
 }
 
 const Journeys = () => (
-  <div className="bg-pink">
+  <div className="bg-pink h-full overflow-auto">
     <div className="container mx-auto p-5">
       <div className="col-span-12">
-        <h1 className="text-4xl mb-5 font-sans">Journeys</h1>
         <div className="bg-yellow p-5">
           Share your creative journeys with #DirectionsToNowhere on your favorite (social) media channels for a chance to be featured here.
         </div>

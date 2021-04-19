@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { getPrompts } from '../utils/airtableOps'
 import Prompts from '../components/Prompts'
 import Directions from '../components/views/Directions'
@@ -13,55 +14,75 @@ import {
     AccordionItemPanel,
 } from 'react-accessible-accordion';
 
-import 'react-accessible-accordion/dist/fancy-example.css';
+// import 'react-accessible-accordion/dist/fancy-example.css';
+
+const CustomAccordionItem = ({ currentItemUid, id, children, title, className }) => {
+  const selected = currentItemUid.includes(id)
+
+  return (
+    <AccordionItem className={`${className} flex flex-col overflow-hidden ${selected ? 'selected flex-grow' : 'flex-grow-0 flex-shrink-0'}`} uuid={id} id={id}>
+      <AccordionItemHeading aria-level={2} className="flex-grow-0">
+        <AccordionItemButton className={`${selected ? 'text-3xl pt-5' : 'text-lg py-1' } px-5`}>
+          {title}
+        </AccordionItemButton>
+      </AccordionItemHeading>
+      <AccordionItemPanel className={`p-0 flex-grow overflow-auto`}>
+        {children}
+      </AccordionItemPanel>
+    </AccordionItem>
+  )
+}
 
 export default function Home({ prompts }) {
+  const [currentItemUid, setCurrentItemUid] = useState(['directions'])
+  const handleChange = uid => {
+    console.log({ uid })
+    if (uid !== currentItemUid) {
+      setCurrentItemUid(uid)
+    }
+  }
+  console.log(currentItemUid)
+
   return (
-      <Accordion className="flex flex-col">
-        <AccordionItem className="flex-grow-0">
-          <AccordionItemHeading>
-            <AccordionItemButton>
-              Directions
-            </AccordionItemButton>
-          </AccordionItemHeading>
-          <AccordionItemPanel className="p-0">
-            <Directions prompts={prompts}/>
-          </AccordionItemPanel>
-        </AccordionItem>
+      <Accordion
+        className="accordion flex flex-col h-full"
+        onChange={handleChange}
+        preExpanded={['directions']}>
+        <CustomAccordionItem
+          id="directions"
+          title="Directions"
+          currentItemUid={currentItemUid}
+          className="bg-yellow"
+        >
+          <Directions prompts={prompts}/>
+        </CustomAccordionItem>
 
-        <AccordionItem className="flex-grow">
-          <AccordionItemHeading>
-            <AccordionItemButton>
-              Journeys
-            </AccordionItemButton>
-          </AccordionItemHeading>
-          <AccordionItemPanel className="p-0">
-            <Journeys />
-          </AccordionItemPanel>
-        </AccordionItem>
+        <CustomAccordionItem
+          id="journeys"
+          title="Journeys"
+          currentItemUid={currentItemUid}
+          className="bg-pink"
+        >
+          <Journeys />
+        </CustomAccordionItem>
 
-        <AccordionItem className="flex-grow">
-          <AccordionItemHeading>
-            <AccordionItemButton>
-              How to Use
-            </AccordionItemButton>
-          </AccordionItemHeading>
-          <AccordionItemPanel className="p-0">
-            <HowTo />
-          </AccordionItemPanel>
-        </AccordionItem>
+        <CustomAccordionItem
+          id="howto"
+          title="How to Use"
+          currentItemUid={currentItemUid}
+          className="bg-green text-white"
+        >
+          <HowTo />
+        </CustomAccordionItem>
 
-        <AccordionItem className="flex-grow">
-          <AccordionItemHeading>
-            <AccordionItemButton>
-              About
-            </AccordionItemButton>
-          </AccordionItemHeading>
-          <AccordionItemPanel className="p-0">
-            <About />
-          </AccordionItemPanel>
-        </AccordionItem>
-
+        <CustomAccordionItem
+          id="about"
+          title="About"
+          currentItemUid={currentItemUid}
+          className="bg-white"
+        >
+          <About />
+        </CustomAccordionItem>
       </Accordion>
   )
 }

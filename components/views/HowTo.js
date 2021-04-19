@@ -11,8 +11,7 @@ const Hint = ({ title, body }) => {
 
 const HowTo = () => (
   <div className="bg-green">
-    <div className="container mx-auto p-5 py-10">
-      <h1 className="text-5xl font-sans text-white">How to Use</h1>
+    <div className="container mx-auto p-5 p-5">
       <Hint
         title="When you’re out and about"
         body="Draw a prompt when you go for a walk, when you’re hanging out in the park, or when you’re waiting for public transit, wherever you are in the world."

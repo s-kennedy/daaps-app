@@ -1,22 +1,28 @@
 import ReactMarkdown from 'react-markdown'
 
 const Prompt = ({ prompt, onCancel }) => {
-  console.log({prompt})
+  console.log(prompt)
   const content = prompt.fields
+  const number = prompt.index + 1
 
   return (
-    <div className="relative bg-black text-white rounded-md border border-gray-800 h-full w-full sm:h-3/5 sm:min-h-96 sm:max-w-xs">
-      <div className="p-10 flex flex-col justify-between overflow-auto h-full">
-        <div className="mb-5">
-          { content.title && <h2 className="mb-6 pb-4 border-b border-green-200 font-serif">{content.title}</h2>}
-          <ReactMarkdown className="mb-6 font-sans">{content.prompt}</ReactMarkdown>
-          { content['help text'] && <small>{content['help text']}</small>}
-        </div>
-        <div className="flex justify-between">
-          <button className="bg-gray-700 px-2 py-1 rounded-md" onClick={onCancel}>Back</button>
-        </div>
+    <div className="fixed inset-y-0 inset-x-0 bg-green text-white h-screen w-screen overflow-auto">
+      <div className="bg-pink text-green rounded-b-full">
+        <header className="p-5 text-2xl">
+          <span className="mb-1 font-sans">{number}</span>
+          { content.title && <h2 className="mb-2 font-sans">{content.title}</h2>}
+        </header>
+        <main className="px-16 pb-12">
+          <ReactMarkdown className="mb-12 font-sans text-lg">{content.prompt}</ReactMarkdown>
+          <div className="flex justify-center">
+            <button className="bg-white px-2 py-1 rounded-md" onClick={onCancel}>Back</button>
+          </div>
+        </main>
       </div>
-      <div className="absolute bottom-0 h-10 w-full bg-black"></div>
+      <div className="p-5 flex flex-col justify-center overflow-auto">
+        { content['help text'] && <p className="mb-5 text-center">{content['help text']}</p>}
+        <p className="text-center">#DirectionsToNowhere</p>
+      </div>
     </div>
   )
 }
