@@ -12,8 +12,8 @@ export default function MyApp({ Component, pageProps }) {
           name="viewport"
           content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
         />
-        <meta name="description" content="Description" />
-        <meta name="keywords" content="Keywords" />
+        <meta name="description" content="Prompts for sensing, making, and navigating public space" />
+        <meta name="keywords" content="public space, outdoor game, game, navigation, public and private, The Bentway" />
         <title>Directions to Nowhere in Particular</title>
 
         <link rel="manifest" href="/manifest.json" />
