@@ -10,8 +10,8 @@ const Hint = ({ title, body }) => {
 
 
 const HowTo = () => (
-  <div className="bg-green">
-    <div className="container mx-auto p-5 p-5">
+  <div className="bg-green h-full overflow-auto">
+    <div className="container mx-auto p-5 pt-1">
       <Hint
         title="When you’re out and about"
         body="Draw a prompt when you go for a walk, when you’re hanging out in the park, or when you’re waiting for public transit, wherever you are in the world."

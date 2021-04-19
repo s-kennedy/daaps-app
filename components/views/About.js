@@ -1,7 +1,7 @@
 
 const AboutView = () => (
-  <div className="bg-white">
-    <div className="container mx-auto p-5">
+  <div className="bg-white h-full overflow-auto">
+    <div className="container mx-auto p-5 pt-1">
       <div className="grid grid-cols-8 items-end gap-6">
         <div className="col-span-12">
           <p>Directions to Nowhere is part of The Bentway’s Digital and/as Public Space Initiative, a collaboration between The Bentway x From Later </p>

@@ -21,7 +21,7 @@ const DirectionsAccordionItem = ({ currentItemUid, id, children, title, classNam
   return (
     <AccordionItem dangerouslySetExpanded={selected} className={`${className} flex flex-col overflow-hidden ${selected ? 'selected fixed inset-y-0 inset-x-0 h-screen w-screen' : 'flex-grow-0 flex-shrink-0'}`} uuid={id} id={id}>
       <AccordionItemHeading aria-level={2} className={`${selected ? "h-0" : "flex-grow-0 h-auto"}`}>
-        <AccordionItemButton className={`transition-all ${selected ? 'opacity-0' : 'text-lg py-1' } px-5`}>
+        <AccordionItemButton className={`transition-all container mx-auto ${selected ? 'opacity-0' : 'text-lg py-1' } px-5`}>
           {title}
         </AccordionItemButton>
       </AccordionItemHeading>
@@ -38,7 +38,7 @@ const CustomAccordionItem = ({ currentItemUid, id, children, title, className })
   return (
     <AccordionItem dangerouslySetExpanded={selected} className={`${className} flex flex-col overflow-hidden ${selected ? 'selected flex-grow' : 'flex-grow-0 flex-shrink-0'}`} uuid={id} id={id}>
       <AccordionItemHeading aria-level={2} className="flex-grow-0">
-        <AccordionItemButton className={`transition-all ${selected ? 'text-3xl pt-5' : 'text-lg py-1' } px-5`}>
+        <AccordionItemButton className={`transition-all container mx-auto ${selected ? 'text-3xl py-5' : 'text-lg py-1' } px-5`}>
           {title}
         </AccordionItemButton>
       </AccordionItemHeading>

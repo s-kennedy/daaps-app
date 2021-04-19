@@ -33,15 +33,15 @@ const DirectionsView = ({ prompts, handleReadMore }) => {
       <div className={`directions-panel bg-yellow flex flex-col h-full ${selectedPrompt ? 'selected' : '' }`}>
         <div className="fixed grid grid-cols-4 container mx-auto p-5 flex-grow-0 flex-shrink-0">
           <div className="col-span-1 col-start-4">
-            <p className="mb-1">Bookmark it for later</p>
+            <p className="mb-1 text-right">Bookmark it for later</p>
           </div>
         </div>
         <div className="container mx-auto p-5 flex-grow">
-          <div className="h-full flex justify-start items-start flex overflow-x-auto">
-            <header className="w-8/12 pr-8">
-              <h1 className="text-2xl font-serif mb-5 uppercase">Directions to Nowhere in Particular</h1>
-              <p className="mb-5">Prompts for sensing, making, and navigating public space.</p>
-              <p className="mb-5">Choose your path:</p>
+          <div className="h-full flex sm:flex-col justify-start items-start flex overflow-x-auto">
+            <header className="w-8/12 md:w-1/2 pr-8">
+              <h1 className="text-2xl sm:text-4xl md:text-5xl font-serif mb-5 sm:mb-8 md: mb-10 uppercase">Directions to Nowhere in Particular</h1>
+              <p className="mb-5 sm:text-lg md:text-xl">Prompts for sensing, making, and navigating public space.</p>
+              <p className="mb-5 sm:text-lg md:text-xl">Choose your path:</p>
             </header>
             <Doorways onSelect={selectPrompt} />
           </div>
