@@ -3,11 +3,12 @@ import Doorways from '../Doorways'
 import Prompt from '../Prompt'
 
 
-const DirectionsView = ({ prompts }) => {
+const DirectionsView = ({ prompts, handleReadMore }) => {
   const [availablePrompts, setAvailablePrompts] = useState(prompts)
   const [selectedPrompt, setSelectedPrompt] = useState()
+  const [closed, setClosed] = useState()
 
-  const selectPrompt = () => {
+  const selectPrompt = (e) => {
     const selectedIndex = Math.floor(Math.random() * availablePrompts.length)
     const selectedPrompt = availablePrompts[selectedIndex];
     const remainingPrompts = availablePrompts.filter(item => item !== selectedPrompt)
@@ -20,31 +21,42 @@ const DirectionsView = ({ prompts }) => {
   }
 
   const clearPrompt = () => {
-    setSelectedPrompt(null)
+    setClosed(true)
+    setTimeout(() => {
+      setSelectedPrompt(null)
+      setClosed(null)
+    }, 1000)
   }
 
   return (
-    <div className="daaps-yellow">
-      <div className="flex flex-col">
-        <div className="container mx-auto p-5 flex-grow-0">
-          <header className="grid grid-cols-8 gap-6">
-            <div className="col-span-12">
-              <h1 className="text-xl font-serif">Directions to Nowhere in Particular</h1>
-            </div>
-            <div className="col-span-12">
-              <p className="mb-1">Prompts for sensing, making, and navigating public space.</p>
-              <aside>#DirectionsToNowhere</aside>
-            </div>
-          </header>
+    <>
+      <div className={`directions-panel bg-yellow flex flex-col h-full ${selectedPrompt ? 'selected' : '' }`}>
+        <div className="fixed grid grid-cols-4 container mx-auto p-5 flex-grow-0 flex-shrink-0">
+          <div className="col-span-1 col-start-4">
+            <p className="mb-1">Bookmark it for later</p>
+          </div>
         </div>
         <div className="container mx-auto p-5 flex-grow">
-          <div className="relative flex justify-center items-center flex-col overflow-x-auto">
+          <div className="h-full flex justify-start items-start flex overflow-x-auto">
+            <header className="w-8/12 pr-8">
+              <h1 className="text-2xl font-serif mb-5 uppercase">Directions to Nowhere in Particular</h1>
+              <p className="mb-5">Prompts for sensing, making, and navigating public space.</p>
+              <p className="mb-5">Choose your path:</p>
+            </header>
             <Doorways onSelect={selectPrompt} />
           </div>
         </div>
+        <div className="container mx-auto p-5 pt-0 flex-grow-0 flex-shrink-0">
+          <button
+            className="bg-white px-2 py-1 border border-green"
+            onClick={handleReadMore}
+          >
+            Read more
+          </button>
+        </div>
       </div>
-      { selectedPrompt && <Prompt prompt={selectedPrompt} onCancel={clearPrompt} />}
-    </div>
+      { selectedPrompt && <Prompt prompt={selectedPrompt} onCancel={clearPrompt} closed={closed} />}
+    </>
   )
 }
 

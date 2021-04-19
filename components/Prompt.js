@@ -1,13 +1,12 @@
 import ReactMarkdown from 'react-markdown'
 
-const Prompt = ({ prompt, onCancel }) => {
-  console.log(prompt)
+const Prompt = ({ prompt, onCancel, closed }) => {
   const content = prompt.fields
   const number = prompt.index + 1
 
   return (
-    <div className="fixed inset-y-0 inset-x-0 bg-green text-white h-screen w-screen overflow-auto">
-      <div className="bg-pink text-green rounded-b-full">
+    <div className={`fixed inset-y-0 inset-x-0 bg-green text-white h-screen w-screen overflow-auto prompt ${closed ? 'closed' : ''}`}>
+      <div className="bg-pink text-green rounded-b-full content">
         <header className="p-5 text-2xl">
           <div className="mb-2 font-sans">{number}</div>
           { content.title && <h2 className="mb-2 font-sans">{content.title}</h2>}
