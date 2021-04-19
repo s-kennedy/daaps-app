@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { getPrompts } from '../utils/airtableOps'
 import Prompts from '../components/Prompts'
 import Directions from '../components/views/Directions'

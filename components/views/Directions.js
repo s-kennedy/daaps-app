@@ -1,12 +1,14 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Doorways from '../Doorways'
 import Prompt from '../Prompt'
-
+import InstallModal from '../InstallModal'
 
 const DirectionsView = ({ prompts, handleReadMore }) => {
   const [availablePrompts, setAvailablePrompts] = useState(prompts)
   const [selectedPrompt, setSelectedPrompt] = useState()
   const [closed, setClosed] = useState()
+  const [showInstallMessage, setShowInstallMessage] = useState(false)
+  const [showInstallModal, setShowInstallModal] = useState(false)
 
   const selectPrompt = (e) => {
     const selectedIndex = Math.floor(Math.random() * availablePrompts.length)
@@ -28,14 +30,34 @@ const DirectionsView = ({ prompts, handleReadMore }) => {
     }, 1000)
   }
 
+  useEffect(() => {
+    // Detects if device is on iOS
+    const isIos = () => {
+      const userAgent = window.navigator.userAgent.toLowerCase();
+      return /iphone|ipad|ipod/.test( userAgent );
+    }
+    // Detects if device is in standalone mode
+    const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+
+    // Checks if should display install popup notification:
+    if (!isInStandaloneMode()) {
+      setShowInstallMessage(true);
+    }
+  })
+
   return (
     <>
       <div className={`directions-panel bg-yellow flex flex-col h-full ${selectedPrompt ? 'selected' : '' }`}>
-        <div className="fixed grid grid-cols-4 container mx-auto p-5 flex-grow-0 flex-shrink-0">
-          <div className="col-span-1 col-start-4">
-            <p className="mb-1 text-right">Bookmark it for later</p>
+        {showInstallMessage &&
+          <div className="container mx-auto flex justify-end flex-grow-0 flex-shrink-0">
+            <div className="w-1/3 md:w-1/4 p-5 fixed">
+              <button className="mb-1 text-right" onClick={() => setShowInstallModal(true)}>Bookmark it for later</button>
+            </div>
           </div>
-        </div>
+        }
+        {
+          showInstallModal && <InstallModal handleClose={() => setShowInstallModal(false)} />
+        }
         <div className="container mx-auto p-5 flex-grow">
           <div className="h-full flex sm:flex-col justify-start items-start flex overflow-x-auto">
             <header className="w-8/12 md:w-1/2 pr-8">
