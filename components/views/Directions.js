@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import Doorways from '../Doorways'
+import Prompt from '../Prompt'
+
 
 const DirectionsView = ({ prompts }) => {
   const [availablePrompts, setAvailablePrompts] = useState(prompts)
@@ -37,10 +39,11 @@ const DirectionsView = ({ prompts }) => {
         </div>
         <div className="container mx-auto p-5 flex-grow">
           <div className="relative flex justify-center items-center flex-col overflow-x-auto">
-            <Doorways prompt={selectedPrompt} onSelect={selectPrompt} onCancel={clearPrompt} />
+            <Doorways onSelect={selectPrompt} />
           </div>
         </div>
       </div>
+      { selectedPrompt && <Prompt prompt={selectedPrompt} onCancel={clearPrompt} />}
     </div>
   )
 }
