@@ -9,7 +9,7 @@ const AboutView = () => (
         <div className="col-span-12">
           <div className="flex items-center justify-between">
             <img className="w-1/4" src="/daaps-logo.svg" alt="DaaPS" />
-            <img className="w-1/4" src="/Bentway-logo.jpg" alt="The Bentway" />
+            <img className="w-1/4" src="/bentway-logo.jpg" alt="The Bentway" />
             <img className="w-1/4" src="/from-later-logo.jpg" alt="From Later" />
           </div>
         </div>
