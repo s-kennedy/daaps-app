@@ -161,15 +161,21 @@ a {
 }
 
 .directions-panel.selected {
-  animation: fadeToBlack 2s ease-in;
+  animation: fadeToBlack 2s ease-out;
 }
 
 .prompt {
+  opacity: 0;
+}
+
+.prompt.open {
+  opacity: 1;
   animation: delayIn 2s ease-in;
 }
 
 .prompt.closed {
-  animation: fadeOut 1s ease-in;
+  opacity: 0;
+  animation: fadeOut 1s ease-out;
 }
 
 @media screen and (min-width: 640px) {

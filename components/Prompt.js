@@ -7,7 +7,7 @@ const Prompt = ({ prompt, onCancel, closed }) => {
 
   return (
     <AriaModal titleText={`Prompt #${number}`} onExit={onCancel}>
-      <div className={`backdrop fixed inset-y-0 inset-x-0 h-screen w-screen bg-black flex justify-center items-center prompt ${closed ? 'closed' : ''}`}>
+      <div className={`backdrop fixed inset-y-0 inset-x-0 h-screen w-screen bg-black flex justify-center items-center prompt ${closed ? 'closed' : 'open'}`}>
         <div className={`bg-green text-white h-full w-full overflow-auto card`}>
           <div className="bg-pink text-green rounded-b-full content">
             <header className="p-5 text-2xl">

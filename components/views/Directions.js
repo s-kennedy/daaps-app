@@ -6,7 +6,7 @@ import InstallModal from '../InstallModal'
 const DirectionsView = ({ prompts, handleReadMore }) => {
   const [availablePrompts, setAvailablePrompts] = useState(prompts)
   const [selectedPrompt, setSelectedPrompt] = useState()
-  const [closed, setClosed] = useState()
+  const [closed, setClosed] = useState(false)
   const [showInstallMessage, setShowInstallMessage] = useState(false)
   const [showInstallModal, setShowInstallModal] = useState(false)
 
@@ -19,6 +19,7 @@ const DirectionsView = ({ prompts, handleReadMore }) => {
     } else {
       setAvailablePrompts(prompts)
     }
+    setClosed(false)
     setSelectedPrompt(selectedPrompt)
   }
 
@@ -26,7 +27,6 @@ const DirectionsView = ({ prompts, handleReadMore }) => {
     setClosed(true)
     setTimeout(() => {
       setSelectedPrompt(null)
-      setClosed(null)
     }, 1000)
   }
 
