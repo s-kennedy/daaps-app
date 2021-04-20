@@ -1,3 +1,4 @@
+import Link from 'next/link'
 
 const AboutView = () => (
   <div className="bg-white h-full overflow-auto">
@@ -15,7 +16,13 @@ const AboutView = () => (
         </div>
         <div className="col-span-12">
           <p>Design by <a href="https://www.nomadiclabs.ca/">Nomadic Labs</a></p>
-          <p>Have a prompt to add? <a href="https://airtable.com/shrf8TF1efRfZ3ZV6">Drop it here</a>.</p>
+        </div>
+
+        <div className="col-span-12">
+          <p>Have a prompt to add? <Link href="/suggestions"><a>Drop it here</a></Link>.</p>
+          <p>What do you think about this project? <Link href="/feedback"><a>Share your feedback</a></Link>.</p>
+          <p><Link href="/terms"><a>Terms and Conditions</a></Link></p>
+          <p><Link href="/contact"><a>Contact Us</a></Link></p>
         </div>
       </div>
     </div>

@@ -50,7 +50,7 @@ const DirectionsView = ({ prompts, handleReadMore }) => {
       <div className={`directions-panel bg-yellow flex flex-col h-full ${selectedPrompt ? 'selected' : '' }`}>
         {showInstallMessage &&
           <div className="container mx-auto flex justify-end flex-grow-0 flex-shrink-0">
-            <div className="w-1/3 md:w-1/4 p-5 fixed">
+            <div className="w-1/3 md:w-1/4 p-5 text-right fixed">
               <button className="mb-1 text-right" onClick={() => setShowInstallModal(true)}>Bookmark it for later</button>
             </div>
           </div>

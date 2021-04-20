@@ -5,6 +5,7 @@ import Directions from '../components/views/Directions'
 import About from '../components/views/About'
 import HowTo from '../components/views/HowTo'
 import Journeys from '../components/views/Journeys'
+import DisclaimerModal from '../components/DisclaimerModal'
 
 import {
     Accordion,
@@ -52,6 +53,7 @@ const CustomAccordionItem = ({ currentItemUid, id, children, title, className })
 export default function Home({ prompts }) {
   const [currentItemUid, setCurrentItemUid] = useState(['directions'])
   const [preExpanded, setPreExpanded] = useState(['directions'])
+  const [showDisclaimer, setShowDisclaimer] = useState()
 
   const handleChange = uid => {
     console.log({ uid })
@@ -64,7 +66,31 @@ export default function Home({ prompts }) {
     setCurrentItemUid(['about'])
   }
 
+  const agreeToDisclaimer = () => {
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem('daaps-disclaimer', 'true')
+    }
+    setShowDisclaimer(false)
+  }
+
+  const closeDisclaimer = () => {
+    setShowDisclaimer(false)
+  }
+
+  useEffect(() => {
+    let hasAgreedToDisclaimer = false;
+
+    if (typeof localStorage !== 'undefined') {
+      hasAgreedToDisclaimer = localStorage.getItem('daaps-disclaimer') === 'true'
+    }
+
+    if (!hasAgreedToDisclaimer) {
+      setShowDisclaimer(true)
+    }
+  })
+
   return (
+    <>
       <Accordion
         className="accordion flex flex-col h-full"
         onChange={handleChange}
@@ -105,6 +131,8 @@ export default function Home({ prompts }) {
           <About />
         </CustomAccordionItem>
       </Accordion>
+      { showDisclaimer && <DisclaimerModal agreeToDisclaimer={agreeToDisclaimer} handleClose={closeDisclaimer} /> }
+    </>
   )
 }
 
