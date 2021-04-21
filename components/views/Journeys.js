@@ -8,7 +8,7 @@ const Journey = ({ journey }) => {
 }
 
 const Journeys = () => (
-  <div className="bg-pink h-full overflow-auto">
+  <div className="bg-pink flex-grow overflow-auto">
     <div className="container mx-auto p-5 pt-1">
       <p className="mb-5">Share your creative journeys with #DirectionsToNowhere on your favorite (social) media channels for a chance to be featured here.</p>
       <div className="grid gap-2 grid-cols-12 my-4">

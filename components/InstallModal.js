@@ -7,7 +7,7 @@ const InstallModal = ({ handleClose }) => {
   useEffect(() => {
     const detectIos = () => {
       const userAgent = window.navigator.userAgent.toLowerCase();
-      return /iphone|ipad|ipod/.test( userAgent );
+      return /iphone|ipad|ipod|macintosh/.test( userAgent );
     }
     setIsIos(detectIos())
   })

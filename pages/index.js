@@ -26,7 +26,7 @@ const DirectionsAccordionItem = ({ currentItemUid, id, children, title, classNam
           {title}
         </AccordionItemButton>
       </AccordionItemHeading>
-      <AccordionItemPanel className={`transition-all p-0 flex-grow overflow-auto accordion__panel`}>
+      <AccordionItemPanel className={`transition-all p-0 flex-grow flex overflow-auto accordion__panel`}>
         <Directions prompts={prompts} handleReadMore={handleReadMore} />
       </AccordionItemPanel>
     </AccordionItem>
@@ -43,7 +43,7 @@ const CustomAccordionItem = ({ currentItemUid, id, children, title, className })
           {title}
         </AccordionItemButton>
       </AccordionItemHeading>
-      <AccordionItemPanel className={`transition-all p-0 flex-grow overflow-auto accordion__panel`}>
+      <AccordionItemPanel className={`transition-all p-0 flex-grow flex overflow-auto accordion__panel`}>
         {children}
       </AccordionItemPanel>
     </AccordionItem>

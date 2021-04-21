@@ -34,7 +34,7 @@ const DirectionsView = ({ prompts, handleReadMore }) => {
     // Detects if device is on iOS
     const isIos = () => {
       const userAgent = window.navigator.userAgent.toLowerCase();
-      return /iphone|ipad|ipod/.test( userAgent );
+      return /iphone|ipad|ipod|macintosh/.test( userAgent );
     }
     // Detects if device is in standalone mode
     const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
@@ -47,10 +47,10 @@ const DirectionsView = ({ prompts, handleReadMore }) => {
 
   return (
     <>
-      <div className={`directions-panel bg-yellow flex flex-col h-full ${selectedPrompt ? 'selected' : '' }`}>
+      <div className={`directions-panel bg-yellow flex flex-col flex-grow ${selectedPrompt ? 'selected' : '' }`}>
         {showInstallMessage &&
           <div className="container mx-auto flex justify-end flex-grow-0 flex-shrink-0">
-            <div className="w-1/3 md:w-1/4 p-5 text-right fixed">
+            <div className="w-1/3 md:w-1/4 p-5 text-right fixed right-0 sm:right-auto">
               <button className="mb-1 text-right" onClick={() => setShowInstallModal(true)}>Bookmark it for later</button>
             </div>
           </div>
@@ -58,8 +58,8 @@ const DirectionsView = ({ prompts, handleReadMore }) => {
         {
           showInstallModal && <InstallModal handleClose={() => setShowInstallModal(false)} />
         }
-        <div className="container mx-auto p-5 flex-grow">
-          <div className="h-full flex sm:flex-col justify-start items-start flex overflow-x-auto">
+        <div className="container mx-auto p-5 flex-grow flex">
+          <div className="flex-grow flex sm:flex-col justify-start items-start flex overflow-x-auto">
             <header className="w-8/12 md:w-1/2 pr-8">
               <h1 className="text-2xl sm:text-4xl md:text-5xl font-serif mb-5 sm:mb-8 md: mb-10 uppercase">Directions to Nowhere in Particular</h1>
               <p className="mb-5 sm:text-lg md:text-xl">Prompts for sensing, making, and navigating public space.</p>

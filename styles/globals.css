@@ -105,6 +105,7 @@ a {
   width: 25vw;
   min-height: 200px;
   height: 100%;
+  display: flex;
   transition: all 3s ease-out;
 }
 
