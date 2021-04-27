@@ -97,9 +97,9 @@ export default function Home({ prompts }) {
         preExpanded={preExpanded}>
         <DirectionsAccordionItem
           id="directions"
-          title="Directions"
+          title="Play"
           currentItemUid={currentItemUid}
-          className="bg-yellow"
+          className="bg-green text-white"
           handleReadMore={handleReadMore}
           prompts={prompts}
         />
@@ -117,7 +117,7 @@ export default function Home({ prompts }) {
           id="howto"
           title="How to Use"
           currentItemUid={currentItemUid}
-          className="bg-green text-white"
+          className="bg-yellow"
         >
           <HowTo />
         </CustomAccordionItem>

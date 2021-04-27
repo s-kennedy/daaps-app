@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
-const Doorway = ({ onClick }) => {
+const Doorway = ({ onClick, position='0% center' }) => {
   const [clicked, setClicked] = useState(false)
   const handleClick = () => {
     setClicked(true)
@@ -10,9 +10,9 @@ const Doorway = ({ onClick }) => {
   return (
     <div className="doorway-outer">
       <button className={`${clicked ? 'doorway clicked' : 'doorway'}`} aria-label="Click to open a random prompt" onClick={handleClick}>
-        <div className="background" />
-        <div className="foreground" />
+        <div className="background" style={{ backgroundPosition: `${position}`}} />
         <div className="depth" />
+        <div className="foreground" />
       </button>
     </div>
   )

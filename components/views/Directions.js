@@ -47,7 +47,7 @@ const DirectionsView = ({ prompts, handleReadMore }) => {
 
   return (
     <>
-      <div className={`directions-panel bg-yellow flex flex-col flex-grow ${selectedPrompt ? 'selected' : '' }`}>
+      <div className={`directions-panel bg-green text-white flex flex-col flex-grow ${selectedPrompt ? 'selected' : '' }`}>
         {showInstallMessage &&
           <div className="container mx-auto flex justify-end flex-grow-0 flex-shrink-0">
             <div className="w-1/3 md:w-1/4 p-5 text-right fixed right-0 sm:right-auto">
@@ -70,7 +70,7 @@ const DirectionsView = ({ prompts, handleReadMore }) => {
         </div>
         <div className="container mx-auto p-5 pt-0 flex-grow-0 flex-shrink-0">
           <button
-            className="bg-white px-2 py-1 border border-green"
+            className="bg-white text-green px-2 py-1 border border-green"
             onClick={handleReadMore}
           >
             Read more

@@ -1,7 +1,7 @@
 const Hint = ({ title, body }) => {
   return (
-    <div className="hint py-5 text-white">
-      <div className="image bg-pink h-16 w-12 rounded-t-full mb-4" />
+    <div className="hint py-5">
+      <div className="image bg-green h-16 w-12 rounded-t-full mb-4" />
       <h2 className="text-xl mb-2">{title}</h2>
       <p>{body}</p>
     </div>
@@ -10,7 +10,7 @@ const Hint = ({ title, body }) => {
 
 
 const HowTo = () => (
-  <div className="bg-green flex-grow overflow-auto">
+  <div className="bg-yellow flex-grow overflow-auto">
     <div className="container mx-auto p-5 pt-1">
       <Hint
         title="When you’re out and about"
