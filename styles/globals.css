@@ -6,6 +6,7 @@
   --daaps-black: #000;
   --daaps-white: #fff;
   --daaps-gray: #C4C4C4;
+  --daaps-dark-purple: #362b71;
 }
 
 @font-face {
@@ -90,6 +91,15 @@
   }
 }
 
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -121,6 +131,16 @@ a {
   height: 100%;
 }*/
 
+button {
+  transition: all 0.3s ease-out;
+  box-shadow: 0 0 var(--daaps-green);
+}
+
+button:focus {
+  box-shadow: 4px 4px var(--daaps-green);
+  outline: none;
+}
+
 .doorway {
   position: relative;
   width: 25vw;
@@ -137,7 +157,7 @@ a {
   /*background-image: url("../public/doors-bg.jpg");*/
   /*background-image: linear-gradient(80deg, rgba(0,0,0,0.25), rgba(0,0,0,0.65));*/
   border-radius: 25vw 25vw 0 0;
-  box-shadow: inset 15px 10px #362b71, inset -10px -10px var(--daaps-purple);
+  box-shadow: inset 15px 10px var(--daaps-dark-purple), inset -10px -10px var(--daaps-purple);
   border: 5px solid var(--daaps-purple);
   border-bottom: none;
   position: relative;
@@ -175,6 +195,12 @@ a {
   right: 0;
   background-image: url("../public/doors-bg.jpg");
   border-radius: 25vw 25vw 0 0;
+  filter: brightness(0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+button.doorway:hover .background, button.doorway:focus .background {
+  filter: brightness(1);
 }
 
 .doorway .depth {
@@ -229,6 +255,74 @@ a {
   opacity: 0;
   animation: fadeOut 1s ease-out;
 }
+
+.prompt .bg-make {
+  background-color: var(--daaps-pink);
+}
+
+.prompt .bg-make .card-bg {
+  /*background-size: 320%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.5;*/
+}
+
+.prompt .bg-make .card-bg .bg-a {
+  background-image: url('../public/images/card1a.svg');
+  background-size: 280%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+}
+
+.prompt .bg-make .card-bg .bg-b {
+  background-image: url('../public/images/card1b.svg');
+  background-size: 280%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+}
+
+.prompt .bg-sense {
+  background-color: var(--daaps-pink);
+}
+
+.prompt .bg-sense .card-bg {
+  background-image: url('../public/images/card2.svg');
+  background-size: 150%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+}
+
+.prompt .bg-navigate {
+  background-color: var(--daaps-yellow);
+}
+
+.prompt .bg-navigate .card-bg {
+  background-image: url('../public/images/card3.svg');
+  background-size: 170%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+}
+
+.prompt .bg-care {
+  background-color: var(--daaps-yellow);
+}
+
+.prompt .bg-care .card-bg {
+  background-image: url('../public/images/card4.svg');
+  background-size: 150%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.75;
+}
+
+.rotate {
+  animation: rotation 60s infinite linear;
+}
+
 
 @media screen and (min-width: 640px) {
   .prompt .card {
