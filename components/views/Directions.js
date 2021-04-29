@@ -47,11 +47,11 @@ const DirectionsView = ({ prompts, handleReadMore }) => {
 
   return (
     <>
-      <div className={`directions-panel bg-green text-white flex flex-col flex-grow ${selectedPrompt ? 'selected' : '' }`}>
+      <div className={`directions-panel bg-texture flex flex-col flex-grow ${selectedPrompt ? 'selected' : '' }`}>
         {showInstallMessage &&
-          <div className="container mx-auto flex justify-end flex-grow-0 flex-shrink-0">
+          <div className="container mx-auto flex justify-end flex-grow-0 flex-shrink-0 z-10">
             <div className="w-1/3 md:w-1/4 p-5 text-right fixed right-0 sm:right-auto">
-              <button className="mb-1 text-right text-yellow" onClick={() => setShowInstallModal(true)}>Bookmark it for later</button>
+              <button className="mb-1 text-right bg-white text-green border border-green px-2 py-1 btn" onClick={() => setShowInstallModal(true)}>Bookmark it for later</button>
             </div>
           </div>
         }
@@ -70,7 +70,7 @@ const DirectionsView = ({ prompts, handleReadMore }) => {
         </div>
         <div className="container mx-auto p-5 pt-0 flex-grow-0 flex-shrink-0">
           <button
-            className="bg-yellow text-green px-2 py-1 border border-yellow"
+            className="bg-white text-green border border-green px-2 py-1 btn"
             onClick={handleReadMore}
           >
             Read more

@@ -9,7 +9,7 @@ module.exports = {
       transparent: 'transparent',
       yellow: '#F1E297',
       pink: '#FCEEF4',
-      green: '#1C452B',
+      green: '#006D77',
       purple: '#7860f7',
       black: '#000',
       white: '#fff',

@@ -10,7 +10,7 @@ const Hint = ({ title, body }) => {
 
 
 const HowTo = () => (
-  <div className="bg-yellow flex-grow overflow-auto">
+  <div className="flex-grow overflow-auto">
     <div className="container mx-auto p-5 pt-1">
       <Hint
         title="When you’re out and about"

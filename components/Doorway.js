@@ -10,7 +10,7 @@ const Doorway = ({ onClick, position='0% center' }) => {
   return (
     <div className="doorway-outer">
       <button className={`${clicked ? 'doorway clicked' : 'doorway'}`} aria-label="Click to open a random prompt" onClick={handleClick}>
-        <div className="background" style={{ backgroundPosition: `${position}`}} />
+        <div className="background bg-texture" style={{ backgroundPosition: `${position}`}} />
         <div className="depth" />
         <div className="foreground" />
       </button>

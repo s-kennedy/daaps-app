@@ -1,7 +1,7 @@
 :root {
   --daaps-yellow: #F1E297;
   --daaps-pink: #FCEEF4;
-  --daaps-green: #1C452B;
+  --daaps-green: #006D77;
   --daaps-purple: #7860f7;
   --daaps-black: #000;
   --daaps-white: #fff;
@@ -46,8 +46,30 @@
   }
 }
 
-@keyframes delayIn {
+@keyframes delayIn1 {
   0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes delayIn2 {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
     opacity: 0;
   }
 
@@ -55,10 +77,37 @@
     opacity: 0;
   }
 
+  75% {
+    opacity: 1;
+  }
+
   100% {
     opacity: 1;
   }
 }
+
+@keyframes delayIn3 {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 
 @keyframes fadeToBlack {
   0% {
@@ -131,13 +180,22 @@ a {
   height: 100%;
 }*/
 
-button {
-  transition: all 0.3s ease-out;
+button.btn {
+  transition: all 0.2s ease-out;
   box-shadow: 0 0 var(--daaps-green);
 }
 
-button:focus {
+button.btn:hover {
   box-shadow: 4px 4px var(--daaps-green);
+}
+
+button.btn:focus, button.btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px var(--daaps-green);
+  outline: none;
+}
+
+.doorway:active, .doorway:focus {
   outline: none;
 }
 
@@ -154,38 +212,12 @@ button:focus {
 .doorway .foreground {
   height: 100%;
   width: 100%;
-  /*background-image: url("../public/doors-bg.jpg");*/
   /*background-image: linear-gradient(80deg, rgba(0,0,0,0.25), rgba(0,0,0,0.65));*/
   border-radius: 25vw 25vw 0 0;
-  box-shadow: inset 15px 10px var(--daaps-dark-purple), inset -10px -10px var(--daaps-purple);
-  border: 5px solid var(--daaps-purple);
+  box-shadow: inset 5px 5px 10px rgba(0,0,0,0.35);
   border-bottom: none;
   position: relative;
 }
-
-.doorway .foreground:before {
-  content: '';
-  position: absolute;
-  width: calc(100% - 10px);
-  height: 20px;
-  bottom: 0;
-  left: 0;
-  border-left: 15px solid transparent;
-  border-bottom: 15px solid #211d35;
-}
-
-.doorway .foreground:after {
-  content: '';
-  position: absolute;
-  width: 15px;
-  height: 20px;
-  bottom: 0;
-  right: -10px;
-  border-left: 10px solid transparent;
-  border-bottom: 15px solid #1C452B;
-  z-index: 1;
-}
-
 
 .doorway .background {
   width: 100%;
@@ -193,14 +225,13 @@ button:focus {
   position: absolute;
   bottom: 0;
   right: 0;
-  background-image: url("../public/doors-bg.jpg");
   border-radius: 25vw 25vw 0 0;
-  filter: brightness(0.1);
   transition: all 0.3s ease-in-out;
+  background-image: url("../public/doors-bg.jpg");
 }
 
 button.doorway:hover .background, button.doorway:focus .background {
-  filter: brightness(1);
+  filter: brightness(1.5);
 }
 
 .doorway .depth {
@@ -209,7 +240,7 @@ button.doorway:hover .background, button.doorway:focus .background {
   position: absolute;
   bottom: 0;
   right: 0;
-  background-image: linear-gradient(80deg, rgba(0,0,0,0.25), rgba(0,0,0,0.75));
+  /*background-image: linear-gradient(80deg, rgba(0,0,0,0.25), rgba(0,0,0,0.75));*/
   border-radius: 25vw 25vw 0 0;
 }
 
@@ -248,7 +279,19 @@ button.doorway:hover .background, button.doorway:focus .background {
 
 .prompt.open {
   opacity: 1;
-  animation: delayIn 2s ease-in;
+  animation: delayIn1 4s ease-in;
+}
+
+.prompt.open .card-bg {
+  animation: fadein 4s ease-in;
+}
+
+.prompt.open .card {
+  animation: delayIn2 4s ease-in;
+}
+
+.prompt.open .content {
+  animation: delayIn3 4s ease-in;
 }
 
 .prompt.closed {
@@ -257,7 +300,6 @@ button.doorway:hover .background, button.doorway:focus .background {
 }
 
 .prompt .bg-make {
-  background-color: var(--daaps-pink);
 }
 
 .prompt .bg-make .card-bg {
@@ -269,18 +311,26 @@ button.doorway:hover .background, button.doorway:focus .background {
 
 .prompt .bg-make .card-bg .bg-a {
   background-image: url('../public/images/card1a.svg');
-  background-size: 280%;
+  background-size: 110%;
   background-position: center center;
   background-repeat: no-repeat;
-  opacity: 0.5;
+  opacity: 1;
 }
 
 .prompt .bg-make .card-bg .bg-b {
   background-image: url('../public/images/card1b.svg');
-  background-size: 280%;
+  background-size: 110%;
   background-position: center center;
   background-repeat: no-repeat;
-  opacity: 0.5;
+  opacity: 0.8;
+}
+
+.prompt .bg-make .card-bg .bg-c {
+  background-image: url('../public/images/card1c.svg');
+  background-size: 110%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 1;
 }
 
 .prompt .bg-sense {
@@ -323,9 +373,19 @@ button.doorway:hover .background, button.doorway:focus .background {
   animation: rotation 60s infinite linear;
 }
 
+.bg-texture {
+  background-image: url('../public/images/texture.png');
+  background-repeat: repeat;
+}
+
+.bg-texture-grey {
+  background-image: url('../public/images/texture-grey.png');
+  background-repeat: repeat;
+}
+
 
 @media screen and (min-width: 640px) {
-  .prompt .card {
+  .prompt .card-container {
     max-width: 350px;
     max-height: 600px;
   }

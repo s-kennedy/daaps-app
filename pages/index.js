@@ -20,8 +20,8 @@ const DirectionsAccordionItem = ({ currentItemUid, id, children, title, classNam
   const selected = currentItemUid.includes(id)
 
   return (
-    <AccordionItem dangerouslySetExpanded={selected} className={`${className} flex flex-col overflow-hidden ${selected ? 'selected fixed inset-y-0 inset-x-0 h-screen w-screen' : 'flex-grow-0 flex-shrink-0'}`} uuid={id} id={id}>
-      <AccordionItemHeading aria-level={2} className={`${selected ? "h-0" : "flex-grow-0 h-auto"}`}>
+    <AccordionItem dangerouslySetExpanded={selected} className={`${className} flex flex-col overflow-hidden ${selected ? 'selected fixed inset-y-0 inset-x-0 h-screen w-screen' : 'flex-grow-0 flex-shrink-0 shadow'}`} uuid={id} id={id}>
+      <AccordionItemHeading aria-level={2} className={`${selected ? "h-0" : "flex-grow-0 h-auto "}`}>
         <AccordionItemButton className={`transition-all container mx-auto ${selected ? 'opacity-0' : 'text-lg py-1' } px-5`}>
           {title}
         </AccordionItemButton>
@@ -37,7 +37,7 @@ const CustomAccordionItem = ({ currentItemUid, id, children, title, className })
   const selected = currentItemUid.includes(id)
 
   return (
-    <AccordionItem dangerouslySetExpanded={selected} className={`${className} flex flex-col overflow-hidden ${selected ? 'selected flex-grow' : 'flex-grow-0 flex-shrink-0'}`} uuid={id} id={id}>
+    <AccordionItem dangerouslySetExpanded={selected} className={`${className} flex flex-col overflow-hidden ${selected ? 'selected flex-grow' : 'flex-grow-0 flex-shrink-0 shadow'}`} uuid={id} id={id}>
       <AccordionItemHeading aria-level={2} className="flex-grow-0">
         <AccordionItemButton className={`transition-all container mx-auto ${selected ? 'text-3xl py-5' : 'text-lg py-1' } px-5`}>
           {title}
@@ -99,7 +99,7 @@ export default function Home({ prompts }) {
           id="directions"
           title="Play"
           currentItemUid={currentItemUid}
-          className="bg-green text-white"
+          className=""
           handleReadMore={handleReadMore}
           prompts={prompts}
         />
@@ -108,7 +108,7 @@ export default function Home({ prompts }) {
           id="journeys"
           title="Journeys"
           currentItemUid={currentItemUid}
-          className="bg-pink"
+          className=""
         >
           <Journeys />
         </CustomAccordionItem>
@@ -117,7 +117,7 @@ export default function Home({ prompts }) {
           id="howto"
           title="How to Use"
           currentItemUid={currentItemUid}
-          className="bg-yellow"
+          className=""
         >
           <HowTo />
         </CustomAccordionItem>
@@ -126,7 +126,7 @@ export default function Home({ prompts }) {
           id="about"
           title="About"
           currentItemUid={currentItemUid}
-          className="bg-white"
+          className=""
         >
           <About />
         </CustomAccordionItem>
