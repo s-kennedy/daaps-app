@@ -10,7 +10,7 @@ const DirectionsView = ({ prompts, handleReadMore }) => {
   const [showInstallMessage, setShowInstallMessage] = useState(false)
   const [showInstallModal, setShowInstallModal] = useState(false)
 
-  const selectPrompt = (e) => {
+  const selectPrompt = () => {
     const selectedIndex = Math.floor(Math.random() * availablePrompts.length)
     const selectedPrompt = availablePrompts[selectedIndex];
     const remainingPrompts = availablePrompts.filter(item => item !== selectedPrompt)
@@ -47,7 +47,7 @@ const DirectionsView = ({ prompts, handleReadMore }) => {
 
   return (
     <>
-      <div className={`directions-panel bg-texture flex flex-col flex-grow ${selectedPrompt ? 'selected' : '' }`}>
+      <div className={`directions-panel flex flex-col flex-grow ${selectedPrompt ? 'selected' : '' }`}>
         {showInstallMessage &&
           <div className="container mx-auto flex justify-end flex-grow-0 flex-shrink-0 z-10">
             <div className="w-1/3 md:w-1/4 p-5 text-right fixed right-0 sm:right-auto">
@@ -60,21 +60,13 @@ const DirectionsView = ({ prompts, handleReadMore }) => {
         }
         <div className="container mx-auto p-5 flex-grow flex">
           <div className="flex-grow flex sm:flex-col justify-start items-start flex overflow-x-auto">
-            <header className="w-8/12 md:w-1/2 pr-8">
-              <h1 className="text-2xl sm:text-4xl md:text-5xl font-serif mb-5 sm:mb-8 md: mb-10 uppercase">Directions to Nowhere in Particular</h1>
+            <header className="w-8/12 pr-8">
+              <h1 className="text-2xl sm:text-4xl md:text-5xl font-serif mb-5 sm:mb-8 md: mb-10 uppercase">Directions<br /> to Nowhere in Particular</h1>
               <p className="mb-5 sm:text-lg md:text-xl">Prompts for sensing, making, and navigating public space.</p>
               <p className="mb-5 sm:text-lg md:text-xl">Choose your path:</p>
             </header>
             <Doorways onSelect={selectPrompt} />
           </div>
-        </div>
-        <div className="container mx-auto p-5 pt-0 flex-grow-0 flex-shrink-0">
-          <button
-            className="bg-white text-green border border-green px-2 py-1 btn"
-            onClick={handleReadMore}
-          >
-            Read more
-          </button>
         </div>
       </div>
       { selectedPrompt && <Prompt prompt={selectedPrompt} onCancel={clearPrompt} closed={closed} />}

@@ -21,6 +21,8 @@
     "react-dom": "^16.13.1",
     "react-markdown": "^5.0.3",
     "react-slick": "^0.28.1",
+    "react-tabs": "^3.2.2",
+    "sass": "^1.32.12",
     "slick-carousel": "^1.8.1",
     "tailwindcss": "^2.0.4"
   },

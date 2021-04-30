@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react'
 
 const Doorway = ({ onClick, position='0% center' }) => {
   const [clicked, setClicked] = useState(false)
-  const handleClick = () => {
+  const handleClick = (e) => {
+    e.preventDefault()
     setClicked(true)
     onClick()
   }

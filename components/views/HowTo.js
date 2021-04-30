@@ -1,7 +1,7 @@
 const Hint = ({ title, body }) => {
   return (
     <div className="hint py-5">
-      <div className="image bg-green h-16 w-12 rounded-t-full mb-4" />
+      <div className="image bg-yellow h-12 w-12 rounded-full mb-4" />
       <h2 className="text-xl mb-2">{title}</h2>
       <p>{body}</p>
     </div>

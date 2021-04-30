@@ -6,6 +6,8 @@ import About from '../components/views/About'
 import HowTo from '../components/views/HowTo'
 import Journeys from '../components/views/Journeys'
 import DisclaimerModal from '../components/DisclaimerModal'
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+// import 'react-tabs/style/react-tabs.css';
 
 import {
     Accordion,
@@ -14,41 +16,6 @@ import {
     AccordionItemButton,
     AccordionItemPanel,
 } from 'react-accessible-accordion';
-
-
-const DirectionsAccordionItem = ({ currentItemUid, id, children, title, className, handleReadMore, prompts }) => {
-  const selected = currentItemUid.includes(id)
-
-  return (
-    <AccordionItem dangerouslySetExpanded={selected} className={`${className} flex flex-col overflow-hidden ${selected ? 'selected fixed inset-y-0 inset-x-0 h-screen w-screen' : 'flex-grow-0 flex-shrink-0 shadow'}`} uuid={id} id={id}>
-      <AccordionItemHeading aria-level={2} className={`${selected ? "h-0" : "flex-grow-0 h-auto "}`}>
-        <AccordionItemButton className={`transition-all container mx-auto ${selected ? 'opacity-0' : 'text-lg py-1' } px-5`}>
-          {title}
-        </AccordionItemButton>
-      </AccordionItemHeading>
-      <AccordionItemPanel className={`transition-all p-0 flex-grow flex overflow-auto accordion__panel`}>
-        <Directions prompts={prompts} handleReadMore={handleReadMore} />
-      </AccordionItemPanel>
-    </AccordionItem>
-  )
-}
-
-const CustomAccordionItem = ({ currentItemUid, id, children, title, className }) => {
-  const selected = currentItemUid.includes(id)
-
-  return (
-    <AccordionItem dangerouslySetExpanded={selected} className={`${className} flex flex-col overflow-hidden ${selected ? 'selected flex-grow' : 'flex-grow-0 flex-shrink-0 shadow'}`} uuid={id} id={id}>
-      <AccordionItemHeading aria-level={2} className="flex-grow-0">
-        <AccordionItemButton className={`transition-all container mx-auto ${selected ? 'text-3xl py-5' : 'text-lg py-1' } px-5`}>
-          {title}
-        </AccordionItemButton>
-      </AccordionItemHeading>
-      <AccordionItemPanel className={`transition-all p-0 flex-grow flex overflow-auto accordion__panel`}>
-        {children}
-      </AccordionItemPanel>
-    </AccordionItem>
-  )
-}
 
 export default function Home({ prompts }) {
   const [currentItemUid, setCurrentItemUid] = useState(['directions'])
@@ -91,47 +58,43 @@ export default function Home({ prompts }) {
 
   return (
     <>
-      <Accordion
-        className="accordion flex flex-col h-full"
-        onChange={handleChange}
-        preExpanded={preExpanded}>
-        <DirectionsAccordionItem
-          id="directions"
-          title="Play"
-          currentItemUid={currentItemUid}
-          className=""
-          handleReadMore={handleReadMore}
-          prompts={prompts}
-        />
+    <Tabs defaultFocus={true} className="primary-tabs w-full">
+      <TabList className="bottom-0 w-full bg-fade fixed z-10">
+        <div className="container mx-auto">
+          <Tab className="bg-green m-5 my-8 text-white w-24 p-2 flex justify-center btn-dark font-serif" selectedClassName="hidden">PLAY!</Tab>
+          <Tab className="bg-green m-5 my-8 text-white w-24 p-2 flex justify-center btn-dark" selectedClassName="hidden">Read More</Tab>
+        </div>
+      </TabList>
 
-        <CustomAccordionItem
-          id="journeys"
-          title="Journeys"
-          currentItemUid={currentItemUid}
-          className=""
-        >
-          <Journeys />
-        </CustomAccordionItem>
+      <TabPanel className="tab-panel flex-grow flex" selectedClassName="h-full">
+        <Directions prompts={prompts} handleReadMore={handleReadMore} />
+      </TabPanel>
 
-        <CustomAccordionItem
-          id="howto"
-          title="How to Use"
-          currentItemUid={currentItemUid}
-          className=""
-        >
-          <HowTo />
-        </CustomAccordionItem>
+      <TabPanel>
+        <Tabs defaultFocus={true} className="secondary-tabs">
+          <TabList className="container mx-auto p-5 py-2 flex justify-between">
+            <Tab className="pb-2 transition-all text-lg border-0 cursor-pointer" selectedClassName="font-extrabold border-0 border-b-2 border-green">Journeys</Tab>
+            <Tab className="pb-2 transition-all text-lg border-0 cursor-pointer" selectedClassName="font-extrabold border-0 border-b-2 border-green">How To Use</Tab>
+            <Tab className="pb-2 transition-all text-lg border-0 cursor-pointer" selectedClassName="font-extrabold border-0 border-b-2 border-green">About</Tab>
+          </TabList>
 
-        <CustomAccordionItem
-          id="about"
-          title="About"
-          currentItemUid={currentItemUid}
-          className=""
-        >
-          <About />
-        </CustomAccordionItem>
-      </Accordion>
-      { showDisclaimer && <DisclaimerModal agreeToDisclaimer={agreeToDisclaimer} handleClose={closeDisclaimer} /> }
+          <TabPanel>
+            <Journeys />
+          </TabPanel>
+
+          <TabPanel>
+            <HowTo />
+          </TabPanel>
+
+          <TabPanel>
+            <About />
+          </TabPanel>
+
+        </Tabs>
+      </TabPanel>
+
+    </Tabs>
+    { showDisclaimer && <DisclaimerModal agreeToDisclaimer={agreeToDisclaimer} handleClose={closeDisclaimer} /> }
     </>
   )
 }

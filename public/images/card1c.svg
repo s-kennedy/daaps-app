@@ -6,18 +6,17 @@
 	.st0{clip-path:url(#SVGID_2_);}
 	.st1{display:none;}
 	.st2{display:inline;fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
-	.st3{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
-	.st4{opacity:0.5;}
-	.st5{display:none;opacity:0.5;fill:#FFFFFF;stroke:#FFFFFF;stroke-miterlimit:10;}
-	.st6{display:none;fill:#FFFFFF;stroke:#FFFFFF;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#006D77;stroke-miterlimit:10;}
+	.st4{display:none;opacity:0.5;}
+	.st5{opacity:0.5;fill:#FFFFFF;stroke:#FFFFFF;stroke-miterlimit:10;}
+	.st6{fill:#FFFFFF;stroke:#FFFFFF;stroke-miterlimit:10;}
 	.st7{clip-path:url(#SVGID_4_);}
-	.st8{opacity:0.5;fill:#FFFFFF;}
+	.st8{opacity:0.5;fill:#006D77;}
 	.st9{display:none;fill:#FFFFFF;}
-	.st10{opacity:0.75;fill:#FFFFFF;}
-	.st11{fill:#EDEDED;}
-	.st12{display:none;fill:none;stroke:#FFFFFF;stroke-width:0.9921;stroke-miterlimit:10;stroke-dasharray:376.2607,376.2607;}
-	.st13{display:none;fill:none;stroke:#FFFFFF;stroke-width:0.9921;stroke-miterlimit:10;stroke-dasharray:251.276,251.276;}
-	.st14{display:none;fill:none;stroke:#FFFFFF;stroke-width:0.9921;stroke-miterlimit:10;stroke-dasharray:153.5009,153.5009;}
+	.st10{fill:#006D77;}
+	.st11{display:none;fill:none;stroke:#FFFFFF;stroke-width:0.9921;stroke-miterlimit:10;stroke-dasharray:376.2607,376.2607;}
+	.st12{display:none;fill:none;stroke:#FFFFFF;stroke-width:0.9921;stroke-miterlimit:10;stroke-dasharray:251.276,251.276;}
+	.st13{display:none;fill:none;stroke:#FFFFFF;stroke-width:0.9921;stroke-miterlimit:10;stroke-dasharray:153.5009,153.5009;}
 </style>
 <g id="Layer_2_1_">
 	<g id="Layer_1-2">
@@ -80,22 +79,22 @@
 								c-3.5,0-6-1.8-7.9-6.2c-0.3-0.8-1.8-1.1-4.2-1.1c-15.6,0-69.6,15-86.4,23.1c-9.4,4.5-61.8,41.8-71.3,45.1l-171.3,82.1
 								l741-12.3V555.2h-5.3C919.7,552.5,904.6,545.9,885.9,545.9L885.9,545.9z"/>
 						</g>
-						<path class="st10" d="M190.8,929.7l197.1-87.1c9.5-4,67.7-59.8,77.1-53.8c3.8,2.4,21.5,12,23,11.8c5.9-0.9,16.6,8.1,29.8,0.3
+						<path class="st8" d="M190.8,929.7l197.1-87.1c9.5-4,67.7-59.8,77.1-53.8c3.8,2.4,21.5,12,23,11.8c5.9-0.9,16.6,8.1,29.8,0.3
 							c3.8-2.2,7.6-4.1,11.1-8.2c26.6-31.1,50.5-51.9,73.7-13.1c18,30.1,62.6,20.2,74.1-1.5c9-17,18.9-30.8,29.3-40.8l113.4-64.9
 							c12.3-7,24.1-18.4,35.2-33.7c24.9-34.5,47.9-47.6,57.4-43.1l16.9,16v318.2H190.8z"/>
-						<path class="st11" d="M191.5,980.7l186.7-112.5c9.5-4,85.7-56,95-50c3.8,2.4,14.5,32.2,15.5,33.3c3.5,3.7,16.6,8.1,29.8,0.3
+						<path class="st10" d="M191.5,980.7l186.7-112.5c9.5-4,85.7-56,95-50c3.8,2.4,14.5,32.2,15.5,33.3c3.5,3.7,16.6,8.1,29.8,0.3
 							c3.8-2.2,44.2-12.5,47.7-16.6c26.6-31.1,44.8-41.8,68-3c18,30.1,31.8,18.5,43.2-3.2c5.1-9.6,19.2-32.5,32.3-52.4
 							c13.4-20.2,38.4-29.4,61.6-22.6l15.9,4.7c22.7,6.6,46.5-6.3,53.2-29c4.8-16.2,9.5-32.8,14.8-40.1
 							c24.9-34.5,47.9-47.6,57.4-43.1l16.9,16v318.2H191.5z"/>
 					</g>
 				</g>
 			</g>
-			<path class="st12" d="M523,792.4c-131-18.1-222.6-138.9-204.6-270s138.9-222.6,270-204.6C719.4,336,811,456.8,793,587.9
+			<path class="st11" d="M523,792.4c-131-18.1-222.6-138.9-204.6-270s138.9-222.6,270-204.6C719.4,336,811,456.8,793,587.9
 				c-8.7,62.9-42,119.8-92.6,158.2C649.8,784.6,585.9,801.3,523,792.4z"/>
 			
-				<ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 -229.8278 555.5463)" class="st13" cx="555.7" cy="555.2" rx="160" ry="160"/>
+				<ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 -229.8278 555.5463)" class="st12" cx="555.7" cy="555.2" rx="160" ry="160"/>
 			
-				<ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 -229.8278 555.5463)" class="st14" cx="555.7" cy="555.2" rx="195.5" ry="195.5"/>
+				<ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 -229.8278 555.5463)" class="st13" cx="555.7" cy="555.2" rx="195.5" ry="195.5"/>
 			<path class="st9" d="M648.7,519.4c-55.1,3.1-94.2,24.2-111.1,31.9c-25.5,11.7-78.7,19.7-131.7,15.2c0-0.8-0.1-1.6-0.2-2.5
 				c-1.8-12.1-13.2-20.5-25.3-18.7c-4.8,0.7-9.3,3-12.7,6.6c-0.9-0.8-1.8-1.6-2.8-2.3l-0.6-0.4c-4-2.8-6.4-7.4-6.4-12.2
 				c0.1-37-29.7-67.1-66.7-67.3s-67.1,29.7-67.3,66.7c-0.1,37,29.7,67.1,66.7,67.3c6.9,0,13.8-1,20.4-3.1c4.6-1.4,9.7-0.5,13.5,2.5

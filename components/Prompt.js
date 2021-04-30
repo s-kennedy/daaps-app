@@ -23,18 +23,18 @@ class Prompt extends React.Component {
     const { prompt, onCancel, closed } = this.props
     const content = prompt.fields
     const number = prompt.index + 1
-    // const category = categories[prompt.index % 4]
-    const category = 'make'
+    const category = categories[prompt.index % 4]
 
     return (
       <AriaModal titleText={`Prompt #${number}`} onExit={onCancel} focusDialog={true}>
         <div className={`overflow-hidden backdrop fixed inset-y-0 inset-x-0 h-screen w-screen bg-black flex justify-center items-center prompt ${closed ? 'closed' : 'open'}`}>
           <div className={`h-full w-full overflow-hidden card-container relative bg-${category}`}>
-            <div className="absolute h-full w-full inset-y-0 inset-x-0 card bg-texture-grey" />
+            <div className="absolute h-full w-full inset-y-0 inset-x-0 card bg-texture" />
             <div className={`absolute h-full w-full inset-y-0 inset-x-0 card-bg`} ref={this.scene}>
-              <div className="bg-a h-full w-full absolute rotate" data-depth="0.20" />
+              <div className="bg-a h-full w-full absolute" data-depth="0.20" />
               <div className="bg-b h-full w-full absolute" data-depth="0.40" />
               <div className="bg-c h-full w-full absolute" data-depth="0.60" />
+              <div className="bg-d h-full w-full absolute" data-depth="0.80" />
             </div>
             <div className="content absolute flex flex-col flex-grow h-full w-full justify-between">
               <header className="p-5 text-2xl">
@@ -54,7 +54,7 @@ class Prompt extends React.Component {
               </main>
               <div className="p-5 flex flex-col justify-center overflow-auto">
                 <div className="flex justify-center">
-                  <button className="bg-white px-4 py-2 border border-green font-serif text-lg btn" onClick={onCancel}>Back</button>
+                  <button className="bg-white px-4 py-2 border text-green border-green font-serif text-lg btn" onClick={onCancel}>Back</button>
                 </div>
                 <div className="text-center my-5">#DirectionsToNowhere</div>
               </div>
