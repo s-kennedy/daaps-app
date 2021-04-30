@@ -6,7 +6,7 @@ import InstallModal from '../InstallModal'
 const DirectionsView = ({ prompts, handleReadMore }) => {
   const [availablePrompts, setAvailablePrompts] = useState(prompts)
   const [selectedPrompt, setSelectedPrompt] = useState()
-  const [closed, setClosed] = useState(false)
+  const [closed, setClosed] = useState(true)
   const [showInstallMessage, setShowInstallMessage] = useState(false)
   const [showInstallModal, setShowInstallModal] = useState(false)
 
@@ -47,7 +47,7 @@ const DirectionsView = ({ prompts, handleReadMore }) => {
 
   return (
     <>
-      <div className={`directions-panel flex flex-col flex-grow ${selectedPrompt ? 'selected' : '' }`}>
+      <div className={`directions-panel flex flex-col flex-grow`}>
         {showInstallMessage &&
           <div className="container mx-auto flex justify-end flex-grow-0 flex-shrink-0 z-10">
             <div className="w-1/3 md:w-1/4 p-5 text-right fixed right-0 sm:right-auto">

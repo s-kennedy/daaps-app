@@ -73,9 +73,9 @@ export default function Home({ prompts }) {
       <TabPanel>
         <Tabs defaultFocus={true} className="secondary-tabs">
           <TabList className="container mx-auto p-5 py-2 flex justify-between">
-            <Tab className="pb-2 transition-all text-lg border-0 cursor-pointer" selectedClassName="font-extrabold border-0 border-b-2 border-green">Journeys</Tab>
-            <Tab className="pb-2 transition-all text-lg border-0 cursor-pointer" selectedClassName="font-extrabold border-0 border-b-2 border-green">How To Use</Tab>
-            <Tab className="pb-2 transition-all text-lg border-0 cursor-pointer" selectedClassName="font-extrabold border-0 border-b-2 border-green">About</Tab>
+            <Tab className="pb-2 transition-all text-lg border-0 cursor-pointer font-bold" selectedClassName="border-0 border-b-2 border-green">Journeys</Tab>
+            <Tab className="pb-2 transition-all text-lg border-0 cursor-pointer font-bold" selectedClassName="border-0 border-b-2 border-green">How To Use</Tab>
+            <Tab className="pb-2 transition-all text-lg border-0 cursor-pointer font-bold" selectedClassName="border-0 border-b-2 border-green">About</Tab>
           </TabList>
 
           <TabPanel>
