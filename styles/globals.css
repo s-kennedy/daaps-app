@@ -153,8 +153,14 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body,
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+html {
+  height: -webkit-fill-available;
+}
+
 #__next {
   height: 100%;
 }
@@ -165,7 +171,7 @@ small {
 }
 
 a {
-  color: #1c452b;
+  color: var(--daaps-green);
   text-decoration: underline;
 }
 
