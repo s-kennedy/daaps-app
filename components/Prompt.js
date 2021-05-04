@@ -22,8 +22,8 @@ class Prompt extends React.Component {
   render () {
     const { prompt, onCancel, closed } = this.props
     const content = prompt.fields
-    const number = prompt.index + 1
-    const category = categories[prompt.index % 4]
+    const number = content.uid
+    const category = categories[content.uid % 4]
 
     return (
       <AriaModal titleText={`Prompt #${number}`} onExit={onCancel} focusDialog={true}>
@@ -43,11 +43,10 @@ class Prompt extends React.Component {
               </header>
               <main className="px-14 flex-grow overflow-auto">
                 <ReactMarkdown className="mb-12 font-sans text-lg">{content.prompt}</ReactMarkdown>
-                { content['help-text'] &&
+                { content['help text'] &&
                   <div className="mb-5">
                     <p className="flex align-center">
-                      <span className="font-serif text-green text-2xl mr-1">*</span>
-                      {content['help-text']}
+                      {content['help text']}
                     </p>
                   </div>
                 }

@@ -2,8 +2,10 @@ import { useState, useEffect } from 'react'
 import Doorways from '../Doorways'
 import Prompt from '../Prompt'
 import InstallModal from '../InstallModal'
+import { useRouter } from 'next/router'
 
 const DirectionsView = ({ prompts, handleReadMore }) => {
+  const router = useRouter()
   const [availablePrompts, setAvailablePrompts] = useState(prompts)
   const [selectedPrompt, setSelectedPrompt] = useState()
   const [closed, setClosed] = useState(true)
@@ -19,11 +21,19 @@ const DirectionsView = ({ prompts, handleReadMore }) => {
     } else {
       setAvailablePrompts(prompts)
     }
+    router.push({
+      pathname: '/',
+      query: { prompt: selectedPrompt.fields.uid },
+    })
     setClosed(false)
     setSelectedPrompt(selectedPrompt)
   }
 
   const clearPrompt = () => {
+    router.push({
+      pathname: '/',
+      query: {},
+    })
     setClosed(true)
     setTimeout(() => {
       setSelectedPrompt(null)
@@ -45,6 +55,16 @@ const DirectionsView = ({ prompts, handleReadMore }) => {
     }
   })
 
+  useEffect(() => {
+    const query = router.query
+    const promptFromQuery = prompts.find(p => p.fields.uid === parseInt(query.prompt))
+    console.log({promptFromQuery})
+    if (!selectedPrompt && promptFromQuery) {
+      setClosed(false)
+      setSelectedPrompt(promptFromQuery)
+    }
+  }, [router])
+
   return (
     <>
       <div className={`directions-panel flex flex-col flex-grow`}>
@@ -60,7 +80,7 @@ const DirectionsView = ({ prompts, handleReadMore }) => {
         }
         <div className="container mx-auto p-5 flex-grow flex">
           <div className="flex-grow flex sm:flex-col justify-start items-start flex overflow-x-auto">
-            <header className="w-8/12 pr-8">
+            <header className="w-8/12 lg:w-6/12 pr-8">
               <h1 className="text-2xl sm:text-4xl md:text-5xl font-serif mb-5 sm:mb-8 md: mb-10 uppercase">Directions<br /> to Nowhere in Particular</h1>
               <p className="mb-5 sm:text-lg md:text-xl">Prompts for sensing, making, and navigating public space.</p>
               <p className="mb-5 sm:text-lg md:text-xl">Choose your path:</p>
