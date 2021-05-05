@@ -4,7 +4,7 @@ import Prompt from '../Prompt'
 import InstallModal from '../InstallModal'
 import { useRouter } from 'next/router'
 
-const DirectionsView = ({ prompts, handleReadMore }) => {
+const DirectionsView = ({ prompts, handleReadMore, showDisclaimer }) => {
   const router = useRouter()
   const [availablePrompts, setAvailablePrompts] = useState(prompts)
   const [selectedPrompt, setSelectedPrompt] = useState()
@@ -58,20 +58,20 @@ const DirectionsView = ({ prompts, handleReadMore }) => {
   useEffect(() => {
     const query = router.query
     const promptFromQuery = prompts.find(p => p.fields.uid === parseInt(query.prompt))
-    console.log({promptFromQuery})
-    if (!selectedPrompt && promptFromQuery) {
+
+    if (!showDisclaimer && !selectedPrompt && promptFromQuery) {
       setClosed(false)
       setSelectedPrompt(promptFromQuery)
     }
-  }, [router])
+  }, [router, showDisclaimer])
 
   return (
     <>
-      <div className={`directions-panel flex flex-col flex-grow`}>
+      <div className={`directions-panel flex flex-col flex-grow parallax-wrapper`}>
         {showInstallMessage &&
           <div className="container mx-auto flex justify-end flex-grow-0 flex-shrink-0 z-10">
             <div className="w-1/3 md:w-1/4 p-5 text-right fixed right-0 sm:right-auto">
-              <button className="mb-1 text-right bg-white text-green border border-green px-2 py-1 btn" onClick={() => setShowInstallModal(true)}>Bookmark it for later</button>
+              <button className="mb-1 text-right bg-white text-green border border-green px-2 py-1 btn" onClick={() => setShowInstallModal(true)}>Save app to phone</button>
             </div>
           </div>
         }
@@ -83,7 +83,7 @@ const DirectionsView = ({ prompts, handleReadMore }) => {
             <header className="w-8/12 lg:w-6/12 pr-8">
               <h1 className="text-2xl sm:text-4xl md:text-5xl font-serif mb-5 sm:mb-8 md: mb-10 uppercase">Directions<br /> to Nowhere in Particular</h1>
               <p className="mb-5 sm:text-lg md:text-xl">Prompts for sensing, making, and navigating public space.</p>
-              <p className="mb-5 sm:text-lg md:text-xl">Choose your path:</p>
+              <p className="mb-5 sm:text-lg md:text-xl">Scroll and select one:</p>
             </header>
             <Doorways onSelect={selectPrompt} />
           </div>

@@ -37,6 +37,15 @@ const HowTo = () => (
         body="Don’t feel that you have to execute the prompt exactly. Change the prompts to suit your strengths, abilities, and interests. Perhaps just use them to alter the ways you perceive, interpret, and reflect on your relationships to the spaces around you."
       />
 
+      <div className="hint py-5">
+        <h2 className="text-2xl mb-5">Code of Conduct</h2>
+        <p><span className="font-sans-bold">Be safe. </span>Don’t do anything that puts yourself or others at risk. Stay aware of your surroundings. And follow your local health and safety guidelines.</p>
+
+        <p><span className="font-sans-bold">Be kind. </span>Care for your community. We do not tolerate hatred, derision, harassment, threatening behavior, or abuse of any kind against any individual or group.</p>
+
+        <p><span className="font-sans-bold">Be respectful. </span>Navigate public space gently and considerately. Do not vandalize or infringe on the property of others.</p>
+      </div>
+
     </div>
   </div>
 )

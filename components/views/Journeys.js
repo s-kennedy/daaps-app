@@ -1,3 +1,4 @@
+import Link from 'next/link'
 
 const Journey = ({ journey }) => {
   return (
@@ -10,7 +11,7 @@ const Journey = ({ journey }) => {
 const Journeys = () => (
   <div className="flex-grow overflow-auto">
     <div className="container mx-auto p-5 pt-1">
-      <p className="mb-5">Share your creative journeys with #DirectionsToNowhere on your favorite (social) media channels for a chance to be featured here.</p>
+      <p className="mb-5">Share your creative journeys with #DirectionsToNowhere on your favorite (social) media channels or <Link href="/submit"><a>submit</a></Link> for a chance to be featured here.</p>
       <div className="grid gap-2 grid-cols-12 my-4">
         <Journey />
         <Journey />

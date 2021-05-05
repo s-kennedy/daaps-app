@@ -17,7 +17,8 @@ module.exports = {
     },
     fontFamily: {
       'sans': ['Jost', 'ui-sans-serif', 'system-ui'],
-      'serif': ['Plastic', 'ui-serif', 'Georgia']
+      'serif': ['Plastic', 'ui-serif', 'Georgia'],
+      'sans-bold': ['Jost Bold', 'ui-sans-serif', 'system-ui'],
     }
   },
   variants: {

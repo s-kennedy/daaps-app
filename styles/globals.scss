@@ -30,7 +30,7 @@
 
 @font-face {
   font-family: "Jost Bold";
-  src: url("/fonts/Jost-Regular.ttf");
+  src: url("/fonts/Jost-SemiBold.ttf");
   font-style: normal;
   font-weight: bold;
   font-display: swap;
@@ -209,14 +209,36 @@ a {
   }
 }
 
+.app-background {
+  background-image: url("../public/images/app-background-01.svg");
+  background-repeat: repeat-x;
+  background-size: contain;
+  background-attachment: inherit;
+  background-clip: content-box;
+  background-position: left center;
+}
+
+
 .doorway {
   position: relative;
   width: 25vw;
   max-width: 200px;
   min-height: 200px;
   height: 100%;
+  padding: 15px;
   display: flex;
+  overflow: hidden;
   transition: all 3s ease-out;
+
+  &:after {
+    content:'';
+    position:absolute;
+    box-shadow: 0px 0px 0px 2000px #fafafa;
+    height: 100%;
+    width: calc(100% - 30px);
+    border-radius: 25vw 25vw 0 0;
+  }
+
 
   &:hover, &:focus {
     .background {
@@ -231,7 +253,6 @@ a {
   .foreground {
     height: 100%;
     width: 100%;
-    /*background-image: linear-gradient(80deg, rgba(0,0,0,0.25), rgba(0,0,0,0.65));*/
     border-radius: 25vw 25vw 0 0;
     box-shadow: inset 5px 5px 10px rgba(0,0,0,0.35);
     border-bottom: none;
@@ -246,9 +267,9 @@ a {
     right: 0;
     border-radius: 25vw 25vw 0 0;
     transition: all 0.3s ease-in-out;
-    background-image: url("../public/doors-bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    /*background-image: url("../public/images/app-background-01.svg");*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
   }
 
   .depth {

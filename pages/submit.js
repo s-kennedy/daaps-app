@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function Suggestions() {
+export default function Submit() {
   return (
     <div className="h-full w-full">
       <div className="container mx-auto p-5">
@@ -8,7 +8,7 @@ export default function Suggestions() {
       </div>
       <iframe
         className="airtable-embed"
-        src="https://airtable.com/embed/shrf8TF1efRfZ3ZV6?backgroundColor=yellow"
+        src="https://airtable.com/embed/shrjuDRyFO4rgiHxe?backgroundColor=yellow"
         frameBorder="0"
         width="100%"
         height="100%"
