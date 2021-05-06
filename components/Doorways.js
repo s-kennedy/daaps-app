@@ -35,6 +35,30 @@ class Doorways extends React.Component {
                 <Doorway onClick={onSelect} />
                 <Doorway onClick={onSelect} />
                 <Doorway onClick={onSelect} />
+                <Doorway onClick={onSelect} />
+                <Doorway onClick={onSelect} />
+                <Doorway onClick={onSelect} />
+                <Doorway onClick={onSelect} />
+                <Doorway onClick={onSelect} />
+                <Doorway onClick={onSelect} />
+                <Doorway onClick={onSelect} />
+                <Doorway onClick={onSelect} />
+                <Doorway onClick={onSelect} />
+                <Doorway onClick={onSelect} />
+                <Doorway onClick={onSelect} />
+                <Doorway onClick={onSelect} />
+                <Doorway onClick={onSelect} />
+                <Doorway onClick={onSelect} />
+                <Doorway onClick={onSelect} />
+                <Doorway onClick={onSelect} />
+                <Doorway onClick={onSelect} />
+                <Doorway onClick={onSelect} />
+                <Doorway onClick={onSelect} />
+                <Doorway onClick={onSelect} />
+                <Doorway onClick={onSelect} />
+                <Doorway onClick={onSelect} />
+                <Doorway onClick={onSelect} />
+                <Doorway onClick={onSelect} />
               </div>
           </div>
       </div>

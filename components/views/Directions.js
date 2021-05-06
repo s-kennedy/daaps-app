@@ -71,7 +71,7 @@ const DirectionsView = ({ prompts, handleReadMore, showDisclaimer }) => {
         {showInstallMessage &&
           <div className="container mx-auto flex justify-end flex-grow-0 flex-shrink-0 z-10">
             <div className="w-1/3 md:w-1/4 p-5 text-right fixed right-0 sm:right-auto">
-              <button className="mb-1 text-right bg-white text-green border border-green px-2 py-1 btn" onClick={() => setShowInstallModal(true)}>Save app to phone</button>
+              <button className="mb-1 text-center bg-white text-green border border-green px-2 py-1 btn" onClick={() => setShowInstallModal(true)}>Save app to phone</button>
             </div>
           </div>
         }
@@ -79,7 +79,7 @@ const DirectionsView = ({ prompts, handleReadMore, showDisclaimer }) => {
           showInstallModal && <InstallModal handleClose={() => setShowInstallModal(false)} />
         }
         <div className="container mx-auto p-5 flex-grow flex">
-          <div className="flex-grow flex sm:flex-col justify-start items-start flex overflow-x-auto">
+          <div className="flex-grow flex sm:flex-col justify-start items-start flex sm:overflow-x-auto">
             <header className="w-8/12 lg:w-6/12 pr-8">
               <h1 className="text-2xl sm:text-4xl md:text-5xl font-serif mb-5 sm:mb-8 md: mb-10 uppercase">Directions<br /> to Nowhere in Particular</h1>
               <p className="mb-5 sm:text-lg md:text-xl">Prompts for sensing, making, and navigating public space.</p>

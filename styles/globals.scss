@@ -152,8 +152,6 @@
 body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
-  background-image: url('../public/images/texture.png');
-  background-repeat: repeat;
   display: flex;
 }
 
@@ -223,7 +221,7 @@ a {
   &:after {
     content:'';
     position:absolute;
-    box-shadow: 0px 0px 0px 2000px #fafafa;
+    box-shadow: 0px 0px 0px 2000px var(--daaps-white);
     height: 100%;
     width: calc(100% - 30px);
     border-radius: 25vw 25vw 0 0;
@@ -458,23 +456,12 @@ a {
   }
 }
 
-
 .rotate {
   animation: rotation 60s infinite linear;
 }
 
-.bg-texture {
-  background-image: url('../public/images/texture.png');
-  background-repeat: repeat;
-}
-
 .bg-fade {
   background-image: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,1))
-}
-
-.bg-texture-grey {
-  background-image: url('../public/images/texture-grey.png');
-  background-repeat: repeat;
 }
 
 .bg-image {
@@ -519,7 +506,7 @@ a {
 
 .parallax-layer-back {
   &:after {
-    transform: translateZ(-2px) scale(3);
+    transform: translateZ(-2px) scale(2);
   }
 }
 
@@ -547,6 +534,12 @@ a {
     perspective-origin-x: 100%;
     -webkit-perspective-origin-x: right;
     -webkit-perspective-origin-y: bottom;
+  }
+
+  .parallax-layer-back {
+    &:after {
+      transform: translateZ(-2px) scale(3);
+    }
   }
 }
 
