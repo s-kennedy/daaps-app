@@ -501,12 +501,20 @@ a {
 .parallax-layer-base {
   &:after {
     transform: translateZ(-1px) scale(2);
+    -webkit-transform: translateZ(-1px) scale(2);
+    -moz-transform: translateZ(-1px) scale(1);
+    -ms-transform: translateZ(-1px) scale(1);
+    -o-transform: translateZ(-1px) scale(1);
   }
 }
 
 .parallax-layer-back {
   &:after {
     transform: translateZ(-2px) scale(2);
+    -webkit-transform: translateZ(-2px) scale(2);
+    -moz-transform: translateZ(-2px) scale(1);
+    -ms-transform: translateZ(-2px) scale(1);
+    -o-transform: translateZ(-2px) scale(1);
   }
 }
 
@@ -539,6 +547,7 @@ a {
   .parallax-layer-back {
     &:after {
       transform: translateZ(-2px) scale(3);
+
     }
   }
 }

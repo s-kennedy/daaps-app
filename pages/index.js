@@ -59,12 +59,14 @@ export default function Home({ prompts }) {
   return (
     <>
     <Tabs defaultFocus={true} className="primary-tabs w-full">
-      <TabList className="bottom-0 absolute z-10 w-full">
-        <Tab className="m-5 my-8 ml-auto bg-white text-green border border-green w-24 p-2 flex justify-center btn font-serif fixed right-0 bottom-0" selectedClassName="hidden">PLAY!</Tab>
-        <Tab className="m-5 my-8 mr-auto bg-white text-green border border-green w-24 p-2 flex justify-center btn" selectedClassName="hidden">Read More</Tab>
+      <TabList className="bottom-0 absolute z-10 w-full flex justify-center">
+        <div className="container mx-auto">
+          <Tab className="m-5 my-8 ml-auto bg-white text-green border border-green w-24 p-2 flex justify-center btn font-serif fixed right-0 bottom-0" selectedClassName="hidden">PLAY!</Tab>
+          <Tab className="m-5 my-8 mr-auto bg-white text-green border border-green w-24 p-2 flex justify-center btn" selectedClassName="hidden">Read More</Tab>
+        </div>
       </TabList>
 
-      <TabPanel className="tab-panel flex-grow flex" selectedClassName="h-full">
+      <TabPanel className="tab-panel flex-grow flex justify-center" selectedClassName="h-full">
         <Directions prompts={prompts} handleReadMore={handleReadMore} showDisclaimer={showDisclaimer} />
       </TabPanel>
 
