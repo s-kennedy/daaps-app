@@ -209,19 +209,9 @@ a {
   }
 }
 
-.app-background {
-  background-image: url("../public/images/app-background-01.svg");
-  background-repeat: repeat-x;
-  background-size: contain;
-  background-attachment: inherit;
-  background-clip: content-box;
-  background-position: left center;
-}
-
-
 .doorway {
   position: relative;
-  width: 25vw;
+  width: 30vw;
   max-width: 200px;
   min-height: 200px;
   height: 100%;
@@ -494,6 +484,55 @@ a {
   background-position: fixed;
 }
 
+.parallax {
+  perspective: 1px;
+  /*overflow-x: hidden;*/
+  /*overflow-y: auto;*/
+  width: 100%;
+  perspective-origin-x: 100%;
+  -webkit-perspective-origin-x: right;
+  -webkit-perspective-origin-y: bottom;
+}
+
+.parallax-layer {
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: 100% 100%;
+    z-index: -1;
+    transform-origin-x: right;
+    -webkit-transform-origin-x: right;
+    -webkit-transform-origin-y: bottom;
+  }
+}
+
+.app-background {
+  &:after {
+    background-image: url("../public/images/app-background-01.svg");
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-attachment: inherit;
+    background-clip: content-box;
+    background-position: left center;
+  }
+}
+
+.parallax-layer-base {
+  &:after {
+    transform: translateZ(-1px) scale(2);
+  }
+}
+
+.parallax-layer-back {
+  &:after {
+    transform: translateZ(-2px) scale(3);
+  }
+}
+
 @media screen and (min-width: 640px) {
   .prompt .card-container {
     max-width: 350px;
@@ -509,5 +548,27 @@ a {
   .doorway-outer {
     padding: 1.4vw;
   }
+
+  .parallax {
+    perspective: 1px;
+    /*overflow-x: hidden;*/
+    /*overflow-y: auto;*/
+    width: 100%;
+    perspective-origin-x: 100%;
+    -webkit-perspective-origin-x: right;
+    -webkit-perspective-origin-y: bottom;
+  }
 }
+
+
+@media screen and (max-width: 640px) {
+  .parallax-wrapper {
+    width: 100vw;
+    overflow-y: hidden;
+    overflow-x: auto;
+    perspective: 2px;
+    display: flex;
+  }
+}
+
 

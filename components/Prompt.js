@@ -46,6 +46,7 @@ class Prompt extends React.Component {
                 { content['help text'] &&
                   <div className="mb-5">
                     <p className="flex align-center">
+                      <span className="font-serif text-green text-2xl mr-1">*</span>
                       {content['help text']}
                     </p>
                   </div>

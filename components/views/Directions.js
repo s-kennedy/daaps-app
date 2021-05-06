@@ -67,7 +67,7 @@ const DirectionsView = ({ prompts, handleReadMore, showDisclaimer }) => {
 
   return (
     <>
-      <div className={`directions-panel flex flex-col flex-grow parallax-wrapper`}>
+      <div className={`directions-panel flex flex-col flex-grow parallax parallax-wrapper`}>
         {showInstallMessage &&
           <div className="container mx-auto flex justify-end flex-grow-0 flex-shrink-0 z-10">
             <div className="w-1/3 md:w-1/4 p-5 text-right fixed right-0 sm:right-auto">
