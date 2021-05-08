@@ -19,6 +19,10 @@ module.exports = {
       'sans': ['Jost', 'ui-sans-serif', 'system-ui'],
       'serif': ['Plastic', 'ui-serif', 'Georgia'],
       'sans-bold': ['Jost Bold', 'ui-sans-serif', 'system-ui'],
+    },
+    boxShadow: {
+      tabs: 'inset 1px -2px 4px 0 rgb(0, 0, 0, 0.1)',
+      none: 'none',
     }
   },
   variants: {

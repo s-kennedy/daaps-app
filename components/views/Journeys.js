@@ -10,7 +10,7 @@ const Journey = ({ journey }) => {
 
 const Journeys = () => (
   <div className="flex-grow overflow-auto">
-    <div className="container mx-auto p-5 pt-1">
+    <div className="container mx-auto px-5 py-8">
       <p className="mb-5">Share your creative journeys with #DirectionsToNowhere on your favorite (social) media channels or <Link href="/submit"><a>submit</a></Link> for a chance to be featured here.</p>
       <div className="grid gap-2 grid-cols-12 my-4">
         <Journey />

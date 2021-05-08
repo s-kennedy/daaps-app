@@ -1,0 +1,110 @@
+@keyframes trails {
+  0% {
+    stroke-dasharray: 120 12 40;
+  }
+
+  50% {
+    stroke-dasharray: 100 220 12;
+  }
+
+  100% {
+    stroke-dasharray: 100 12 40;
+  }
+}
+
+@keyframes rotatingcircles {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.starpaths {
+  stroke-width: 1.5px;
+  fill: none;
+  stroke: #F1E297;
+  stroke-miterlimit: 10;
+  width: 400px;
+  padding: 20px;
+  transition-duration: 1s;
+}
+
+.starpathImage {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  z-index: -1;
+}
+
+.solidCircles {
+  transform-origin: center;
+  animation: rotatingcircles 18s infinite;
+}
+
+.emptyCircles {
+  transform-origin: center;
+  animation: rotatingcircles 12s infinite;
+}
+
+.star1 {
+  stroke-dasharray: 320 123 20;
+  animation: trails 27s infinite;
+  animation-delay: 400ms;
+}
+
+.star2 {
+  stroke-dasharray: 120 40;
+  animation: trails 20s infinite;
+  animation-delay: 900ms;
+}
+
+.star3 {
+  stroke-dasharray: 200 12 120;
+  animation: trails 12s infinite;
+  animation-delay: 1100ms;
+}
+
+.star4 {
+  stroke-dasharray: 20 102 220;
+  animation: trails 15s infinite;
+  animation-delay: 400ms;
+}
+
+.star5 {
+  stroke-dasharray: 200 12 120;
+  animation: trails 16s infinite ;
+  animation-delay: 800ms;
+}
+
+.star6 {
+  stroke-dasharray: 100 12 120;
+  animation: trails 15s infinite;
+}
+
+.star7 {
+  stroke-dasharray: 200 12 120;
+  animation: trails 20s infinite;
+  animation-delay: 900ms;
+}
+
+.star8 {
+  stroke-dasharray: 200 12 120;
+  animation: trails 12s infinite;
+  animation-delay: 1900ms;
+}
+
+.star9 {
+  stroke-dasharray: 30 12 120;
+  animation: trails 8s infinite;
+  animation-delay: 900ms;
+}
+
+.yellowFill {
+  fill: var(--daaps-yellow);
+}

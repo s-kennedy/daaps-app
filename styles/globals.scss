@@ -7,6 +7,15 @@
   --daaps-white: #fff;
   --daaps-gray: #C4C4C4;
   --daaps-dark-purple: #362b71;
+  --plastic-aalt: "aalt" off;
+  --plastic-case: "case" off;
+  --plastic-frac: "frac" off;
+  --plastic-ordn: "ordn" off;
+  --plastic-ornm: "ornm" off;
+  --plastic-salt: "salt" off;
+  --plastic-ss01: "ss01" off;
+  --plastic-ss02: "ss02" off;
+  --plastic-sups: "sups" off;
 }
 
 @font-face {
@@ -281,6 +290,10 @@ a {
   &:last-of-type {
     padding-right: 0;
   }
+}
+
+.directions-panel {
+  animation: fadein 0.4s ease-in;
 }
 
 .react-tabs__tab-panel--selected {
@@ -566,4 +579,115 @@ a {
   }
 }
 
+.svg-img {
+    stroke-width: 1.5px;
+    fill: none;
+    stroke: #F1E297;
+    stroke-miterlimit: 10;
+    width: 400px;
+    padding: 20px;
+}
+
+
+@keyframes trails {
+  0% {
+        stroke-dasharray: 120 12 40;
+    }
+
+  50% {
+        stroke-dasharray: 100 220 12;
+    }
+    100% {
+        stroke-dasharray: 100 12 40;
+  }
+}
+
+@keyframes rotatingcircles {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(360deg);
+
+    }
+}
+
+.starpath-image{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: -1;
+}
+
+.starpaths {
+    transition-duration: 1s;
+}
+
+.starpaths #solid-circles {
+    transform-origin: center;
+animation: rotatingcircles 18s infinite;
+}
+
+.starpaths #empty-circles {
+    transform-origin: center;
+animation: rotatingcircles 12s infinite;
+}
+
+.starpaths #star1 {
+    stroke-dasharray: 320 123 20;
+    animation: trails 27s infinite;
+    animation-delay: 400ms;}
+
+.starpaths #star2 {
+    stroke-dasharray: 120 40;
+    animation: trails 20s infinite;
+    animation-delay: 900ms;
+
+    }
+
+.starpaths #star3 {
+    stroke-dasharray: 200 12 120;
+    animation: trails 12s infinite;
+    animation-delay: 1100ms;
+}
+
+.starpaths #star4 {
+    stroke-dasharray: 20 102 220;
+    animation: trails 15s infinite;
+    animation-delay: 400ms;
+ }
+
+.starpaths #star5 {
+    stroke-dasharray: 200 12 120;
+    animation: trails 16s infinite ;
+    animation-delay: 800ms;
+ }
+
+.starpaths #star6 {
+    stroke-dasharray: 100 12 120;
+    animation: trails 15s infinite;
+ }
+
+.starpaths #star7 {
+    stroke-dasharray: 200 12 120;
+    animation: trails 20s infinite;
+    animation-delay: 900ms;
+
+}
+.starpaths #star8 {
+    stroke-dasharray: 200 12 120;
+    animation: trails 12s infinite;
+    animation-delay: 1900ms;
+
+}
+.starpaths #star9 {
+    stroke-dasharray: 30 12 120;
+    animation: trails 8s infinite;
+    animation-delay: 900ms;
+
+}
 
