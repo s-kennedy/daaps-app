@@ -8,7 +8,7 @@ class Doorways extends React.Component {
   render() {
     const { onSelect, onCancel } = this.props;
     return(
-      <div className="w-full h-full pt-20 sm:pt-0 sm:overflow-x-auto relative flex parallax">
+      <div className="w-full h-full pt-20 sm:mt-20 sm:pt-0 sm:overflow-x-auto relative flex parallax">
           <div className="flex relative">
             <div className="parallax-layer app-background parallax-layer-back flex flex-grow w-full h-full absolute overflow-hidden">
             </div>

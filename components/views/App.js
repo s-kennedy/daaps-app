@@ -21,8 +21,8 @@ const CustomAccordionItem = ({ uuid, currentItemUid, title, children }) => {
   const selected = currentItemUid.includes(uuid)
 
   return(
-    <AccordionItem uuid={uuid} className={`flex flex-col sm:flex-row ${selected ? "flex-grow overflow-hidden" : ""}`} dangerouslySetExpanded={selected}>
-      <AccordionItemHeading className="flex sm:flex-grow relative px-5 py-2 sm:p-5 border-0 border-t sm:border-t-0 sm:border-l border-black">
+    <AccordionItem uuid={uuid} className={`flex flex-col sm:flex-row ${selected ? "flex-grow overflow-hidden sm:border-l border-black" : ""}`} dangerouslySetExpanded={selected}>
+      <AccordionItemHeading className={`flex sm:flex-grow relative px-5 py-2 sm:p-5 border-0 border-t sm:border-t-0 sm:border-l border-black ${selected ? "sm:hidden" : ""}`}>
         <AccordionItemButton className={`flex flex-grow rotate-tab-title ${selected ? "sm:hidden" : "block"}`}>
           <div className="text-xl">{title}</div>
         </AccordionItemButton>
