@@ -17,6 +17,23 @@ import Journeys from './Journeys'
 import Loading from './Loading'
 import DisclaimerModal from '../DisclaimerModal'
 
+const CustomAccordionItem = ({ uuid, currentItemUid, title, children }) => {
+  const selected = currentItemUid.includes(uuid)
+
+  return(
+    <AccordionItem uuid={uuid} className={`flex flex-col sm:flex-row ${selected ? "flex-grow overflow-hidden" : ""}`}>
+      <AccordionItemHeading className="flex flex-grow relative px-5 py-2 sm:p-5 border-0 border-t sm:border-t-0 sm:border-l border-black">
+        <AccordionItemButton className={`flex flex-grow rotate-tab-title ${selected ? "sm:hidden" : "block"}`}>
+          <div className="text-xl">{title}</div>
+        </AccordionItemButton>
+      </AccordionItemHeading>
+      <AccordionItemPanel className="flex-grow fade-in overflow-auto">
+        {children}
+      </AccordionItemPanel>
+    </AccordionItem>
+  )
+}
+
 export default function App({ prompts }) {
   const [currentItemUid, setCurrentItemUid] = useState(['directions'])
   const [preExpanded, setPreExpanded] = useState(['directions'])
@@ -78,7 +95,7 @@ export default function App({ prompts }) {
       <Accordion className="flex flex-col sm:flex-row flex-grow" onChange={handleChange}>
 
         <AccordionItem uuid="directions" className={`sm:flex ${currentItemUid.includes("directions") ? "flex-grow" : ""}`}>
-          <AccordionItemHeading className="flex flex-grow relative px-5 py-2 sm:p-5 border-0 border-black">
+          <AccordionItemHeading className="flex flex-grow-0 sm:flex-grow relative px-5 py-2 sm:p-5 border-0 border-black">
             <AccordionItemButton className={`flex flex-grow rotate-tab-title ${currentItemUid.includes("directions") ? "sm:hidden" : "block"}`}>
               <div className="text-xl">PLAY!</div>
             </AccordionItemButton>
@@ -88,41 +105,17 @@ export default function App({ prompts }) {
           </AccordionItemPanel>
         </AccordionItem>
 
-        <AccordionItem uuid="howto" className={`flex flex-col sm:flex-row ${currentItemUid.includes("howto") ? "flex-grow overflow-hidden" : ""}`}>
-          <AccordionItemHeading className="flex flex-grow relative px-5 py-2 sm:p-5 border-0 border-t sm:border-t-0 sm:border-l border-black">
-            <AccordionItemButton className={`flex flex-grow rotate-tab-title ${currentItemUid.includes("howto") ? "sm:hidden" : "block"}`}>
-              <div className="text-xl">How to Use</div>
-            </AccordionItemButton>
-          </AccordionItemHeading>
-          <AccordionItemPanel className="flex-grow fade-in overflow-auto">
-            <HowTo />
-          </AccordionItemPanel>
-        </AccordionItem>
+        <CustomAccordionItem uuid="howto" currentItemUid={currentItemUid} title="How To Use">
+          <HowTo />
+        </CustomAccordionItem>
 
-        <AccordionItem uuid="journeys" className={`sm:flex ${currentItemUid.includes("journeys") ? "flex-grow" : ""}`}>
-          <AccordionItemHeading className="flex flex-grow relative px-5 py-2 sm:p-5 border-0 border-t sm:border-t-0 sm:border-l border-black">
-            <AccordionItemButton className={`flex flex-grow rotate-tab-title ${currentItemUid.includes("journeys") ? "sm:hidden" : "block"}`}>
-              <div className="flex flex-grow justify-between">
-                <div className="text-xl">Journeys</div>
-                <aside>#DirectionsToNowhere</aside>
-              </div>
-            </AccordionItemButton>
-          </AccordionItemHeading>
-          <AccordionItemPanel className="flex-grow fade-in">
-            <Journeys />
-          </AccordionItemPanel>
-        </AccordionItem>
+        <CustomAccordionItem uuid="journeys" currentItemUid={currentItemUid} title="Journeys">
+          <Journeys />
+        </CustomAccordionItem>
 
-        <AccordionItem uuid="about" className={`sm:flex ${currentItemUid.includes("about") ? "flex-grow" : ""}`}>
-          <AccordionItemHeading className="flex flex-grow relative px-5 py-2 sm:p-5 border-0 border-t sm:border-t-0 sm:border-l border-black">
-            <AccordionItemButton className={`flex flex-grow rotate-tab-title ${currentItemUid.includes("about") ? "sm:hidden" : "block"}`}>
-              <div className="text-xl">About</div>
-            </AccordionItemButton>
-          </AccordionItemHeading>
-          <AccordionItemPanel className="flex-grow fade-in">
-            <About />
-          </AccordionItemPanel>
-        </AccordionItem>
+        <CustomAccordionItem uuid="about" currentItemUid={currentItemUid} title="About">
+          <About />
+        </CustomAccordionItem>
       </Accordion>
     </div>
     { showDisclaimer && <DisclaimerModal agreeToDisclaimer={agreeToDisclaimer} handleClose={closeDisclaimer} /> }
