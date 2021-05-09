@@ -68,7 +68,7 @@ const DirectionsView = ({ prompts, handleReadMore, showDisclaimer }) => {
   return (
     <>
       {showInstallMessage &&
-        <div className="container mx-auto flex justify-end flex-grow-0 flex-shrink-0 z-10 absolute">
+        <div className="container mx-auto flex justify-end flex-grow-0 flex-shrink-0 z-20 absolute fade-in-slow">
           <div className="w-1/3 md:w-1/4 p-5 text-right fixed right-0 sm:right-auto">
             <button className="mb-1 text-center bg-white text-green border border-green px-2 py-1 btn" onClick={() => setShowInstallModal(true)}>Save app to phone</button>
           </div>
@@ -77,14 +77,19 @@ const DirectionsView = ({ prompts, handleReadMore, showDisclaimer }) => {
       {
         showInstallModal && <InstallModal handleClose={() => setShowInstallModal(false)} />
       }
-      <div className={`directions-panel flex flex-col flex-grow parallax parallax-wrapper bg-white`}>
+      <div className={`directions-panel flex flex-col flex-grow parallax parallax-wrapper bg-white fade-in-slow`}>
         <div className="container mx-auto p-5 flex-grow flex">
           <div className="flex-grow flex sm:flex-col justify-start items-start flex sm:overflow-x-auto">
-            <header className="w-8/12 lg:w-6/12 pr-8">
-              <h1 className="text-2xl sm:text-4xl md:text-5xl font-serif mb-5 sm:mb-8 md: mb-10 uppercase">Directions<br /> to Nowhere Particular</h1>
-              <p className="mb-5 sm:text-lg md:text-xl">Prompts for sensing, making, and navigating public space.</p>
-              <p className="mb-5 sm:text-lg md:text-xl">Scroll and select one:</p>
-            </header>
+            <div className="w-8/12 lg:w-6/12 pr-8 flex flex-col flex-grow h-full justify-between">
+              <header>
+                <h1 className="text-2xl sm:text-4xl md:text-5xl font-serif mb-5 sm:mb-8 md: mb-10 uppercase">Directions<br /> to Nowhere Particular</h1>
+                <p className="mb-5 sm:text-lg md:text-xl">Prompts for sensing, making, and navigating public space.</p>
+                <p className="mb-5 sm:text-lg md:text-xl">Scroll and select one:</p>
+              </header>
+              <div className="sm:hidden">
+                <button onClick={handleReadMore} className="mb-1 text-center bg-white text-green border border-green px-2 py-1 btn">Read more</button>
+              </div>
+            </div>
             <Doorways onSelect={selectPrompt} />
           </div>
         </div>

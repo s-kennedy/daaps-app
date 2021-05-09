@@ -21,8 +21,8 @@ const CustomAccordionItem = ({ uuid, currentItemUid, title, children }) => {
   const selected = currentItemUid.includes(uuid)
 
   return(
-    <AccordionItem uuid={uuid} className={`flex flex-col sm:flex-row ${selected ? "flex-grow overflow-hidden" : ""}`}>
-      <AccordionItemHeading className="flex flex-grow relative px-5 py-2 sm:p-5 border-0 border-t sm:border-t-0 sm:border-l border-black">
+    <AccordionItem uuid={uuid} className={`flex flex-col sm:flex-row ${selected ? "flex-grow overflow-hidden" : ""}`} dangerouslySetExpanded={selected}>
+      <AccordionItemHeading className="flex sm:flex-grow relative px-5 py-2 sm:p-5 border-0 border-t sm:border-t-0 sm:border-l border-black">
         <AccordionItemButton className={`flex flex-grow rotate-tab-title ${selected ? "sm:hidden" : "block"}`}>
           <div className="text-xl">{title}</div>
         </AccordionItemButton>
@@ -36,7 +36,6 @@ const CustomAccordionItem = ({ uuid, currentItemUid, title, children }) => {
 
 export default function App({ prompts }) {
   const [currentItemUid, setCurrentItemUid] = useState(['directions'])
-  const [preExpanded, setPreExpanded] = useState(['directions'])
   const [showDisclaimer, setShowDisclaimer] = useState()
   const [showApp, setShowApp] = useState(false)
 
@@ -48,7 +47,7 @@ export default function App({ prompts }) {
   }
 
   const handleReadMore = () => {
-    setCurrentItemUid(['about'])
+    setCurrentItemUid(['howto'])
   }
 
   const agreeToDisclaimer = () => {
@@ -92,15 +91,15 @@ export default function App({ prompts }) {
   return (
     <>
     <div className="bg-white w-full flex max-h-screen overflow-hidden">
-      <Accordion className="flex flex-col sm:flex-row flex-grow" onChange={handleChange}>
+      <Accordion className="flex flex-col sm:flex-row flex-grow" onChange={handleChange} preExpanded={["directions"]}>
 
-        <AccordionItem uuid="directions" className={`sm:flex ${currentItemUid.includes("directions") ? "flex-grow" : ""}`}>
+        <AccordionItem uuid="directions" className={`sm:flex ${currentItemUid.includes("directions") ? "flex-grow" : ""}`} dangerouslySetExpanded={currentItemUid.includes("directions")}>
           <AccordionItemHeading className="flex flex-grow-0 sm:flex-grow relative px-5 py-2 sm:p-5 border-0 border-black">
             <AccordionItemButton className={`flex flex-grow rotate-tab-title ${currentItemUid.includes("directions") ? "sm:hidden" : "block"}`}>
               <div className="text-xl">PLAY!</div>
             </AccordionItemButton>
           </AccordionItemHeading>
-          <AccordionItemPanel className="flex-grow fade-in">
+          <AccordionItemPanel className="flex flex-grow fixed w-full h-full inset-0 sm:relative bg-white z-10">
             <Directions prompts={prompts} handleReadMore={handleReadMore} showDisclaimer={showDisclaimer} />
           </AccordionItemPanel>
         </AccordionItem>
