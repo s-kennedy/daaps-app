@@ -1,7 +1,7 @@
 :root {
   --daaps-yellow: #F1E297;
   --daaps-pink: #FCEEF4;
-  --daaps-green: #006D77;
+  --daaps-green: #004B55;
   --daaps-purple: #7860f7;
   --daaps-black: #000;
   --daaps-white: #fff;
@@ -162,6 +162,7 @@ body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
   display: flex;
+  background-color: var(--daaps-green);
 }
 
 html {
@@ -691,3 +692,11 @@ animation: rotatingcircles 12s infinite;
 
 }
 
+.rotate-tab-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(90deg);
+  transform-origin: 0 36px;
+  white-space: nowrap;
+}

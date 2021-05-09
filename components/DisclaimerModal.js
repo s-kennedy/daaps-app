@@ -19,7 +19,7 @@ const DisclaimerModal = ({ handleClose, agreeToDisclaimer }) => {
       underlayClickExits={false}
       focusDialog={true}
     >
-      <div className="m-10 flex justify-center items-center">
+      <div className="m-12 flex justify-center items-center">
         <div className="container">
           <div className="p-5 bg-white">
             <p className="font-bold text-2xl mb-5">When using Directions to Nowhere — please use your common sense and follow the code of conduct below:</p>

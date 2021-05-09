@@ -77,11 +77,11 @@ const DirectionsView = ({ prompts, handleReadMore, showDisclaimer }) => {
       {
         showInstallModal && <InstallModal handleClose={() => setShowInstallModal(false)} />
       }
-      <div className={`directions-panel flex flex-col flex-grow parallax parallax-wrapper`}>
+      <div className={`directions-panel flex flex-col flex-grow parallax parallax-wrapper bg-white`}>
         <div className="container mx-auto p-5 flex-grow flex">
           <div className="flex-grow flex sm:flex-col justify-start items-start flex sm:overflow-x-auto">
             <header className="w-8/12 lg:w-6/12 pr-8">
-              <h1 className="text-2xl sm:text-4xl md:text-5xl font-serif mb-5 sm:mb-8 md: mb-10 uppercase">Directions<br /> to Nowhere in Particular</h1>
+              <h1 className="text-2xl sm:text-4xl md:text-5xl font-serif mb-5 sm:mb-8 md: mb-10 uppercase">Directions<br /> to Nowhere Particular</h1>
               <p className="mb-5 sm:text-lg md:text-xl">Prompts for sensing, making, and navigating public space.</p>
               <p className="mb-5 sm:text-lg md:text-xl">Scroll and select one:</p>
             </header>

@@ -27,7 +27,7 @@
 .starpaths {
   stroke-width: 1.5px;
   fill: none;
-  stroke: #F1E297;
+  stroke: var(--daaps-yellow);
   stroke-miterlimit: 10;
   width: 400px;
   padding: 20px;
