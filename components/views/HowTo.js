@@ -2,7 +2,7 @@ const Hint = ({ title, body }) => {
   return (
     <div className="hint py-3 col-span-1">
       <div className="image bg-yellow h-12 w-12 rounded-full mb-4" />
-      <h2 className="text-xl mb-2">{title}</h2>
+      <h3 className="text-xl mb-2">{title}</h3>
       <p>{body}</p>
     </div>
   )
@@ -12,6 +12,7 @@ const Hint = ({ title, body }) => {
 const HowTo = () => (
   <div className="flex-grow overflow-auto">
     <div className="container mx-auto px-5 py-8 grid grid-cols-1 sm:grid-cols-3 gap-5">
+      <h2 className="hidden sm:block text-3xl mb-5">How To Use</h2>
       <p className="col-span-1 sm:col-span-3">Directions to Nowhere in Particular is a set of prompts to alter your experience of public space. Use the prompts —</p>
       <Hint
         title="when you’re out and about"

@@ -106,52 +106,56 @@ export default function App({ prompts }) {
 
     </Tabs>
 
-    <div className="bg-white w-full hidden sm:block">
-      <Accordion>
-        <AccordionItem>
-          <AccordionItemHeading>
-            <AccordionItemButton>
-              PLAY!
+    <div className="bg-white w-full hidden sm:flex">
+      <Accordion className="flex flex-grow" onChange={handleChange}>
+
+        <AccordionItem uuid="directions" className={`flex ${currentItemUid.includes("directions") ? "flex-grow" : ""}`}>
+          <AccordionItemHeading className="relative p-5 border-0 border-black">
+            <AccordionItemButton className={`rotate-tab-title ${currentItemUid.includes("directions") ? "hidden" : "block"}`}>
+              <div className="text-xl">PLAY!</div>
             </AccordionItemButton>
           </AccordionItemHeading>
-          <AccordionItemPanel>
+          <AccordionItemPanel className="flex-grow fade-in">
             <Directions prompts={prompts} handleReadMore={handleReadMore} showDisclaimer={showDisclaimer} />
           </AccordionItemPanel>
         </AccordionItem>
-        <AccordionItem>
-          <AccordionItemHeading>
-            <AccordionItemButton>
-              How to Use
+
+        <AccordionItem uuid="howto" className={`flex ${currentItemUid.includes("howto") ? "flex-grow" : ""}`}>
+          <AccordionItemHeading className="relative p-5 border-0 border-l border-black">
+            <AccordionItemButton className={`rotate-tab-title ${currentItemUid.includes("howto") ? "hidden" : "block"}`}>
+              <div className="text-xl">How to Use</div>
             </AccordionItemButton>
           </AccordionItemHeading>
-          <AccordionItemPanel>
+          <AccordionItemPanel className="flex-grow fade-in">
             <HowTo />
           </AccordionItemPanel>
         </AccordionItem>
+
+        <AccordionItem uuid="journeys" className={`flex ${currentItemUid.includes("journeys") ? "flex-grow" : ""}`}>
+          <AccordionItemHeading className="relative p-5 border-0 border-l border-black">
+            <AccordionItemButton className={`rotate-tab-title ${currentItemUid.includes("journeys") ? "hidden" : "block"}`}>
+              <div className="flex flex-grow justify-between">
+                <div className="text-xl">Journeys</div>
+                <aside>#DirectionsToNowhere</aside>
+              </div>
+            </AccordionItemButton>
+          </AccordionItemHeading>
+          <AccordionItemPanel className="flex-grow fade-in">
+            <Journeys />
+          </AccordionItemPanel>
+        </AccordionItem>
+
+        <AccordionItem uuid="about" className={`flex ${currentItemUid.includes("about") ? "flex-grow" : ""}`}>
+          <AccordionItemHeading className="relative p-5 border-0 border-l border-black">
+            <AccordionItemButton className={`rotate-tab-title ${currentItemUid.includes("about") ? "hidden" : "block"}`}>
+              <div className="text-xl">About</div>
+            </AccordionItemButton>
+          </AccordionItemHeading>
+          <AccordionItemPanel className="flex-grow fade-in">
+            <About />
+          </AccordionItemPanel>
+        </AccordionItem>
       </Accordion>
-      <TabList className="flex flex-grow-0">
-        <Tab className="p-2 transition-all text-lg cursor-pointer font-sans-bold flex-grow-0 flex justify-center bg-black bg-opacity-5 shadow-tabs relative p-5" selectedClassName="border-0 bg-white shadow-none"><div className="rotate-tab-title">PLAY!</div></Tab>
-        <Tab className="p-2 transition-all text-lg cursor-pointer font-sans-bold flex-grow-0 flex justify-center bg-black bg-opacity-5 shadow-tabs relative p-5" selectedClassName="border-0 bg-white shadow-none"><div className="rotate-tab-title">How To Use</div></Tab>
-        <Tab className="p-2 transition-all text-lg cursor-pointer font-sans-bold flex-grow-0 flex justify-center bg-black bg-opacity-5 shadow-tabs relative p-5" selectedClassName="border-0 bg-white shadow-none"><div className="rotate-tab-title">Journeys</div></Tab>
-        <Tab className="p-2 transition-all text-lg cursor-pointer font-sans-bold flex-grow-0 flex justify-center bg-black bg-opacity-5 shadow-tabs relative p-5" selectedClassName="border-0 bg-white shadow-none"><div className="rotate-tab-title">About</div></Tab>
-      </TabList>
-
-      <TabPanel className="flex-grow-0" selectedClassName="flex-grow">
-        <Directions prompts={prompts} handleReadMore={handleReadMore} showDisclaimer={showDisclaimer} />
-      </TabPanel>
-
-      <TabPanel className="flex-grow-0" selectedClassName="flex-grow">
-        <HowTo />
-      </TabPanel>
-
-      <TabPanel className="flex-grow-0" selectedClassName="flex-grow">
-        <Journeys />
-      </TabPanel>
-
-      <TabPanel className="flex-grow-0" selectedClassName="flex-grow">
-        <About />
-      </TabPanel>
-
     </div>
     { showDisclaimer && <DisclaimerModal agreeToDisclaimer={agreeToDisclaimer} handleClose={closeDisclaimer} /> }
     </>

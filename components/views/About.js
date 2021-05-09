@@ -3,6 +3,7 @@ import Link from 'next/link'
 const AboutView = () => (
   <div className="flex-grow overflow-auto">
     <div className="container mx-auto px-5 py-8">
+      <h2 className="hidden sm:block text-3xl mb-5">About</h2>
       <div className="grid grid-cols-8 items-end gap-6">
         <div className="col-span-12">
           <p>Directions to Nowhere is part of The Bentway’s Digital and/as Public Space Initiative, a collaboration between The Bentway x From Later </p>

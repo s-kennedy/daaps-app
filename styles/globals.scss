@@ -302,6 +302,10 @@ a {
   padding-bottom: 4rem;
 }
 
+.fade-in {
+  animation: fadein 0.5s ease-in;
+}
+
 [hidden] {
   display: none;
 }
@@ -697,6 +701,7 @@ animation: rotatingcircles 12s infinite;
   top: 0;
   left: 0;
   transform: rotate(90deg);
-  transform-origin: 0 36px;
+  transform-origin: 5px 30px;
   white-space: nowrap;
+  width: calc(100vh - 3rem);
 }
