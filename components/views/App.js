@@ -74,44 +74,12 @@ export default function App({ prompts }) {
 
   return (
     <>
-    <Tabs defaultFocus={true} className="primary-tabs w-full bg-white sm:hidden">
-      <TabList className="bottom-0 absolute z-10 w-full flex justify-center">
-        <div className="container mx-auto">
-          <Tab className="m-5 my-8 ml-auto bg-white text-green border border-green w-24 p-2 flex justify-center btn font-serif fixed right-0 bottom-0" selectedClassName="hidden">PLAY!</Tab>
-          <Tab className="m-5 my-8 mr-auto bg-white text-green border border-green w-24 p-2 flex justify-center btn" selectedClassName="hidden">Read More</Tab>
-        </div>
-      </TabList>
+    <div className="bg-white w-full flex max-h-screen overflow-hidden">
+      <Accordion className="flex flex-col sm:flex-row flex-grow" onChange={handleChange}>
 
-      <TabPanel className="tab-panel flex-grow flex justify-center" selectedClassName="h-full">
-        <Directions prompts={prompts} handleReadMore={handleReadMore} showDisclaimer={showDisclaimer} />
-      </TabPanel>
-
-      <TabPanel>
-        <Tabs defaultFocus={true} className="secondary-tabs">
-          <TabList className="container mx-auto flex justify-around">
-            <Tab className="p-2 transition-all text-lg cursor-pointer font-sans-bold flex-grow flex justify-center bg-black bg-opacity-5 shadow-tabs" selectedClassName="border-0 bg-white shadow-none">How To Use</Tab>
-            <Tab className="p-2 transition-all text-lg cursor-pointer font-sans-bold flex-grow flex justify-center bg-black bg-opacity-5 shadow-tabs" selectedClassName="border-0 bg-white shadow-none">About</Tab>
-          </TabList>
-
-          <TabPanel>
-            <HowTo />
-          </TabPanel>
-
-          <TabPanel>
-            <About />
-          </TabPanel>
-
-        </Tabs>
-      </TabPanel>
-
-    </Tabs>
-
-    <div className="bg-white w-full hidden sm:flex">
-      <Accordion className="flex flex-grow" onChange={handleChange}>
-
-        <AccordionItem uuid="directions" className={`flex ${currentItemUid.includes("directions") ? "flex-grow" : ""}`}>
-          <AccordionItemHeading className="relative p-5 border-0 border-black">
-            <AccordionItemButton className={`rotate-tab-title ${currentItemUid.includes("directions") ? "hidden" : "block"}`}>
+        <AccordionItem uuid="directions" className={`sm:flex ${currentItemUid.includes("directions") ? "flex-grow" : ""}`}>
+          <AccordionItemHeading className="flex flex-grow relative px-5 py-2 sm:p-5 border-0 border-black">
+            <AccordionItemButton className={`flex flex-grow rotate-tab-title ${currentItemUid.includes("directions") ? "sm:hidden" : "block"}`}>
               <div className="text-xl">PLAY!</div>
             </AccordionItemButton>
           </AccordionItemHeading>
@@ -120,9 +88,9 @@ export default function App({ prompts }) {
           </AccordionItemPanel>
         </AccordionItem>
 
-        <AccordionItem uuid="howto" className={`flex ${currentItemUid.includes("howto") ? "flex-grow" : ""}`}>
-          <AccordionItemHeading className="relative p-5 border-0 border-l border-black">
-            <AccordionItemButton className={`rotate-tab-title ${currentItemUid.includes("howto") ? "hidden" : "block"}`}>
+        <AccordionItem uuid="howto" className={`sm:flex ${currentItemUid.includes("howto") ? "flex-grow" : ""}`}>
+          <AccordionItemHeading className="flex flex-grow relative px-5 py-2 sm:p-5 border-0 border-t sm:border-t-0 sm:border-l border-black">
+            <AccordionItemButton className={`flex flex-grow rotate-tab-title ${currentItemUid.includes("howto") ? "sm:hidden" : "block"}`}>
               <div className="text-xl">How to Use</div>
             </AccordionItemButton>
           </AccordionItemHeading>
@@ -131,9 +99,9 @@ export default function App({ prompts }) {
           </AccordionItemPanel>
         </AccordionItem>
 
-        <AccordionItem uuid="journeys" className={`flex ${currentItemUid.includes("journeys") ? "flex-grow" : ""}`}>
-          <AccordionItemHeading className="relative p-5 border-0 border-l border-black">
-            <AccordionItemButton className={`rotate-tab-title ${currentItemUid.includes("journeys") ? "hidden" : "block"}`}>
+        <AccordionItem uuid="journeys" className={`sm:flex ${currentItemUid.includes("journeys") ? "flex-grow" : ""}`}>
+          <AccordionItemHeading className="flex flex-grow relative px-5 py-2 sm:p-5 border-0 border-t sm:border-t-0 sm:border-l border-black">
+            <AccordionItemButton className={`flex flex-grow rotate-tab-title ${currentItemUid.includes("journeys") ? "sm:hidden" : "block"}`}>
               <div className="flex flex-grow justify-between">
                 <div className="text-xl">Journeys</div>
                 <aside>#DirectionsToNowhere</aside>
@@ -145,9 +113,9 @@ export default function App({ prompts }) {
           </AccordionItemPanel>
         </AccordionItem>
 
-        <AccordionItem uuid="about" className={`flex ${currentItemUid.includes("about") ? "flex-grow" : ""}`}>
-          <AccordionItemHeading className="relative p-5 border-0 border-l border-black">
-            <AccordionItemButton className={`rotate-tab-title ${currentItemUid.includes("about") ? "hidden" : "block"}`}>
+        <AccordionItem uuid="about" className={`sm:flex ${currentItemUid.includes("about") ? "flex-grow" : ""}`}>
+          <AccordionItemHeading className="flex flex-grow relative px-5 py-2 sm:p-5 border-0 border-t sm:border-t-0 sm:border-l border-black">
+            <AccordionItemButton className={`flex flex-grow rotate-tab-title ${currentItemUid.includes("about") ? "sm:hidden" : "block"}`}>
               <div className="text-xl">About</div>
             </AccordionItemButton>
           </AccordionItemHeading>

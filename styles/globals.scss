@@ -536,54 +536,6 @@ a {
   }
 }
 
-@media screen and (min-width: 640px) {
-  .prompt .card-container {
-    max-width: 350px;
-    max-height: 600px;
-  }
-
-  .doorway {
-    width: 13vw;
-    min-width: 120px;
-    max-width: 180px;
-  }
-
-  .doorway-outer {
-    padding: 1.4vw;
-  }
-
-  .parallax {
-    perspective: 1px;
-    /*overflow-x: hidden;*/
-    /*overflow-y: auto;*/
-    width: 100%;
-    perspective-origin-x: 100%;
-    -webkit-perspective-origin-x: right;
-    -webkit-perspective-origin-y: bottom;
-  }
-
-  .parallax-layer-back {
-    &:after {
-      transform: translateZ(-2px) scale(3);
-
-    }
-  }
-}
-
-
-@media screen and (max-width: 640px) {
-  .parallax-wrapper {
-    width: 100vw;
-    overflow-y: hidden;
-    overflow-x: auto;
-    perspective: 2px;
-    display: flex;
-    perspective-origin-x: 100%;
-    -webkit-perspective-origin-x: right;
-    -webkit-perspective-origin-y: bottom;
-  }
-}
-
 .svg-img {
     stroke-width: 1.5px;
     fill: none;
@@ -696,12 +648,60 @@ animation: rotatingcircles 12s infinite;
 
 }
 
-.rotate-tab-title {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: rotate(90deg);
-  transform-origin: 5px 30px;
-  white-space: nowrap;
-  width: calc(100vh - 3rem);
+@media screen and (min-width: 640px) {
+  .prompt .card-container {
+    max-width: 350px;
+    max-height: 600px;
+  }
+
+  .doorway {
+    width: 13vw;
+    min-width: 120px;
+    max-width: 180px;
+  }
+
+  .doorway-outer {
+    padding: 1.4vw;
+  }
+
+  .parallax {
+    perspective: 1px;
+    /*overflow-x: hidden;*/
+    /*overflow-y: auto;*/
+    width: 100%;
+    perspective-origin-x: 100%;
+    -webkit-perspective-origin-x: right;
+    -webkit-perspective-origin-y: bottom;
+  }
+
+  .parallax-layer-back {
+    &:after {
+      transform: translateZ(-2px) scale(3);
+
+    }
+  }
+
+  .rotate-tab-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(90deg);
+    transform-origin: 5px 30px;
+    white-space: nowrap;
+    width: calc(100vh - 3rem);
+  }
+}
+
+
+@media screen and (max-width: 640px) {
+  .parallax-wrapper {
+    width: 100vw;
+    overflow-y: hidden;
+    overflow-x: auto;
+    perspective: 2px;
+    display: flex;
+    perspective-origin-x: 100%;
+    -webkit-perspective-origin-x: right;
+    -webkit-perspective-origin-y: bottom;
+  }
 }
