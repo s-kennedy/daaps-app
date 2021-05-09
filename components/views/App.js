@@ -88,13 +88,13 @@ export default function App({ prompts }) {
           </AccordionItemPanel>
         </AccordionItem>
 
-        <AccordionItem uuid="howto" className={`sm:flex ${currentItemUid.includes("howto") ? "flex-grow" : ""}`}>
+        <AccordionItem uuid="howto" className={`flex flex-col sm:flex-row ${currentItemUid.includes("howto") ? "flex-grow overflow-hidden" : ""}`}>
           <AccordionItemHeading className="flex flex-grow relative px-5 py-2 sm:p-5 border-0 border-t sm:border-t-0 sm:border-l border-black">
             <AccordionItemButton className={`flex flex-grow rotate-tab-title ${currentItemUid.includes("howto") ? "sm:hidden" : "block"}`}>
               <div className="text-xl">How to Use</div>
             </AccordionItemButton>
           </AccordionItemHeading>
-          <AccordionItemPanel className="flex-grow fade-in">
+          <AccordionItemPanel className="flex-grow fade-in overflow-auto">
             <HowTo />
           </AccordionItemPanel>
         </AccordionItem>
