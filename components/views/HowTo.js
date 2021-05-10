@@ -42,11 +42,20 @@ const HowTo = () => (
       <div className="hint py-5 sm:col-span-3">
         <h2 className="text-2xl mb-5">Code of Conduct</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-          <p><span className="font-sans-bold">be safe. </span>Don’t do anything that puts yourself or others at risk. Stay aware of your surroundings. And follow your local health and safety guidelines.</p>
+          <div>
+            <h3 className="text-xl mb-2">be safe.</h3>
+            <p>Don’t do anything that puts yourself or others at risk. Stay aware of your surroundings. <span className="font-sans-bold">And follow your local health and safety guidelines.</span></p>
+          </div>
 
-          <p><span className="font-sans-bold">be kind. </span>Care for your community. We do not tolerate hatred, derision, harassment, threatening behavior, or abuse of any kind against any individual or group.</p>
+          <div>
+            <h3 className="text-xl mb-2">be kind.</h3>
+            <p>Care for your community. We do not tolerate hatred, derision, harassment, threatening behavior, or abuse of any kind against any individual or group.</p>
+          </div>
 
-          <p><span className="font-sans-bold">be respectful. </span>Navigate public space gently and considerately. Do not vandalize or infringe on the property of others. Respect people's privacy</p>
+          <div>
+            <h3 className="text-xl mb-2">be safe.</h3>
+            <p>Navigate public space gently and considerately. Do not vandalize or infringe on the property of others. Respect people's privacy</p>
+          </div>
         </div>
       </div>
 

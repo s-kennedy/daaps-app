@@ -45,7 +45,7 @@ class Prompt extends React.Component {
                 <ReactMarkdown className="mb-12 font-sans text-lg">{content.prompt}</ReactMarkdown>
                 { content['help text'] &&
                   <div className="mb-5">
-                    <p className="flex align-center">
+                    <p className="flex align-center text-green">
                       <span className="font-serif text-green text-2xl mr-1">*</span>
                       {content['help text']}
                     </p>
