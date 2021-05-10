@@ -14,7 +14,7 @@ export default function Home({ prompts }) {
   )
 }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   return {
     props: { prompts: await getPrompts() }
   }
