@@ -77,7 +77,7 @@ const DirectionsView = ({ prompts, handleReadMore, showDisclaimer }) => {
       {
         showInstallModal && <InstallModal handleClose={() => setShowInstallModal(false)} />
       }
-      <div className={`directions-panel flex flex-col flex-grow parallax parallax-wrapper bg-white fade-in-slow`}>
+      <div className={`directions-panel flex flex-col flex-grow bg-white fade-in-slow`}>
         <div className="container mx-auto p-5 flex-grow flex">
           <div className="flex-grow flex justify-start items-start flex sm:overflow-x-auto">
             <div className="w-8/12 lg:w-6/12 pr-8 flex flex-col flex-grow h-full justify-between">

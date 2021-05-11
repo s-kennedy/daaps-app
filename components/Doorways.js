@@ -8,14 +8,16 @@ class Doorways extends React.Component {
   render() {
     const { onSelect, onCancel } = this.props;
     return(
-      <div className="w-full h-full pt-20 sm:mt-20 sm:pt-0 sm:overflow-x-auto relative flex parallax">
+      <div className="w-full h-full pt-20 sm:overflow-x-auto relative flex">
           <div className="flex relative">
-            <div className="parallax-layer app-background parallax-layer-back flex flex-grow w-full h-full absolute overflow-hidden">
+            <div className="flex flex-grow w-full h-full absolute overflow-hidden">
+              <Background />
+              <Background />
             </div>
-            <div className="flex parallax-layer parallax-layer-base">
-              <Doorway onClick={onSelect} />
-              <Doorway onClick={onSelect} />
-              <Doorway onClick={onSelect} />
+            <div className="flex">
+              <Doorway onClick={onSelect} tabbable={true} />
+              <Doorway onClick={onSelect} tabbable={true} />
+              <Doorway onClick={onSelect} tabbable={true} />
               <Doorway onClick={onSelect} />
               <Doorway onClick={onSelect} />
               <Doorway onClick={onSelect} />

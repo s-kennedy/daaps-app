@@ -2,6 +2,7 @@ import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import AriaModal from 'react-aria-modal'
 import Parallax from 'parallax-js'
+import breaks from 'remark-breaks'
 
 const categories = ['make', 'sense', 'navigate', 'care']
 
@@ -24,6 +25,7 @@ class Prompt extends React.Component {
     const content = prompt.fields
     const number = content.uid
     const category = categories[content.uid % 4]
+    console.log({content})
 
     return (
       <AriaModal titleText={`Prompt #${number}`} onExit={onCancel} focusDialog={true}>
@@ -42,7 +44,7 @@ class Prompt extends React.Component {
                 { content.title && <h2 className="text-2xl mb-2 font-serif text-green">{content.title}</h2>}
               </header>
               <main className="px-14 flex-grow overflow-auto">
-                <ReactMarkdown className="mb-12 font-sans text-lg">{content.prompt}</ReactMarkdown>
+                <ReactMarkdown className="mb-12 font-sans text-lg whitespace-pre-wrap">{content.prompt}</ReactMarkdown>
                 { content['help text'] &&
                   <div className="mb-5">
                     <p className="flex align-center text-green">
