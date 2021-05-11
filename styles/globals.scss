@@ -235,7 +235,7 @@ a {
     height: 100%;
     width: calc(100% - 30px);
     border-radius: 25vw 25vw 0 0;
-    transition: all 0.2s ease-in;
+    transition: all 0.1s ease-in;
   }
 
 
@@ -450,7 +450,7 @@ a {
 }
 
 .prompt {
-  .bg-navigate {
+  .bg-seek {
     .card-bg {
       .bg-a {
         background-image: url('../public/images/card4a.svg');

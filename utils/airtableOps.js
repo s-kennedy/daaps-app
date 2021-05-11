@@ -11,7 +11,7 @@ const getPrompts = async () => {
     .select({ filterByFormula: "AND({status} = 'published', NOT({prompt} = ''))" })
     .firstPage();
 
-  const prompts = records.map((r, i) => ({ id: r.id, fields: r.fields, index: i }))
+  const prompts = records.map(r => ({ id: r.id, fields: r.fields }))
 
   console.log(prompts)
 

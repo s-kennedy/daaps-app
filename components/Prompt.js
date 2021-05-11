@@ -4,7 +4,9 @@ import AriaModal from 'react-aria-modal'
 import Parallax from 'parallax-js'
 import breaks from 'remark-breaks'
 
-const categories = ['make', 'sense', 'navigate', 'care']
+const categories = ['make', 'sense', 'seek', 'care']
+
+const unescape = text => text.replace(/\\/g, '')
 
 class Prompt extends React.Component {
   constructor(props) {
@@ -24,8 +26,7 @@ class Prompt extends React.Component {
     const { prompt, onCancel, closed } = this.props
     const content = prompt.fields
     const number = content.uid
-    const category = categories[content.uid % 4]
-    console.log({content})
+    const category = content.category ? content.category : categories[content.uid % 4]
 
     return (
       <AriaModal titleText={`Prompt #${number}`} onExit={onCancel} focusDialog={true}>
@@ -44,13 +45,13 @@ class Prompt extends React.Component {
                 { content.title && <h2 className="text-2xl mb-2 font-serif text-green">{content.title}</h2>}
               </header>
               <main className="px-14 flex-grow overflow-auto">
-                <ReactMarkdown className="mb-12 font-sans text-lg whitespace-pre-wrap">{content.prompt}</ReactMarkdown>
+                <ReactMarkdown className="mb-12 font-sans text-lg whitespace-pre-wrap">{unescape(content.prompt)}</ReactMarkdown>
                 { content['help text'] &&
                   <div className="mb-5">
-                    <p className="flex align-center text-green">
+                    <div className="flex align-center text-green">
                       <span className="font-serif text-green text-2xl mr-1">*</span>
-                      {content['help text']}
-                    </p>
+                      <ReactMarkdown className="whitespace-pre-wrap">{unescape(content['help text'])}</ReactMarkdown>
+                    </div>
                   </div>
                 }
               </main>
