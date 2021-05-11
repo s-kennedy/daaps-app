@@ -13,8 +13,6 @@ const getPrompts = async () => {
 
   const prompts = records.map(r => ({ id: r.id, fields: r.fields }))
 
-  console.log(prompts)
-
   return prompts
 }
 

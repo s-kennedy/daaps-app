@@ -3,6 +3,10 @@ import Doorways from '../Doorways'
 import Prompt from '../Prompt'
 import InstallModal from '../InstallModal'
 import { useRouter } from 'next/router'
+import Splitting from "splitting";
+
+import "splitting/dist/splitting.css";
+import "splitting/dist/splitting-cells.css";
 
 const DirectionsView = ({ prompts, handleReadMore, showDisclaimer }) => {
   const router = useRouter()
@@ -65,6 +69,10 @@ const DirectionsView = ({ prompts, handleReadMore, showDisclaimer }) => {
     }
   }, [router, showDisclaimer])
 
+  useEffect(() => {
+    Splitting()
+  })
+
   return (
     <>
       {showInstallMessage &&
@@ -82,7 +90,7 @@ const DirectionsView = ({ prompts, handleReadMore, showDisclaimer }) => {
           <div className="flex-grow flex justify-start items-start flex sm:overflow-x-auto">
             <div className="w-8/12 lg:w-6/12 pr-8 flex flex-col flex-grow h-full justify-between">
               <header>
-                <h1 className="text-2xl sm:text-4xl md:text-5xl font-serif mb-5 sm:mb-8 md:mb-10 uppercase">Directions<br /> to Nowhere Particular</h1>
+                <h1 data-splitting="" className="text-2xl sm:text-4xl md:text-5xl mb-5 sm:mb-8 md:mb-10 uppercase">Directions<br /> to Nowhere Particular</h1>
                 <p className="mb-5 sm:text-lg md:text-xl">Prompts for sensing, making, and navigating public space.</p>
                 <p className="mb-5 sm:text-lg md:text-xl">Scroll and select one:</p>
               </header>

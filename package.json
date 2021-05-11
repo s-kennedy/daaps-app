@@ -27,6 +27,7 @@
     "remark-breaks": "^2.0.2",
     "sass": "^1.32.12",
     "slick-carousel": "^1.8.1",
+    "splitting": "^1.0.6",
     "tailwindcss": "^2.0.4"
   },
   "license": "MIT"

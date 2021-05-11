@@ -57,7 +57,7 @@ class Prompt extends React.Component {
               </main>
               <div className="p-5 flex flex-col justify-center overflow-auto">
                 <div className="flex justify-center">
-                  <button className="bg-white px-4 py-2 border text-green border-green font-serif text-lg btn" onClick={onCancel}>Back</button>
+                  <button className="bg-white px-4 py-2 border text-green border-green font-serif btn" onClick={onCancel}>EXIT</button>
                 </div>
                 <div className="text-center my-5">#DirectionsToNowhere</div>
               </div>

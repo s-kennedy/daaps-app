@@ -19,13 +19,21 @@
 }
 
 @font-face {
+  font-family: "Plastic Var";
+  src: url('/fonts/PlasticGX.ttf') format('truetype-variations');
+  font-style: normal;
+  font-weight: 100 1000;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Plastic";
   src: url("/fonts/Plastic-SimpleRegular.eot") format("eot"),
     url("/fonts/Plastic-SimpleRegular.otf") format("otf"),
     url("/fonts/Plastic-SimpleRegular.woff") format("woff"),
     url("/fonts/Plastic-SimpleRegular.woff2") format("woff2");
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   font-display: swap;
 }
 
@@ -183,6 +191,42 @@ small {
 a {
   color: var(--daaps-green);
   text-decoration: underline;
+}
+
+h1 {
+  font-family: 'Plastic Var', monospace;
+  font-variation-settings: "wght" 100;
+  font-weight: 160;
+}
+
+h1 .char {
+  --delay: calc((var(--char-index) + 1) * 200ms);
+  animation: breathe 6000ms infinite both;
+  animation-delay: var(--delay);
+}
+
+h1:hover span {
+  animation-play-state: paused;
+}
+
+.splitting .word {
+  white-space: nowrap;
+}
+
+@keyframes breathe {
+  0% {
+        font-variation-settings: "SRIF" 200;
+        font-weight: 600;
+  }
+  60% {
+        font-variation-settings: "SRIF" 999.953;
+        font-weight: 160;
+  }
+
+  100% {
+        font-variation-settings: "SRIF" 200;
+        font-weight: 600;
+  }
 }
 
 .btn {
