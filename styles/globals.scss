@@ -20,7 +20,8 @@
 
 @font-face {
   font-family: "Plastic Var";
-  src: url('/fonts/PlasticGX.ttf') format('truetype-variations');
+  src: url('/fonts/PlasticGX.woff2') format('woff2-variations'),
+    url('/fonts/PlasticGX.ttf') format('truetype-variations');
   font-style: normal;
   font-weight: 100 1000;
   font-display: swap;
@@ -209,8 +210,46 @@ h1:hover span {
   animation-play-state: paused;
 }
 
+.title-arrow {
+  position: relative;
+  height: 4px;
+  background-color: black;
+  display: flex;
+  align-self: center;
+  margin-left: 1rem;
+  border-radius: 4px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 1px;
+    width: 30px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: black;
+    transform: rotate(45deg);
+    transform-origin: 0 0;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: 1px;
+    width: 30px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: black;
+    transform: rotate(45deg);
+    transform-origin: 100% 0;
+  }
+}
+
 .splitting .word {
   white-space: nowrap;
+}
+
+.splitting .whitespace {
+  min-width: 1ch;
 }
 
 @keyframes breathe {
@@ -604,7 +643,7 @@ h1:hover span {
   50% {
         stroke-dasharray: 100 220 12;
     }
-    100% {
+  100% {
         stroke-dasharray: 100 12 40;
   }
 }

@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import Slider from "react-slick";
-
 import Prompt from './Prompt'
 
 export default function Prompts({ prompts }) {
