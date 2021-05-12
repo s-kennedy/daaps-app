@@ -197,7 +197,6 @@ body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
   display: flex;
-  background-color: var(--daaps-green);
 }
 
 html {
@@ -473,6 +472,22 @@ h1:hover span {
     animation: chain 6s infinite linear;
     animation-direction: alternate;
   }
+
+  main {
+    ol {
+      list-style-type: decimal;
+      margin-left: 1em;
+      padding-left: 1em;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: initial;
+      margin-left: 1em;
+      padding-left: 1em;
+      margin-bottom: 1rem;
+    }
+  }
 }
 
 .prompt.open {
@@ -636,14 +651,12 @@ h1:hover span {
 }
 
 .app-background {
-  &:after {
-    background-image: url("../public/images/app-background-02.svg");
-    background-repeat: repeat-x;
-    background-size: contain;
-    background-attachment: inherit;
-    background-clip: content-box;
-    background-position: left center;
-  }
+  background-image: url("../public/images/app-background-02.svg");
+  background-repeat: repeat-x;
+  background-size: contain;
+  background-attachment: inherit;
+  background-clip: content-box;
+  background-position: left center;
 }
 
 

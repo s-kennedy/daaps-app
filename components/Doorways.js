@@ -10,7 +10,7 @@ class Doorways extends React.Component {
     return(
       <div className="w-full h-full sm:overflow-x-auto relative flex">
           <div className="flex relative">
-            <div className="flex flex-grow w-full h-full absolute overflow-hidden">
+            <div className="flex flex-grow w-full h-full absolute overflow-hidden app-background">
               <Background />
               <Background />
               <Background />
