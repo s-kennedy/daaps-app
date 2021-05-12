@@ -93,6 +93,7 @@ const DirectionsView = ({ prompts, handleReadMore, showDisclaimer }) => {
         showInstallModal && <InstallModal handleClose={() => setShowInstallModal(false)} />
       }
       <div className={`directions-panel flex flex-col flex-grow bg-white fade-in-slow overflow-x-auto`}>
+        <div className="absolute" />
         <div className="container mx-auto p-5 flex-grow flex flex-col">
           <div className="w-2/3 sm:5/6">
             <SplitTitle />
