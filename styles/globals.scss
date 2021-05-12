@@ -605,22 +605,6 @@ h1:hover span {
   background-position: fixed;
 }
 
-.parallax-layer {
-  &:after {
-    content: " ";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-size: 100% 100%;
-    z-index: -1;
-    transform-origin-x: right;
-    -webkit-transform-origin-x: right;
-    -webkit-transform-origin-y: bottom;
-  }
-}
-
 .app-background {
   &:after {
     background-image: url("../public/images/app-background-02.svg");
@@ -632,25 +616,7 @@ h1:hover span {
   }
 }
 
-.parallax-layer-base {
-  &:after {
-    transform: translateZ(-1px) scale(2);
-    -webkit-transform: translateZ(-1px) scale(2);
-    -moz-transform: translateZ(-1px) scale(1);
-    -ms-transform: translateZ(-1px) scale(1);
-    -o-transform: translateZ(-1px) scale(1);
-  }
-}
 
-.parallax-layer-back {
-  &:after {
-    transform: translateZ(-2px) scale(2);
-    -webkit-transform: translateZ(-2px) scale(2);
-    -moz-transform: translateZ(-2px) scale(1);
-    -ms-transform: translateZ(-2px) scale(1);
-    -o-transform: translateZ(-2px) scale(1);
-  }
-}
 
 @keyframes trails {
   0% {
@@ -788,6 +754,33 @@ animation: rotatingcircles 12s infinite;
   fill: var(--daaps-yellow);
 }
 
+@keyframes sidescroll {
+  0% {
+    right: -40px;
+  }
+
+  100% {
+    right: -60px;
+  }
+}
+
+.scroll-hand {
+  &:after {
+    content: "";
+    position: absolute;
+    height: 50px;
+    width: 30px;
+    top: 0;
+    right: -40px;
+    background-image: url('../public/images/hand.svg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    animation: sidescroll 1.5s infinite ease-in;
+    animation-direction: alternate;
+  }
+}
+
 @media screen and (min-width: 640px) {
   .prompt .card-container {
     max-width: 350px;
@@ -805,23 +798,6 @@ animation: rotatingcircles 12s infinite;
     padding: 1.4vw;
   }
 
-  .parallax {
-    perspective: 1px;
-    /*overflow-x: hidden;*/
-    /*overflow-y: auto;*/
-    width: 100%;
-    perspective-origin-x: 100%;
-    -webkit-perspective-origin-x: right;
-    -webkit-perspective-origin-y: bottom;
-  }
-
-  .parallax-layer-back {
-    &:after {
-      transform: translateZ(-2px) scale(3);
-
-    }
-  }
-
   .rotate-tab-title {
     position: absolute;
     top: 0;
@@ -835,14 +811,5 @@ animation: rotatingcircles 12s infinite;
 
 
 @media screen and (max-width: 640px) {
-  .parallax-wrapper {
-    width: 100vw;
-    overflow-y: hidden;
-    overflow-x: auto;
-    perspective: 2px;
-    display: flex;
-    perspective-origin-x: 100%;
-    -webkit-perspective-origin-x: right;
-    -webkit-perspective-origin-y: bottom;
-  }
+
 }

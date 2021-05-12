@@ -100,9 +100,9 @@ const DirectionsView = ({ prompts, handleReadMore, showDisclaimer }) => {
           <p className="hidden sm:block mb-5 text-lg md:text-2xl">Prompts for sensing, making, and navigating public space.</p>
           <div className="flex-grow flex justify-start items-start sm:overflow-x-auto">
             <div className="w-2/3 sm:w-auto flex-shrink-0 sm:pr-8 flex flex-col flex-grow h-full justify-between">
-              <div className="">
+              <div className="relative">
                 <p className="mb-5 sm:hidden">Prompts for sensing, making, and navigating public space.</p>
-                <p className="my-5 sm:text-lg md:text-xl">Scroll and select one:</p>
+                <p className="my-5 sm:text-lg md:text-xl relative scroll-hand inline-flex mr-16">Scroll and select one:</p>
               </div>
               <div className="sm:hidden">
                 <button onClick={handleReadMore} className="mb-1 text-center bg-white text-green border border-green px-2 py-1 btn">Read more</button>

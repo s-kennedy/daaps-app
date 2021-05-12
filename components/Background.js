@@ -5,6 +5,9 @@ export default function Background() {
     <div className={`bg-green`}>
       <svg className="background svg-img" xmlns="http://w3.org/2000/svg" viewBox="0 0 8192 1910">
         <g id="Layer_1">
+          <g className="dark-background">
+            <rect x="0" y="0" width="8192" height="1910"/>
+          </g>
 
           <g className="starpath-image">
 
