@@ -93,17 +93,17 @@ const DirectionsView = ({ prompts, handleReadMore, showDisclaimer }) => {
         showInstallModal && <InstallModal handleClose={() => setShowInstallModal(false)} />
       }
       <div className={`directions-panel flex flex-col flex-grow bg-white fade-in-slow overflow-x-auto`}>
-        <div className="absolute">
-          <Sundial />
-        </div>
         <div className="container mx-auto p-5 flex-grow flex flex-col">
           <div className="w-2/3 sm:5/6">
             <SplitTitle />
           </div>
-          <p className="mb-5 sm:text-lg md:text-2xl">Prompts for sensing, making, and navigating public space.</p>
+          <p className="hidden sm:block mb-5 text-lg md:text-2xl">Prompts for sensing, making, and navigating public space.</p>
           <div className="flex-grow flex justify-start items-start sm:overflow-x-auto">
-            <div className="flex-shrink-0 pr-8 flex flex-col flex-grow h-full justify-between">
-              <p className="my-5 sm:text-lg md:text-xl">Scroll and select one:</p>
+            <div className="w-2/3 sm:w-auto flex-shrink-0 sm:pr-8 flex flex-col flex-grow h-full justify-between">
+              <div className="">
+                <p className="mb-5 sm:hidden">Prompts for sensing, making, and navigating public space.</p>
+                <p className="my-5 sm:text-lg md:text-xl">Scroll and select one:</p>
+              </div>
               <div className="sm:hidden">
                 <button onClick={handleReadMore} className="mb-1 text-center bg-white text-green border border-green px-2 py-1 btn">Read more</button>
               </div>
