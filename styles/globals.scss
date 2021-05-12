@@ -221,8 +221,8 @@ a {
 }
 
 h1 {
-  font-family: 'Plastic Var', monospace;
-  font-variation-settings: "wght" 100;
+  font-family: 'Plastic Var', 'Plastic', monospace;
+  font-variation-settings: "wght" 160;
   font-weight: 160;
 }
 
@@ -294,8 +294,18 @@ h1:hover span {
   }
 }
 
+@keyframes chain {
+  0% {
+    font-variation-settings: "SRIF" 100;
+  }
+
+  100% {
+    font-variation-settings: "SRIF" 1000;
+  }
+}
+
 .btn {
-  transition: all 0.2s ease-out;
+  transition: all 0.1s ease-out;
   box-shadow: 0 0 var(--daaps-green);
   cursor: pointer;
 
@@ -323,6 +333,24 @@ h1:hover span {
       box-shadow: 2px 2px var(--daaps-yellow);
       outline: none;
     }
+  }
+}
+
+.fancy-btn {
+  transition: all 0.5s ease-in, box-shadow 0.2s ease-in;
+  cursor: pointer;
+  font-family: 'Plastic Var', 'Plastic', monospace;
+  font-weight: 200;
+  font-variation-settings: "SRIF" 100;
+
+  &:hover {
+    font-variation-settings: "SRIF" 800;
+  }
+
+  &:focus, &:active {
+    font-variation-settings: "SRIF" 800;
+    box-shadow: 2px 2px var(--daaps-green);
+    outline: none;
   }
 }
 
@@ -433,6 +461,18 @@ h1:hover span {
 
 .prompt {
   opacity: 0;
+  .card-number {
+    font-family: 'Plastic Var', 'Plastic', monospace;
+    font-weight: 1000;
+  }
+
+  .card-title {
+    font-family: 'Plastic Var', 'Plastic', monospace;
+    font-weight: 200;
+    font-variation-settings: "SRIF" 200;
+    animation: chain 6s infinite linear;
+    animation-direction: alternate;
+  }
 }
 
 .prompt.open {
@@ -455,16 +495,6 @@ h1:hover span {
 .prompt.closed {
   opacity: 0;
   animation: fadeOut 1s ease-out;
-}
-
-.prompt .bg-make {
-}
-
-.prompt .bg-make .card-bg {
-  /*background-size: 320%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  opacity: 0.5;*/
 }
 
 .prompt {
@@ -576,7 +606,7 @@ h1:hover span {
         background-position: center center;
         background-repeat: no-repeat;
         opacity: 1;
-        animation: rotation 30s infinite linear;
+        animation: rotation 20s infinite linear;
       }
 
       .bg-c {
@@ -721,6 +751,13 @@ animation: rotatingcircles 12s infinite;
 .bg-texture-grey {
   background-image: url('../public/images/texture-grey.png');
   background-repeat: repeat;
+}
+
+.bg-galaxy {
+  background-image: url('../public/images/galaxy.svg');
+  background-repeat: no-repeat;
+  background-position: -25vh -25vw;
+  background-attachment: fixed;
 }
 
 .svg-img {

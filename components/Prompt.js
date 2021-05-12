@@ -39,10 +39,10 @@ class Prompt extends React.Component {
               <div className="bg-c h-full w-full absolute" data-depth="0.60" />
               <div className="bg-d h-full w-full absolute" data-depth="0.80" />
             </div>
-            <div className="content absolute flex flex-col flex-grow h-full w-full justify-between">
+            <div className="content p-2 absolute flex flex-col flex-grow h-full w-full justify-between">
               <header className="p-5">
-                <div className="mb-2 font-serif text-green">{number}</div>
-                { content.title && <h2 className="text-2xl mb-2 font-serif text-green">{content.title}</h2>}
+                <div className="text-green card-number">{number}</div>
+                { content.title && <h2 className="text-2xl mb-2 text-green card-title">{content.title}</h2>}
               </header>
               <main className="px-14 flex-grow overflow-auto">
                 <ReactMarkdown className="mb-12 font-sans text-lg whitespace-pre-wrap">{unescape(content.prompt)}</ReactMarkdown>
@@ -56,10 +56,9 @@ class Prompt extends React.Component {
                 }
               </main>
               <div className="p-5 flex flex-col justify-center overflow-auto">
-                <div className="flex justify-center">
-                  <button className="bg-white px-4 py-2 border text-green border-green font-serif btn" onClick={onCancel}>EXIT</button>
+                <div className="flex justify-center my-5">
+                  <button className="bg-white px-4 py-2 border text-green border-green fancy-btn" onClick={onCancel}>EXIT</button>
                 </div>
-                <div className="text-center my-5">#DirectionsToNowhere</div>
               </div>
             </div>
           </div>
