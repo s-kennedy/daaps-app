@@ -19,7 +19,7 @@ class Doorways extends React.Component {
 
     return(
       <div className="flex-grow flex justify-start items-start sm:overflow-x-auto relative">
-        <div className="scroll-arrow z-20 fancy-btn">Scroll</div>
+        <div className="scroll-arrow z-20 fancy-btn hidden sm:flex">Scroll</div>
         <div className="doorways w-full h-full sm:overflow-x-auto relative flex">
           <div className="flex relative">
             <div className="flex flex-grow w-full h-full absolute overflow-hidden">
