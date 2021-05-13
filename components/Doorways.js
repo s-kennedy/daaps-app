@@ -27,16 +27,10 @@ class Doorways extends React.Component {
               <Background />
               <Background />
             </div>
-            <div className="flex">
+            <div className="flex z-10">
               <Doorway onClick={onSelect} tabbable={true} />
               <Doorway onClick={onSelect} tabbable={true} />
               <Doorway onClick={onSelect} tabbable={true} />
-              <Doorway onClick={onSelect} />
-              <Doorway onClick={onSelect} />
-              <Doorway onClick={onSelect} />
-              <Doorway onClick={onSelect} />
-              <Doorway onClick={onSelect} />
-              <Doorway onClick={onSelect} />
               <Doorway onClick={onSelect} />
               <Doorway onClick={onSelect} />
               <Doorway onClick={onSelect} />
