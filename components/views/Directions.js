@@ -98,7 +98,7 @@ const DirectionsView = ({ prompts, handleReadMore, showDisclaimer }) => {
             <SplitTitle />
           </div>
           <p className="mb-3 text-lg md:text-2xl">Prompts for sensing, making, and navigating public space.</p>
-          <div className="mb-3">
+          <div className="mb-3 sm:hidden">
             <button className="inline mb-1 text-center bg-white text-green border border-green px-2 py-1 btn" onClick={handleReadMore}>Read more </button>
           </div>
           <Doorways onSelect={selectPrompt} />
