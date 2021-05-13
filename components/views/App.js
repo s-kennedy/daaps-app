@@ -108,9 +108,9 @@ export default function App({ prompts }) {
           <HowTo />
         </CustomAccordionItem>
 
-        {/*<CustomAccordionItem uuid="journeys" currentItemUid={currentItemUid} title="Journeys">
+        <CustomAccordionItem uuid="journeys" currentItemUid={currentItemUid} title="Journeys">
           <Journeys />
-        </CustomAccordionItem>*/}
+        </CustomAccordionItem>
 
         <CustomAccordionItem uuid="about" currentItemUid={currentItemUid} title="About">
           <About />

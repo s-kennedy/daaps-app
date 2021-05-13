@@ -340,16 +340,17 @@ h1:hover span {
   cursor: pointer;
   font-family: 'Plastic Var', 'Plastic', monospace;
   font-weight: 200;
-  font-variation-settings: "SRIF" 100;
+  font-variation-settings: "SRIF" 100, "wght" 200;
+  cursor: pointer;
 
   &:hover {
-    font-variation-settings: "SRIF" 800;
+    font-weight: 400;
+    font-variation-settings: "SRIF" 800, "wght" 400;
   }
 
   &:focus, &:active {
-    font-variation-settings: "SRIF" 800;
-    box-shadow: 2px 2px var(--daaps-green);
-    outline: none;
+    font-weight: 200;
+    font-variation-settings: "SRIF" 800, "wght" 400;
   }
 }
 
@@ -364,6 +365,7 @@ h1:hover span {
   overflow: hidden;
   transition: all 3s ease-out;
   transform: scaleX(1.02);
+  cursor: pointer;
 
   &:after {
     content:'';
@@ -659,8 +661,6 @@ h1:hover span {
   background-position: left center;
 }
 
-
-
 @keyframes trails {
   0% {
         stroke-dasharray: 120 12 40;
@@ -686,7 +686,6 @@ h1:hover span {
 
     }
 }
-
 
 .starpaths {
   transition-duration: 1s;
@@ -828,6 +827,31 @@ animation: rotatingcircles 12s infinite;
     background-repeat: no-repeat;
     animation: sidescroll 1.5s infinite ease-in;
     animation-direction: alternate;
+  }
+}
+
+.scroll-arrow {
+  position: absolute;
+  height: 40px;
+  width: 90px;
+  right: 40px;
+  background-color: var(--daaps-white);
+  top: calc(50% - 20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  padding-left: 10px;
+
+  &:before {
+    content: "";
+    height: 40px;
+    width: 40px;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid white;
+    border-top: 20px solid transparent;
+    position: absolute;
+    right: -40px;
   }
 }
 
