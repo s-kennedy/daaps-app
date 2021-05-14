@@ -27,7 +27,9 @@ class Doorways extends React.Component {
           <button className="scroll-btn z-20 fancy-btn sm:flex" onClick={this.scrollAhead}>
             <span className="hidden sm:block">Scroll</span>
             <span className="sm:hidden">Scroll right, select one.</span>
-            <ScrollArrow />
+            <div className="scroll-arrow-icon">
+              <img src="/images/scroll-arrow.svg" alt="arrow right" />
+            </div>
           </button>
         </div>
         <div className="doorways w-full h-full sm:overflow-x-auto relative flex" ref={this.doorwaysRef}>
