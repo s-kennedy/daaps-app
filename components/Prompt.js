@@ -11,7 +11,6 @@ const unescape = text => text.replace(/\\/g, '')
 class Prompt extends React.Component {
   constructor(props) {
     super(props);
-    // create a ref to store the textInput DOM element
     this.scene = React.createRef();
   }
 
@@ -55,17 +54,17 @@ class Prompt extends React.Component {
                   </div>
                 }
               </main>
-              <div className="p-5 flex flex-col justify-center overflow-auto">
+              <div className="p-5 flex flex-col justify-center items-center overflow-auto">
                 <div className="flex justify-center my-5">
                   <button className="bg-white px-4 py-2 border text-green border-green fancy-btn" onClick={onCancel}>EXIT</button>
                 </div>
+                <p>#DirectionsToNowhere</p>
               </div>
             </div>
           </div>
         </div>
       </AriaModal>
     )
-
   }
 }
 
