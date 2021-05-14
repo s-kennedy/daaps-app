@@ -43,17 +43,17 @@ const HowTo = () => (
         <h2 className="text-2xl mb-5">Code of Conduct</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
           <div>
-            <h3 className="text-xl mb-2">be safe.</h3>
+            <h3 className="text-xl mb-2">be safe</h3>
             <p>Don’t do anything that puts yourself or others at risk. Stay aware of your surroundings. <span className="font-sans-bold">And follow your local health and safety guidelines.</span></p>
           </div>
 
           <div>
-            <h3 className="text-xl mb-2">be kind.</h3>
+            <h3 className="text-xl mb-2">be kind</h3>
             <p>Care for your community. We do not tolerate hatred, derision, harassment, threatening behavior, or abuse of any kind against any individual or group.</p>
           </div>
 
           <div>
-            <h3 className="text-xl mb-2">be safe.</h3>
+            <h3 className="text-xl mb-2">be safe</h3>
             <p>Navigate public space gently and considerately. Do not vandalize or infringe on the property of others. Respect people's privacy</p>
           </div>
         </div>
