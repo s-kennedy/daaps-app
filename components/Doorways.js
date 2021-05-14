@@ -1,4 +1,4 @@
-import { createRef } from 'React'
+import { createRef } from 'react'
 import Doorway from './Doorway'
 import Background from './Background'
 import ScrollArrow from './ScrollArrow'
