@@ -22,7 +22,7 @@ const CustomAccordionItem = ({ uuid, currentItemUid, title, children }) => {
 
   return(
     <AccordionItem uuid={uuid} className={`flex flex-col sm:flex-row ${selected ? "flex-grow overflow-hidden sm:border-l border-black" : ""}`} dangerouslySetExpanded={selected}>
-      <AccordionItemHeading className={`flex sm:flex-grow relative px-5 py-2 sm:p-5 border-0 border-t sm:border-t-0 sm:border-l border-black ${selected ? "sm:hidden" : ""}`}>
+      <AccordionItemHeading className={`flex sm:flex-grow relative px-5 py-3 sm:p-8 border-0 border-t sm:border-t-0 sm:border-l border-black ${selected ? "sm:hidden" : ""}`}>
         <AccordionItemButton className={`flex flex-grow rotate-tab-title ${selected ? "sm:hidden" : "block"}`}>
           <div className="text-xl">{title}</div>
         </AccordionItemButton>
@@ -94,7 +94,7 @@ export default function App({ prompts }) {
       <Accordion className="flex flex-col sm:flex-row flex-grow" onChange={handleChange} preExpanded={["directions"]}>
 
         <AccordionItem uuid="directions" className={`sm:flex ${currentItemUid.includes("directions") ? "flex-grow" : ""}`} dangerouslySetExpanded={currentItemUid.includes("directions")}>
-          <AccordionItemHeading className="flex flex-grow-0 sm:flex-grow relative px-5 py-2 sm:p-5 border-0 border-black">
+          <AccordionItemHeading className={`${currentItemUid.includes("directions") ? "sm:p-0" : "sm:p-8"} flex flex-grow-0 sm:flex-grow relative px-5 py-3 border-0 border-black`}>
             <AccordionItemButton className={`flex flex-grow rotate-tab-title ${currentItemUid.includes("directions") ? "sm:hidden" : "block"}`}>
               <div className="text-xl">PLAY!</div>
             </AccordionItemButton>
@@ -108,9 +108,9 @@ export default function App({ prompts }) {
           <HowTo />
         </CustomAccordionItem>
 
-        <CustomAccordionItem uuid="journeys" currentItemUid={currentItemUid} title="Journeys">
+        {/*<CustomAccordionItem uuid="journeys" currentItemUid={currentItemUid} title="Journeys">
           <Journeys />
-        </CustomAccordionItem>
+        </CustomAccordionItem>*/}
 
         <CustomAccordionItem uuid="about" currentItemUid={currentItemUid} title="About">
           <About />

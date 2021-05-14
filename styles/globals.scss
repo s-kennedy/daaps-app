@@ -400,8 +400,7 @@ h1:hover span {
   &:after {
     content:'';
     position:absolute;
-    --doorway-width: calc(100% - 30px);
-    width: var(--doorway-width);
+    width: calc(100% - 30px);
     box-shadow: 0px 0px 0px 200px var(--daaps-white), inset 5px 5px 20px rgba(0, 0, 0, 0.2);
     height: 100%;
     border-radius: 25vw 25vw 0 0;
@@ -830,14 +829,18 @@ animation: rotatingcircles 12s infinite;
 }
 
 .scroll-btn-container {
+  display: flex;
   position: fixed;
   width: 100%;
-  display: flex;
   justify-content: center;
   align-items: center;
   bottom: 40px;
   left: 0;
   z-index: 50;
+
+  &.mobile {
+    display: flex;
+  }
 }
 
 .scroll-btn {
@@ -900,16 +903,18 @@ animation: rotatingcircles 12s infinite;
 
 @media screen and (min-width: 640px) {
   .scroll-btn-container {
-    position: absolute;
-    left: unset;
-    right: 40px;
-    top: calc(50% - 20px);
-    bottom: unset;
-    width: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 50;
+    &.desktop {
+      display: flex;
+      position: absolute;
+      left: unset;
+      right: 40px;
+      top: calc(50% - 20px);
+      bottom: unset;
+      width: auto;
+      justify-content: center;
+      align-items: center;
+      z-index: 50;
+    }
   }
 
   .prompt .card-container {
@@ -933,7 +938,7 @@ animation: rotatingcircles 12s infinite;
     top: 0;
     left: 0;
     transform: rotate(90deg);
-    transform-origin: 5px 30px;
+    transform-origin: 10px 35px;
     white-space: nowrap;
     width: calc(100vh - 3rem);
   }

@@ -23,7 +23,7 @@ class Doorways extends React.Component {
 
     return(
       <div className="flex-grow flex justify-start items-start sm:overflow-x-auto relative">
-        <div className="scroll-btn-container">
+        <div className="scroll-btn-container desktop">
           <button className="scroll-btn z-20 fancy-btn sm:flex" onClick={this.scrollAhead}>
             <span className="hidden sm:block">Scroll</span>
             <span className="sm:hidden">Scroll right, select one.</span>
