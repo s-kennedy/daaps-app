@@ -1,17 +1,21 @@
-// import { createRef } from 'React'
+import { createRef } from 'React'
 import Doorway from './Doorway'
 import Background from './Background'
+import ScrollArrow from './ScrollArrow'
 
 class Doorways extends React.Component {
   constructor(props) {
     super(props);
-    // this.doorwaysRef = createRef()
+    this.doorwaysRef = createRef()
   }
 
   scrollAhead = () => {
-    var x = this.doorwaysRef.current.scrollLeft;
-    $(window).scrollTop(y+150);
-    this.doorwaysRef.current
+    const newScrollPosition = this.doorwaysRef.current.scrollLeft + this.doorwaysRef.current.offsetWidth
+    if (newScrollPosition >= this.doorwaysRef.current.scrollWidth) {
+      this.doorwaysRef.current.scrollLeft = 0
+    } else {
+      this.doorwaysRef.current.scrollLeft = newScrollPosition
+    }
   }
 
   render() {
@@ -19,11 +23,13 @@ class Doorways extends React.Component {
 
     return(
       <div className="flex-grow flex justify-start items-start sm:overflow-x-auto relative">
-        <div className="scroll-arrow z-20 fancy-btn hidden sm:flex">Scroll</div>
-        <div className="doorways w-full h-full sm:overflow-x-auto relative flex">
+        <button className="scroll-arrow z-20 fancy-btn hidden sm:flex" onClick={this.scrollAhead}>
+          <span>Scroll</span>
+          <ScrollArrow />
+        </button>
+        <div className="doorways w-full h-full sm:overflow-x-auto relative flex" ref={this.doorwaysRef}>
           <div className="flex relative">
             <div className="flex flex-grow w-full h-full absolute overflow-hidden">
-              <Background />
               <Background />
               <Background />
             </div>
@@ -31,6 +37,9 @@ class Doorways extends React.Component {
               <Doorway onClick={onSelect} tabbable={true} />
               <Doorway onClick={onSelect} tabbable={true} />
               <Doorway onClick={onSelect} tabbable={true} />
+              <Doorway onClick={onSelect} />
+              <Doorway onClick={onSelect} />
+              <Doorway onClick={onSelect} />
               <Doorway onClick={onSelect} />
               <Doorway onClick={onSelect} />
               <Doorway onClick={onSelect} />
