@@ -54,7 +54,7 @@ const HowTo = () => (
 
           <div>
             <h3 className="text-xl mb-2">be safe</h3>
-            <p>Navigate public space gently and considerately. Do not vandalize or infringe on the property of others. Respect people's privacy</p>
+            <p>Navigate public space gently and considerately. Do not vandalize or infringe on the property of others. Respect people's privacy.</p>
           </div>
         </div>
       </div>
