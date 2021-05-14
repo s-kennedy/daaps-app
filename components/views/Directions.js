@@ -5,6 +5,7 @@ import Prompt from '../Prompt'
 import InstallModal from '../InstallModal'
 import { useRouter } from 'next/router'
 import Sundial from '../Sundial'
+import ScrollArrow from '../ScrollArrow'
 
 const LoadingTitle = () => (<h1 className="text-2xl sm:text-4xl md:text-5xl mb-5 sm:mb-8 md:mb-10 uppercase font-serif">Directions to <br />Nowhere in Particular</h1>)
 
@@ -92,7 +93,7 @@ const DirectionsView = ({ prompts, handleReadMore, showDisclaimer }) => {
       {
         showInstallModal && <InstallModal handleClose={() => setShowInstallModal(false)} />
       }
-      <div className={`directions-panel w-full`}>
+      <div className={`directions-panel w-full`} id="directions-panel">
         <div className="flex flex-col flex-grow bg-white h-full">
           <div className="container mx-auto p-5 flex-grow flex flex-col">
             <div className="w-2/3 sm:5/6">
@@ -103,10 +104,12 @@ const DirectionsView = ({ prompts, handleReadMore, showDisclaimer }) => {
               <div className="w-1/2 flex flex-grow flex-shrink-0 flex-col justify-between mr-2 sm:hidden">
                 <div>
                   <p className="mb-3 text-lg md:text-2xl">Prompts for sensing, making, and navigating public space.</p>
-                  <p className="mb-3 text-lg md:text-2xl">Scroll and select one.</p>
-                </div>
-                <div className="mb-3 sm:hidden">
-                  <button className="inline mb-1 text-center bg-white text-green border border-green px-2 py-1 btn" onClick={handleReadMore}>Read more </button>
+                  <div className="mb-3 sm:hidden">
+                    <button className="inline-flex items-center my-1 read-more-button" onClick={handleReadMore}>
+                      <span className="icon transition-all font-serif rounded-full border border-green h-7 w-7 text-green flex justify-center items-center">?</span>
+                      <span className="ml-1 read-more">Read more</span>
+                    </button>
+                  </div>
                 </div>
               </div>
               <Doorways onSelect={selectPrompt} />
@@ -114,7 +117,7 @@ const DirectionsView = ({ prompts, handleReadMore, showDisclaimer }) => {
           </div>
         </div>
       </div>
-      { selectedPrompt && <Prompt prompt={selectedPrompt} onCancel={clearPrompt} closed={closed} />}
+      { selectedPrompt && <Prompt prompt={selectedPrompt} onCancel={clearPrompt} closed={closed} getApplicationNode={() => document.getElementById('directions-panel')}/>}
     </>
   )
 }

@@ -27,10 +27,9 @@ class Prompt extends React.Component {
     const content = prompt.fields
     const number = content.uid
     const category = content.category ? content.category : categories[content.uid % 4]
-    console.log(unescape(content.prompt))
 
     return (
-      <AriaModal titleText={`Prompt #${number}`} onExit={onCancel} focusDialog={true}>
+      <AriaModal titleText={`Prompt #${number}`} onExit={onCancel} focusDialog={true} focusTrapOptions={{returnFocusOnDeactivate: false}}>
         <div className={`overflow-hidden backdrop absolute inset-0 h-screen w-screen bg-black flex justify-center items-center prompt ${closed ? 'closed' : 'open'}`}>
           <div className={`h-full w-full overflow-hidden card-container relative bg-${category}`}>
             <div className="absolute h-full w-full inset-y-0 inset-x-0 card bg-white" />
