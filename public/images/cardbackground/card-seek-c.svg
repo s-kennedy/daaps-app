@@ -1,0 +1,33 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 620">
+  <g>
+    <g>
+      <path d="M136,193.22a19.5,19.5,0,1,1,13.79-5.71A19.42,19.42,0,0,1,136,193.22Z" style="fill: #fff"/>
+      <path d="M136,154.71a19,19,0,1,1-13.44,5.57A18.9,18.9,0,0,1,136,154.71m0-1a20,20,0,1,0,14.14,5.86A19.94,19.94,0,0,0,136,153.72Z" style="fill: #f1e297"/>
+    </g>
+    <g>
+      <line x1="123.45" y1="173.72" x2="148.45" y2="173.72" style="fill: none;stroke: #f1e297;stroke-miterlimit: 10;stroke-width: 0.992125988006592px"/>
+      <line x1="135.95" y1="161.22" x2="135.95" y2="186.22" style="fill: none;stroke: #f1e297;stroke-miterlimit: 10;stroke-width: 0.992125988006592px"/>
+    </g>
+    <rect x="154.72" y="183.87" width="5" height="20.83" transform="translate(-91.33 168.07) rotate(-45)" style="fill: #f1e297"/>
+  </g>
+  <g>
+    <line x1="307" y1="318.5" x2="338" y2="318.5" style="fill: none;stroke: #f1e297;stroke-miterlimit: 10;stroke-width: 0.992125988006592px"/>
+    <line x1="322.5" y1="303" x2="322.5" y2="334" style="fill: none;stroke: #f1e297;stroke-miterlimit: 10;stroke-width: 0.992125988006592px"/>
+  </g>
+  <g>
+    <circle cx="514.17" cy="358.92" r="22" style="fill: #fff"/>
+    <path d="M514.17,337.41a21.51,21.51,0,1,1-21.5,21.51,21.54,21.54,0,0,1,21.5-21.51m0-1a22.5,22.5,0,1,0,22.5,22.5,22.5,22.5,0,0,0-22.5-22.5Z" style="fill: #f1e297"/>
+  </g>
+  <g>
+    <circle cx="549.75" cy="232.02" r="5.5" style="fill: #fff"/>
+    <path d="M549.75,227a5,5,0,1,1-5,5,5,5,0,0,1,5-5m0-1a6,6,0,1,0,6,6,6,6,0,0,0-6-6Z" style="fill: #f1e297"/>
+  </g>
+  <g>
+    <circle cx="48.25" cy="270.52" r="9.5" style="fill: #fff"/>
+    <path d="M48.25,261.51a9,9,0,1,1-9,9,9,9,0,0,1,9-9m0-1a10,10,0,1,0,10,10,10,10,0,0,0-10-10Z" style="fill: #f1e297"/>
+  </g>
+  <g>
+    <circle cx="236" cy="479" r="9.5" style="fill: #fff"/>
+    <path d="M236,470a9,9,0,1,1-9,9,9,9,0,0,1,9-9m0-1a10,10,0,1,0,10,10,10,10,0,0,0-10-10Z" style="fill: #f1e297"/>
+  </g>
+</svg>

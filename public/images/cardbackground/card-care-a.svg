@@ -1,0 +1,30 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 620">
+  <g id="rays">
+    <g>
+      <line x1="310" y1="468.4" x2="310" y2="41.5" style="fill: none;stroke: #f1e297;stroke-miterlimit: 10;stroke-width: 0.9921000003814697px"/>
+      <line x1="365.2" y1="461.1" x2="254.8" y2="48.8" style="fill: none;stroke: #f1e297;stroke-miterlimit: 10;stroke-width: 0.9921259842519686px;stroke-dasharray: 45.354331970214844,85.03936767578125,141.73228454589844"/>
+      <line x1="416.7" y1="439.8" x2="203.3" y2="70.1" style="fill: none;stroke: #f1e297;stroke-miterlimit: 10;stroke-width: 0.9921259842519686px;stroke-dasharray: 45.354331970214844,85.03936767578125,141.73228454589844"/>
+      <line x1="460.9" y1="405.9" x2="159.1" y2="104" style="fill: none;stroke: #f1e297;stroke-miterlimit: 10;stroke-width: 0.9921000003814697px"/>
+      <line x1="494.8" y1="361.7" x2="125.2" y2="148.2" style="fill: none;stroke: #f1e297;stroke-miterlimit: 10;stroke-width: 0.9921259842519686px;stroke-dasharray: 45.354331970214844,85.03936767578125,141.73228454589844"/>
+      <line x1="516.1" y1="310.2" x2="103.9" y2="199.7" style="fill: none;stroke: #f1e297;stroke-miterlimit: 10;stroke-dasharray: 85.03936767578125,5.6692914962768555,141.73228454589844"/>
+      <line x1="523.4" y1="254.9" x2="96.6" y2="254.9" style="fill: none;stroke: #f1e297;stroke-miterlimit: 10;stroke-width: 0.9921000003814697px"/>
+      <line x1="516.1" y1="199.7" x2="103.9" y2="310.2" style="fill: none;stroke: #f1e297;stroke-miterlimit: 10;stroke-dasharray: 85.03936767578125,5.6692914962768555,141.73228454589844"/>
+      <line x1="494.8" y1="148.2" x2="125.2" y2="361.7" style="fill: none;stroke: #f1e297;stroke-miterlimit: 10;stroke-width: 0.9921259842519686px;stroke-dasharray: 45.354331970214844,85.03936767578125,141.73228454589844"/>
+      <line x1="460.9" y1="104" x2="159.1" y2="405.9" style="fill: none;stroke: #f1e297;stroke-miterlimit: 10;stroke-width: 0.9921000003814697px"/>
+      <line x1="416.7" y1="70.1" x2="203.3" y2="439.8" style="fill: none;stroke: #f1e297;stroke-miterlimit: 10;stroke-width: 0.9921259842519686px;stroke-dasharray: 45.354331970214844,85.03936767578125,141.73228454589844"/>
+      <line x1="365.2" y1="48.8" x2="254.8" y2="461.1" style="fill: none;stroke: #f1e297;stroke-miterlimit: 10;stroke-dasharray: 85.03936767578125,5.6692914962768555,141.73228454589844"/>
+    </g>
+  </g>
+  <g id="eye">
+    <g>
+      <path d="M392.8,254.9h0a148.57,148.57,0,0,0-166.9.1h0a148.57,148.57,0,0,0,166.9-.1Z" style="fill: #fff;stroke: #f1e297;stroke-miterlimit: 10;stroke-width: 0.9921000003814697px"/>
+      <g>
+        <g>
+          <path d="M309.3,277a22.5,22.5,0,1,1,22.5-22.5A22.53,22.53,0,0,1,309.3,277Z" style="fill: #fff"/>
+          <path d="M309.3,232.5a22,22,0,1,1-22,22,22.06,22.06,0,0,1,22-22m0-1a23,23,0,1,0,23,23,23,23,0,0,0-23-23Z" style="fill: #f1e297"/>
+        </g>
+        <circle cx="309.3" cy="254.5" r="11.9" style="fill: #f1e297"/>
+      </g>
+    </g>
+  </g>
+</svg>

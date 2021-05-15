@@ -1,0 +1,18 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 620">
+  <g>
+    <path d="M44,288.31a264.5,264.5,0,0,1,527.21,41c-.24,4.79-.61,9.62-1.11,14.37a264.5,264.5,0,0,1-527.21-41C43.08,297.88,43.45,293.05,44,288.31Z" style="fill: none;stroke: #f1e297;stroke-miterlimit: 10;stroke-width: 0.992125988006592px;stroke-dasharray: 166.20919799804688,166.20919799804688"/>
+    <path d="M408.73,532.8A239.48,239.48,0,1,1,205.27,99.2,239.48,239.48,0,1,1,408.73,532.8Z" style="fill: none;stroke: #f1e297;stroke-miterlimit: 10;stroke-width: 0.992125988006592px;stroke-dasharray: 376.2607116699219,376.2607116699219"/>
+    <path d="M300.65,525.4a209.49,209.49,0,1,1,149.93-56.84A208.1,208.1,0,0,1,300.65,525.4Z" style="fill: none;stroke: #f1e297;stroke-miterlimit: 10;stroke-width: 0.992125988006592px;stroke-dasharray: 329.1443176269531,329.1443176269531"/>
+    <circle cx="307" cy="316" r="180" transform="translate(-133.53 309.64) rotate(-45)" style="fill: none;stroke: #f1e297;stroke-miterlimit: 10;stroke-width: 0.992125988006592px;stroke-dasharray: 113.1018295288086,113.1018295288086"/>
+    <circle cx="307" cy="316" r="160" style="fill: none;stroke: #f1e297;stroke-miterlimit: 10;stroke-width: 0.992125988006592px;stroke-dasharray: 251.2760009765625,251.2760009765625"/>
+    <circle cx="307" cy="316" r="140" style="fill: none;stroke: #f1e297;stroke-miterlimit: 10;stroke-width: 0.992125988006592px;stroke-dasharray: 439.73309326171875,439.73309326171875"/>
+    <circle cx="307" cy="316" r="110" style="fill: none;stroke: #f1e297;stroke-miterlimit: 10;stroke-width: 0.992125988006592px;stroke-dasharray: 69.10089874267578,69.10089874267578"/>
+    <circle cx="307" cy="316" r="90" style="fill: none;stroke: #f1e297;stroke-miterlimit: 10;stroke-width: 0.992125988006592px;stroke-dasharray: 141.34288024902344,141.34288024902344"/>
+    <circle cx="307" cy="316" r="60" style="fill: none;stroke: #f1e297;stroke-miterlimit: 10;stroke-width: 0.992125988006592px;stroke-dasharray: 62.80527877807617,62.80527877807617"/>
+  </g>
+  <circle cx="450.25" cy="291.52" r="6" style="fill: #f1e297"/>
+  <circle cx="247.75" cy="143.02" r="10" style="fill: #f1e297"/>
+  <circle cx="207.75" cy="387.02" r="6" style="fill: #f1e297"/>
+  <circle cx="315.25" cy="475.52" r="10" style="fill: #f1e297"/>
+  <circle cx="290.75" cy="374.02" r="3" style="fill: #f1e297"/>
+</svg>

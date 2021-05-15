@@ -36,26 +36,6 @@
   height: 100%;
 }
 
-.st0{stroke:var(--daaps-yellow);stroke-miterlimit:10;}
-.st1{fill:none;stroke:var(--daaps-yellow);stroke-width:2.126;stroke-miterlimit:10;stroke-dasharray:168.5397,168.5397;}
-.st2{fill:none;stroke:var(--daaps-yellow);stroke-width:2.126;stroke-miterlimit:10;stroke-dasharray:419.691,419.691;}
-.st3{fill:none;stroke:var(--daaps-yellow);stroke-width:2.126;stroke-miterlimit:10;stroke-dasharray:293.7089,293.7089;}
-.st4{fill:none;stroke:var(--daaps-yellow);stroke-width:2.126;stroke-miterlimit:10;stroke-dasharray:114.688,114.688;}
-.st5{fill:none;stroke:var(--daaps-yellow);stroke-width:2.126;stroke-miterlimit:10;stroke-dasharray:224.2239,224.2239;}
-.st6{fill:none;stroke:var(--daaps-yellow);stroke-width:2.126;stroke-miterlimit:10;stroke-dasharray:326.9932,326.9932;}
-.st7{fill:none;stroke:var(--daaps-yellow);stroke-width:2.126;stroke-miterlimit:10;stroke-dasharray:64.2276,64.2276;}
-.st8{fill:none;stroke:var(--daaps-yellow);stroke-width:2.126;stroke-miterlimit:10;stroke-dasharray:180.1665,180.1665;}
-.st9{fill:none;stroke:var(--daaps-yellow);stroke-width:2.126;stroke-miterlimit:10;stroke-dasharray:56.0518,56.0518;}
-.st10{fill:var(--daaps-yellow);}
-.st11{fill:none;stroke:var(--daaps-yellow);stroke-width:2.126;stroke-miterlimit:10;}
-.st12{fill:var(--daaps-yellow);stroke:var(--daaps-green);stroke-width:2.126;stroke-miterlimit:10;}
-.st13{fill:none;stroke:var(--daaps-green);stroke-width:2.126;stroke-miterlimit:10;}
-.st14{fill:none;stroke:var(--daaps-green);stroke-width:2.126;stroke-linecap:round;stroke-linejoin:round;}
-.st15{fill:none;stroke:var(--daaps-green);stroke-miterlimit:10;}
-.st16{fill:none;stroke:var(--daaps-yellow);stroke-miterlimit:10;}
-.st17{fill:none;stroke:var(--daaps-yellow);stroke-width:2.8346;stroke-miterlimit:10;}
-.st18{stroke:var(--daaps-yellow);stroke-width:2.126;stroke-miterlimit:10;}
-.st19{clip-path:url(#SVGID_2_);}
 
 .starpathImage {
   position: fixed;
@@ -133,4 +113,8 @@
 
 .yellowFill {
   fill: var(--daaps-yellow);
+}
+
+.dark-stroke {
+  stroke: var(--daaps-green);
 }
