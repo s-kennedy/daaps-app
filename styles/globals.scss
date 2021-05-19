@@ -753,6 +753,8 @@ h1:hover span {
 
 
   .tab-title {
+    cursor: pointer;
+
     &:focus {
       outline: none;
       color: var(--daaps-green);
