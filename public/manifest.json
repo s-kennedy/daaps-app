@@ -1,6 +1,6 @@
 {
   "name": "Directions to Nowhere in Particular",
-  "short_name": "Directions",
+  "short_name": "Directions to Nowhere",
   "theme_color": "#004B55",
   "background_color": "#FFFFFF",
   "display": "fullscreen",
@@ -9,30 +9,10 @@
   "start_url": "/",
   "icons": [
     {
-      "src": "icons/icon-72x72.png",
-      "sizes": "72x72",
-      "type": "image/png"
+      "src": "icons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
     },
-    {
-      "src": "icons/icon-96x96.png",
-      "sizes": "96x96",
-      "type": "image/png"
-    },
-    {
-      "src": "icons/icon-144x144.png",
-      "sizes": "144x144",
-      "type": "image/png"
-    },
-    {
-      "src": "icons/icon-152x152.png",
-      "sizes": "152x152",
-      "type": "image/png"
-    },
-    {
-      "src": "icons/icon-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    }
   ],
   "splash_pages": null
 }
