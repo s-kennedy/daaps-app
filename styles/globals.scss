@@ -336,17 +336,14 @@ h1:hover span {
 
 .btn {
   transition: all 0.1s ease-out;
-  box-shadow: 0 0 var(--daaps-green);
+  box-shadow: 4px 4px var(--daaps-green);
   cursor: pointer;
-
-  &:hover {
-    box-shadow: 4px 4px var(--daaps-green);
-  }
 
   &:focus, &:active {
     transform: translate(2px, 2px);
     box-shadow: 2px 2px var(--daaps-green);
     outline: none;
+    background-color: var(--daaps-yellow);
   }
 
   &-dark {
@@ -730,14 +727,6 @@ h1:hover span {
 .read-more-button {
   &:focus {
     outline: none;
-    .icon {
-      background-color: var(--daaps-green);
-      color: var(--daaps-white);
-      font-weight: 400;
-    }
-    .read-more {
-      text-decoration: underline;
-    }
   }
 }
 
@@ -793,7 +782,6 @@ h1:hover span {
 .scroll-arrow-icon {
   height: 20px;
   width: 20px;
-  margin-left: 5px;
   display: inline-flex;
 
   .icon {
@@ -804,6 +792,13 @@ h1:hover span {
 }
 
 @media screen and (min-width: 640px) {
+  .btn {
+    box-shadow: 0 0 var(--daaps-green);
+
+    &:hover {
+      box-shadow: 4px 4px var(--daaps-green);
+    }
+  }
   .scroll-btn-container {
     position: absolute;
     left: unset;

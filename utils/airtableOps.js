@@ -19,7 +19,7 @@ const getPrompts = async () => {
 
 const getJourneys = async () => {
   const records = await journeysTable
-    .select({ filterByFormula: "{status} = 'published'" })
+    .select({ filterByFormula: "AND({status} = 'published', NOT({image} = ''))" })
     .firstPage();
 
   const journeys = records.map(r => ({ id: r.id, fields: r.fields }))

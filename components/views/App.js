@@ -110,17 +110,19 @@ export default function App({ prompts }) {
           </AccordionItemPanel>
         </AccordionItem>
 
-        <CustomAccordionItem uuid="howto" currentItemUid={currentItemUid} title="How To Use">
-          <HowTo />
-        </CustomAccordionItem>
-
-        {/*<CustomAccordionItem uuid="journeys" currentItemUid={currentItemUid} title="Journeys">
+        <CustomAccordionItem uuid="journeys" currentItemUid={currentItemUid} title="Journeys">
           <Journeys />
-        </CustomAccordionItem>*/}
+        </CustomAccordionItem>
 
         <CustomAccordionItem uuid="about" currentItemUid={currentItemUid} title="About">
           <About />
         </CustomAccordionItem>
+
+        <CustomAccordionItem uuid="howto" currentItemUid={currentItemUid} title="How To Use">
+          <HowTo />
+        </CustomAccordionItem>
+
+
       </Accordion>
     </div>
     { showDisclaimer && <DisclaimerModal agreeToDisclaimer={agreeToDisclaimer} handleClose={closeDisclaimer} /> }

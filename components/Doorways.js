@@ -32,7 +32,7 @@ class Doorways extends React.Component {
       <div className="flex-grow flex justify-start items-start sm:overflow-x-auto relative">
         <div className="scroll-btn-container hidden sm:flex">
           <button className="scroll-btn z-20 border border-green transition-all" onClick={this.scrollAhead}>
-            <span className="">Scroll</span>
+            <span className="mr-1">Scroll</span>
             <div className="scroll-arrow-icon">
               <img src="/images/scroll-arrow.svg" alt="arrow right" />
             </div>

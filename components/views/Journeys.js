@@ -1,10 +1,16 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
-const Journey = ({ description, media, prompt, status }) => {
+const Journey = ({ description, media, prompt, status, image, credit, story_url }) => {
   return (
-    <div className="border-2 border-gray-400 flex justify-center col-span-3 sm:col-span-1">
-      <img src={media[0].url} className="w-full h-auto object-cover" />
+    <div className="flex flex-col justify-center col-span-3 sm:col-span-1">
+      <figure>
+        <img src={image[0].url} alt={description} className="w-full h-auto object-cover border border-black" />
+        <figcaption className="mt-1">{`Credit: ${credit}`}</figcaption>
+      </figure>
+      {story_url &&
+        <a href={story_url} target="_blank" rell="noopener noreferrer">Read the full story</a>
+      }
     </div>
   )
 }

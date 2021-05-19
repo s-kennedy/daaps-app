@@ -86,7 +86,7 @@ const DirectionsView = ({ prompts, handleReadMore, showDisclaimer }) => {
       {showInstallMessage &&
         <div className="container mx-auto flex justify-end flex-grow-0 flex-shrink-0 z-20 absolute fade-in-slow">
           <div className="w-1/3 sm:w-1/6 p-5 text-right fixed sm:absolute right-0 sm:right-auto">
-            <button className="mb-1 text-center bg-white text-green border border-green px-2 py-1 btn" onClick={() => setShowInstallModal(true)}>Save app to phone</button>
+            <button className="mb-1 text-center bg-white text-green border border-green px-2 py-1 btn" onClick={() => setShowInstallModal(true)}>Save app</button>
           </div>
         </div>
       }
@@ -104,8 +104,8 @@ const DirectionsView = ({ prompts, handleReadMore, showDisclaimer }) => {
               <div className="w-1/2 flex flex-grow flex-shrink-0 flex-col justify-between mr-2 sm:hidden">
                   <p className="mb-5 text-lg md:text-2xl">Prompts for sensing, making, and navigating public space</p>
                   <div className="">
-                    <p>Scroll right, select one.</p>
-                    <div className="flex justify-end">
+                    <p className="mb-1">Scroll & select</p>
+                    <div className="flex justify-start">
                       <div className="scroll-arrow-icon">
                         <img src="/images/scroll-arrow.svg" alt="arrow right" style={{ transform: 'rotate(10deg)' }} />
                       </div>
@@ -119,8 +119,8 @@ const DirectionsView = ({ prompts, handleReadMore, showDisclaimer }) => {
                   </div>
                   <div className="mb-3 sm:hidden">
                     <button className="text-center text-green border border-green px-2 py-1 btn inline-flex items-center my-1 read-more-button" onClick={handleReadMore}>
-                      <span className="icon transition-all font-serif h-6 w-6 rounded-full flex justify-center items-center font-black">?</span>
-                      <span className="ml-1 read-more">More info</span>
+                      <div className="icon transition-all font-serif h-6 w-6 rounded-full bg-green text-white flex justify-center items-center font-semibold">?</div>
+                      <div className="ml-1 read-more">Info</div>
                     </button>
                   </div>
               </div>
