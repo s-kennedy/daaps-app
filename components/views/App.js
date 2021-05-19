@@ -98,10 +98,10 @@ export default function App({ prompts }) {
 
         <AccordionItem uuid="directions" className={`tab sm:flex ${currentItemUid.includes("directions") ? "flex-grow tab-selected" : "bg-light"}`} dangerouslySetExpanded={currentItemUid.includes("directions")}>
           <AccordionItemHeading className={`tab-heading ${currentItemUid.includes("directions") ? "sm:p-0" : "sm:p-8 "} flex flex-grow-0 sm:flex-grow relative px-5 py-3 border-0 border-black`}>
-            <AccordionItemButton className={`tab-title flex flex-grow rotate-tab-title ${currentItemUid.includes("directions") ? "sm:hidden" : "block"}`}>
+            <AccordionItemButton className={`tab-title flex flex-grow rotate-tab-title fancy-btn ${currentItemUid.includes("directions") ? "sm:hidden" : "block"}`}>
               <div className="text-xl flex items-center">
                 <div className={`w-4 h-4 border border-green rounded-full mr-2 ${currentItemUid.includes("directions") ? "bg-green" : "bg-white"}`} />
-                <span>PLAY!</span>
+                <span className="">PLAY!</span>
               </div>
             </AccordionItemButton>
           </AccordionItemHeading>

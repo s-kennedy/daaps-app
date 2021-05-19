@@ -233,6 +233,12 @@ a {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+a {
+  :hover, :focus {
+    font-style: italic;
+  }
+}
+
 h1 {
   font-family: 'Plastic Var', 'Plastic', monospace;
   font-variation-settings: "wght" 160;
@@ -359,8 +365,8 @@ h1:hover span {
   transition: all 0.5s ease-in, box-shadow 0.2s ease-in;
   cursor: pointer;
   font-family: 'Plastic Var', 'Plastic', monospace;
-  font-weight: 200;
-  font-variation-settings: "SRIF" 100, "wght" 200;
+  font-weight: 400;
+  font-variation-settings: "SRIF" 400, "wght" 200;
   cursor: pointer;
 
   &:hover {
@@ -756,23 +762,26 @@ h1:hover span {
 }
 
 .scroll-btn {
-  height: 40px;
   background-color: var(--daaps-white);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 10px 15px;
   border-radius: 40px;
   box-shadow: 0 0 4px rgba(0,0,0,0.3);
-  font-size: 14px;
 
   &:hover, &:focus {
+    outline: none;
+
     .scroll-arrow-icon {
       animation: wiggle 80ms linear;
       animation-direction: alternate;
       animation-iteration-count: 6;
     }
+  }
+
+  &:focus {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
   }
 }
 
@@ -791,7 +800,6 @@ h1:hover span {
 }
 
 .tab {
-  /*box-shadow: 0 2px 4px rgba(0,0,0,0.35);*/
 
   &:hover {
     .tab-title {
@@ -800,6 +808,8 @@ h1:hover span {
   }
 
   &.tab-selected {
+    box-shadow: inset 0 -2px 4px rgba(0,0,0,0.3);
+
     .tab-heading {
 
     }
@@ -813,6 +823,20 @@ h1:hover span {
 
   100% {
     transform: rotate(20deg);
+  }
+}
+
+@keyframes nudge {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0);
   }
 }
 
@@ -831,17 +855,15 @@ h1:hover span {
 
 @media screen and (min-width: 640px) {
   .scroll-btn-container {
-    &.desktop {
-      position: absolute;
-      left: unset;
-      right: 40px;
-      top: calc(50% - 20px);
-      bottom: unset;
-      width: auto;
-      justify-content: center;
-      align-items: center;
-      z-index: 50;
-    }
+    position: absolute;
+    left: unset;
+    right: 40px;
+    top: calc(50% - 20px);
+    bottom: unset;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
   }
 
   .prompt .card-container {

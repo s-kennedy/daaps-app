@@ -34,9 +34,9 @@ class Prompt extends React.Component {
             <div className="absolute h-full w-full inset-y-0 inset-x-0 card bg-white" />
             <div className={`absolute h-full w-full inset-y-0 inset-x-0 card-bg`} ref={this.scene}>
               <div className="bg-a h-full w-full absolute" data-depth="0.20" />
-              <div className="bg-b h-full w-full absolute" data-depth="0.40" />
-              <div className="bg-c h-full w-full absolute" data-depth="0.60" />
-              <div className="bg-d h-full w-full absolute" data-depth="0.80" />
+              <div className="bg-b h-full w-full absolute" data-depth="0.60" />
+              <div className="bg-c h-full w-full absolute" data-depth="1.00" />
+              <div className="bg-d h-full w-full absolute" data-depth="1.40" />
             </div>
             <div className="content p-2 absolute flex flex-col flex-grow h-full w-full justify-between">
               <header className="p-5">
@@ -56,7 +56,7 @@ class Prompt extends React.Component {
               </main>
               <div className="p-5 flex flex-col justify-center items-center overflow-auto">
                 <div className="flex justify-center my-5">
-                  <button className="bg-white px-4 py-2 border text-green border-green fancy-btn" onClick={onCancel}>EXIT</button>
+                  <button className="bg-white px-4 py-2 border text-green border-green btn fancy-btn" onClick={onCancel}>EXIT</button>
                 </div>
                 <p>#DirectionsToNowhere</p>
               </div>
