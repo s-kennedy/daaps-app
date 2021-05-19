@@ -4,10 +4,6 @@ import 'tailwindcss/tailwind.css'
 import '../styles/globals.scss'
 import "../styles/background.css"
 
-var httpTokens = /^http:\/\/(.*)$/.exec(window.location.href);
-if(httpTokens) {
-    window.location.replace('https://' + httpTokens[1]);
-}
 
 export default function MyApp({ Component, pageProps }) {
   useEffect(() => {
