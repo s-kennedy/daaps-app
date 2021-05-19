@@ -1,7 +1,7 @@
-const Hint = ({ title, body }) => {
+const Hint = ({ title, body, image }) => {
   return (
     <div className="hint py-3 col-span-1">
-      <div className="image bg-yellow h-12 w-12 rounded-full mb-4" />
+      <img src={`/images/${image}`} className="h-20 w-20 mb-4" />
       <h3 className="text-xl mb-2">{title}</h3>
       <p>{body}</p>
     </div>
@@ -16,26 +16,31 @@ const HowTo = () => (
       <p className="col-span-1 sm:col-span-3">Directions to Nowhere in Particular is a set of prompts to alter your experience of public space. Use the prompts —</p>
       <Hint
         title="when you’re out and about"
+        image="out-and-about.svg"
         body="Draw a prompt when you go for a walk, when you’re hanging out in the park, or when you’re waiting for public transit, wherever you are in the world."
       />
 
       <Hint
         title="with what you have handy"
+        image="handy.svg"
         body="Interpret the prompts by creatively using and misusing the everyday digital tools you have in your phone, tablet, laptop, multitool, or other device."
       />
 
       <Hint
         title="share the story of your journey"
+        image="share.svg"
         body="Make something. Tell your story. Create a work of art based on your experience. Film it. Record audio. Take pictures and screenshots. And share! Tag with #DirectionsToNowhere."
       />
 
       <Hint
         title="notice what you notice"
+        image="notice.svg"
         body="Open your mind and open your senses. These prompts are meant to change the way you see what’s around you. "
       />
 
       <Hint
         title="you don’t have to be literal"
+        image="not-literal.svg"
         body="Don’t feel that you have to execute the prompt exactly. Change the prompts to suit your strengths, abilities, and interests. Perhaps just use them to alter the ways you perceive, interpret, and reflect on your relationships to the spaces around you."
       />
 
@@ -53,7 +58,7 @@ const HowTo = () => (
           </div>
 
           <div>
-            <h3 className="text-xl mb-2">be safe</h3>
+            <h3 className="text-xl mb-2">be respectful</h3>
             <p>Navigate public space gently and considerately. Do not vandalize or infringe on the property of others. Respect people's privacy.</p>
           </div>
         </div>

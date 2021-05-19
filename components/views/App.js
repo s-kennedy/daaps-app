@@ -21,10 +21,13 @@ const CustomAccordionItem = ({ uuid, currentItemUid, title, children }) => {
   const selected = currentItemUid.includes(uuid)
 
   return(
-    <AccordionItem uuid={uuid} className={`flex flex-col sm:flex-row ${selected ? "flex-grow overflow-hidden sm:border-l border-black" : ""}`} dangerouslySetExpanded={selected}>
-      <AccordionItemHeading className={`flex sm:flex-grow relative px-5 py-3 sm:p-8 border-0 border-t sm:border-t-0 sm:border-l border-black ${selected ? "sm:hidden" : ""}`}>
-        <AccordionItemButton className={`flex flex-grow rotate-tab-title ${selected ? "sm:hidden" : "block"}`}>
-          <div className="text-xl">{title}</div>
+    <AccordionItem uuid={uuid} className={`tab flex flex-col sm:flex-row ${selected ? "tab-selected flex-grow overflow-hidden sm:border-l border-black" : "bg-light"}`} dangerouslySetExpanded={selected}>
+      <AccordionItemHeading className={`tab-heading flex sm:flex-grow relative px-5 py-3 sm:p-8 border-0 border-t sm:border-t-0 sm:border-l border-black ${selected ? "sm:hidden" : ""}`}>
+        <AccordionItemButton className={`tab-title flex flex-grow rotate-tab-title ${selected ? "sm:hidden" : "block"}`}>
+          <div className="text-xl flex items-center">
+            <div className={`w-4 h-4 border border-green rounded-full mr-2 ${selected ? "bg-green" : "bg-white"}`} />
+            <span>{title}</span>
+          </div>
         </AccordionItemButton>
       </AccordionItemHeading>
       <AccordionItemPanel className="flex-grow fade-in overflow-auto">
@@ -90,13 +93,16 @@ export default function App({ prompts }) {
 
   return (
     <>
-    <div className="bg-white w-full flex max-h-screen overflow-hidden">
+    <div className="bg-white w-full max-w-screen h-100 max-h-screen flex overflow-hidden">
       <Accordion className="flex flex-col sm:flex-row flex-grow" onChange={handleChange} preExpanded={["directions"]}>
 
-        <AccordionItem uuid="directions" className={`sm:flex ${currentItemUid.includes("directions") ? "flex-grow" : ""}`} dangerouslySetExpanded={currentItemUid.includes("directions")}>
-          <AccordionItemHeading className={`${currentItemUid.includes("directions") ? "sm:p-0" : "sm:p-8"} flex flex-grow-0 sm:flex-grow relative px-5 py-3 border-0 border-black`}>
-            <AccordionItemButton className={`flex flex-grow rotate-tab-title ${currentItemUid.includes("directions") ? "sm:hidden" : "block"}`}>
-              <div className="text-xl">PLAY!</div>
+        <AccordionItem uuid="directions" className={`tab sm:flex ${currentItemUid.includes("directions") ? "flex-grow tab-selected" : "bg-light"}`} dangerouslySetExpanded={currentItemUid.includes("directions")}>
+          <AccordionItemHeading className={`tab-heading ${currentItemUid.includes("directions") ? "sm:p-0" : "sm:p-8 "} flex flex-grow-0 sm:flex-grow relative px-5 py-3 border-0 border-black`}>
+            <AccordionItemButton className={`tab-title flex flex-grow rotate-tab-title ${currentItemUid.includes("directions") ? "sm:hidden" : "block"}`}>
+              <div className="text-xl flex items-center">
+                <div className={`w-4 h-4 border border-green rounded-full mr-2 ${currentItemUid.includes("directions") ? "bg-green" : "bg-white"}`} />
+                <span>PLAY!</span>
+              </div>
             </AccordionItemButton>
           </AccordionItemHeading>
           <AccordionItemPanel className="flex flex-grow fixed w-full h-full inset-0 sm:relative bg-white z-10">
@@ -108,9 +114,9 @@ export default function App({ prompts }) {
           <HowTo />
         </CustomAccordionItem>
 
-        {/*<CustomAccordionItem uuid="journeys" currentItemUid={currentItemUid} title="Journeys">
+        <CustomAccordionItem uuid="journeys" currentItemUid={currentItemUid} title="Journeys">
           <Journeys />
-        </CustomAccordionItem>*/}
+        </CustomAccordionItem>
 
         <CustomAccordionItem uuid="about" currentItemUid={currentItemUid} title="About">
           <About />

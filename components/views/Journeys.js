@@ -12,7 +12,8 @@ const Journeys = () => (
   <div className="flex-grow overflow-auto">
     <div className="container mx-auto px-5 py-8">
       <h2 className="hidden sm:block text-3xl mb-5">Journeys</h2>
-      <p className="mb-5">Share your creative journeys with #DirectionsToNowhere on your favorite (social) media channels or <Link href="/submit"><a>submit</a></Link> for a chance to be featured here.</p>
+      <p className="mb-2">Share your creative journeys with #DirectionsToNowhere on your favorite (social) media channels.</p>
+      <p className="mb-5">Want to be featured on here? <Link href="/submit"><a>Send us your creation.</a></Link></p>
       <div className="grid gap-4 grid-cols-3 my-4">
         <Journey image="https://placekitten.com/g/300/400" />
         <Journey image="https://placekitten.com/g/400/400" />

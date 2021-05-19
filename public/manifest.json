@@ -1,8 +1,8 @@
 {
   "name": "Directions to Nowhere in Particular",
-  "short_name": "Directions to Nowhere",
-  "theme_color": "#000000",
-  "background_color": "#fcd108",
+  "short_name": "Directions",
+  "theme_color": "#F1E297",
+  "background_color": "#004B55",
   "display": "fullscreen",
   "orientation": "portrait",
   "scope": "/",

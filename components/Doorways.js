@@ -7,6 +7,13 @@ class Doorways extends React.Component {
   constructor(props) {
     super(props);
     this.doorwaysRef = createRef()
+    this.state = { mounted: false }
+  }
+
+  componentDidUpdate() {
+    if (!this.state.mounted) {
+      this.setState({ mounted: true })
+    }
   }
 
   scrollAhead = () => {
@@ -23,8 +30,8 @@ class Doorways extends React.Component {
 
     return(
       <div className="flex-grow flex justify-start items-start sm:overflow-x-auto relative">
-        <div className="scroll-btn-container desktop">
-          <button className="scroll-btn z-20 fancy-btn sm:flex" onClick={this.scrollAhead}>
+        <div className="scroll-btn-container hidden sm:flex">
+          <button className="scroll-btn z-20 fancy-btn" onClick={this.scrollAhead}>
             <span className="hidden sm:block">Scroll</span>
             <span className="sm:hidden">Scroll right, select one.</span>
             <div className="scroll-arrow-icon">
@@ -32,7 +39,7 @@ class Doorways extends React.Component {
             </div>
           </button>
         </div>
-        <div className="doorways w-full h-full sm:overflow-x-auto relative flex" ref={this.doorwaysRef}>
+        <div className="doorways w-full h-full sm:overflow-x-auto relative flex bg-green" ref={this.doorwaysRef}>
           <div className="flex relative">
             <div className="flex z-10">
               <Doorway onClick={onSelect} tabbable={true} />
@@ -60,10 +67,7 @@ class Doorways extends React.Component {
               <Doorway onClick={onSelect} />
               <Doorway onClick={onSelect} />
             </div>
-            <div className="flex flex-grow w-full h-full absolute overflow-hidden">
-              <Background />
-              <Background />
-            </div>
+            <div className="w-full h-full absolute overflow-hidden app-background" />
           </div>
         </div>
       </div>

@@ -26,7 +26,7 @@ const DisclaimerModal = ({ handleClose, agreeToDisclaimer }) => {
             <p className="font-bold">Be Safe</p>
             <p className="mb-5">Don’t do anything that puts yourself or others at risk. Stay aware of your surroundings. <span className="font-sans-bold">And follow your local health and safety guidelines.</span></p>
             <p className="font-bold">Be Kind</p>
-            <p className="mb-5">Care for your community. We do not tolerate hatred, derision, harassment, threatening behavior, or abuse of any kind against any individual or group.</p>
+            <p className="mb-5">Care for community. Hatred, derision, harassment, threatening behavior, or abuse of any kind against any individual or group will not be tolerated.</p>
             <p className="font-bold">Be Respectful</p>
             <p className="mb-5">Navigate public space gently and considerately. Do not vandalize or infringe on the property of others. Respect people’s privacy.</p>
             <button id="disclaimer-agree" onClick={agreeToDisclaimer} className="border border-white bg-green text-white px-3 py-1">I agree, let's start!</button>

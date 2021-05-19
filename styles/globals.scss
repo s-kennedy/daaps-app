@@ -39,6 +39,14 @@
 }
 
 @font-face {
+  font-family: "Jost Var";
+  src: url("/fonts/Jost-VariableFont_wght.ttf") format('truetype-variations');
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Jost";
   src: url("/fonts/Jost-Regular.ttf");
   font-style: normal;
@@ -219,6 +227,12 @@ a {
   text-decoration: underline;
 }
 
+button,
+[role="button"],
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 h1 {
   font-family: 'Plastic Var', 'Plastic', monospace;
   font-variation-settings: "wght" 160;
@@ -233,6 +247,12 @@ h1 .char {
 
 h1:hover span {
   animation-play-state: paused;
+}
+
+.subtitle {
+  font-family: 'Plastic Var', 'Plastic', monospace;
+  font-weight: 160;
+  font-variation-settings: "SRIF" 0;
 }
 
 .title-arrow {
@@ -650,109 +670,6 @@ h1:hover span {
   background-position: fixed;
 }
 
-.app-background {
-  background-image: url("../public/images/app-background-02.svg");
-  background-repeat: repeat-x;
-  background-size: contain;
-  background-attachment: inherit;
-  background-clip: content-box;
-  background-position: left center;
-}
-
-@keyframes trails {
-  0% {
-        stroke-dasharray: 120 12 40;
-    }
-
-  50% {
-        stroke-dasharray: 100 220 12;
-    }
-  100% {
-        stroke-dasharray: 100 12 40;
-  }
-}
-
-@keyframes rotatingcircles {
-    0% {
-        transform: rotate(0deg);
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        transform: rotate(360deg);
-
-    }
-}
-
-.starpaths {
-  transition-duration: 1s;
-}
-
-.starpaths #solid-circles {
-    transform-origin: center;
-animation: rotatingcircles 18s infinite;
-}
-
-.starpaths #empty-circles {
-    transform-origin: center;
-animation: rotatingcircles 12s infinite;
-}
-
-.starpaths #star1 {
-    stroke-dasharray: 320 123 20;
-    animation: trails 27s infinite;
-    animation-delay: 400ms;}
-
-.starpaths #star2 {
-    stroke-dasharray: 120 40;
-    animation: trails 20s infinite;
-    animation-delay: 900ms;
-
-    }
-
-.starpaths #star3 {
-    stroke-dasharray: 200 12 120;
-    animation: trails 12s infinite;
-    animation-delay: 1100ms;
-}
-
-.starpaths #star4 {
-    stroke-dasharray: 20 102 220;
-    animation: trails 15s infinite;
-    animation-delay: 400ms;
- }
-
-.starpaths #star5 {
-    stroke-dasharray: 200 12 120;
-    animation: trails 16s infinite ;
-    animation-delay: 800ms;
- }
-
-.starpaths #star6 {
-    stroke-dasharray: 100 12 120;
-    animation: trails 15s infinite;
- }
-
-.starpaths #star7 {
-    stroke-dasharray: 200 12 120;
-    animation: trails 20s infinite;
-    animation-delay: 900ms;
-
-}
-.starpaths #star8 {
-    stroke-dasharray: 200 12 120;
-    animation: trails 12s infinite;
-    animation-delay: 1900ms;
-
-}
-.starpaths #star9 {
-    stroke-dasharray: 30 12 120;
-    animation: trails 8s infinite;
-    animation-delay: 900ms;
-
-}
-
 .bg-texture {
   background-image: url('../public/images/texture.png');
   background-repeat: repeat;
@@ -829,7 +746,6 @@ animation: rotatingcircles 12s infinite;
 }
 
 .scroll-btn-container {
-  display: flex;
   position: fixed;
   width: 100%;
   justify-content: center;
@@ -837,10 +753,6 @@ animation: rotatingcircles 12s infinite;
   bottom: 40px;
   left: 0;
   z-index: 50;
-
-  &.mobile {
-    display: flex;
-  }
 }
 
 .scroll-btn {
@@ -878,6 +790,22 @@ animation: rotatingcircles 12s infinite;
   }
 }
 
+.tab {
+  /*box-shadow: 0 2px 4px rgba(0,0,0,0.35);*/
+
+  &:hover {
+    .tab-title {
+      outline: none;
+    }
+  }
+
+  &.tab-selected {
+    .tab-heading {
+
+    }
+  }
+}
+
 @keyframes wiggle {
   0% {
     transform: rotate(0deg);
@@ -904,7 +832,6 @@ animation: rotatingcircles 12s infinite;
 @media screen and (min-width: 640px) {
   .scroll-btn-container {
     &.desktop {
-      display: flex;
       position: absolute;
       left: unset;
       right: 40px;

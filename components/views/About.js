@@ -29,8 +29,12 @@ const AboutView = () => (
 
       <div>
         <h3 className="text-xl my-2">Additional Sponsors:</h3>
-        <div>Balsam Foundation</div>
-        <div>Canada Council for the Arts</div>
+        <div>
+          <a href="https://balsamfoundation.com/" target="_blank" rel="noopener noreferrer">Balsam Foundation</a>
+        </div>
+        <div>
+          <a href="https://canadacouncil.ca/" target="_blank" rel="noopener noreferrer">Canada Council for the Arts</a>
+        </div>
       </div>
     </div>
   </div>

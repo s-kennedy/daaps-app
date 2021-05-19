@@ -7,7 +7,7 @@ export default function SplitTitle() {
   })
 
   return (
-    <h1 data-splitting="" className="mb-5 sm:mb-8 uppercase text-green">
+    <h1 data-splitting="" className="mb-5 sm:mb-5 uppercase text-green">
       <div className="text-2xl sm:text-4xl md:text-6xl leading-normal">Directions to >>></div>
       <div className="text-2xl sm:text-4xl md:text-5xl leading-normal">Nowhere in Particular</div>
     </h1>

@@ -1,6 +1,100 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1833.062 423.91" style="enable-background:new 0 0 1833.062 423.91;" xml:space="preserve">
 <style type="text/css">
+	@keyframes trails {
+	  0% {
+	        stroke-dasharray: 120 12 40;
+	    }
+
+	  50% {
+	        stroke-dasharray: 100 220 12;
+	    }
+	  100% {
+	        stroke-dasharray: 100 12 40;
+	  }
+	}
+
+	@keyframes rotatingcircles {
+	    0% {
+	        transform: rotate(0deg);
+	    }
+	    50% {
+	        opacity: 0;
+	    }
+	    100% {
+	        transform: rotate(360deg);
+
+	    }
+	}
+
+	.starpaths {
+	  transition-duration: 1s;
+	}
+
+	.starpaths #solid-circles {
+	  transform-origin: center;
+	  animation: rotatingcircles 18s infinite;
+	}
+
+	.starpaths #empty-circles {
+	  transform-origin: center;
+	  animation: rotatingcircles 12s infinite;
+	}
+
+	.starpaths #star1 {
+	  stroke-dasharray: 320 123 20;
+	  animation: trails 27s infinite;
+	  animation-delay: 400ms;
+	}
+
+	.starpaths #star2 {
+	    stroke-dasharray: 120 40;
+	    animation: trails 20s infinite;
+	    animation-delay: 900ms;
+
+	    }
+
+	.starpaths #star3 {
+	    stroke-dasharray: 200 12 120;
+	    animation: trails 12s infinite;
+	    animation-delay: 1100ms;
+	}
+
+	.starpaths #star4 {
+	    stroke-dasharray: 20 102 220;
+	    animation: trails 15s infinite;
+	    animation-delay: 400ms;
+	 }
+
+	.starpaths #star5 {
+	    stroke-dasharray: 200 12 120;
+	    animation: trails 16s infinite ;
+	    animation-delay: 800ms;
+	 }
+
+	.starpaths #star6 {
+	    stroke-dasharray: 100 12 120;
+	    animation: trails 15s infinite;
+	 }
+
+	.starpaths #star7 {
+	    stroke-dasharray: 200 12 120;
+	    animation: trails 20s infinite;
+	    animation-delay: 900ms;
+
+	}
+	.starpaths #star8 {
+	    stroke-dasharray: 200 12 120;
+	    animation: trails 12s infinite;
+	    animation-delay: 1900ms;
+
+	}
+	.starpaths #star9 {
+	    stroke-dasharray: 30 12 120;
+	    animation: trails 8s infinite;
+	    animation-delay: 900ms;
+
+	}
 	.st0{fill:#004B55;stroke:#F1E297;stroke-width:0.5;stroke-miterlimit:9.8937;}
 	.st1{fill:none;stroke:#F1E297;stroke-width:0.5;stroke-miterlimit:9.8937;stroke-dasharray:166.7485,166.7485;}
 	.st2{fill:none;stroke:#F1E297;stroke-width:0.5;stroke-miterlimit:9.8937;stroke-dasharray:415.2305,415.2305;}

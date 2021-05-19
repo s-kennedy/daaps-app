@@ -14,14 +14,15 @@ module.exports = {
       black: '#000',
       white: '#fff',
       gray: '#C4C4C4',
+      light: '#f2f6f6',
     },
     fontFamily: {
-      'sans': ['Jost', 'ui-sans-serif', 'system-ui'],
-      'serif': ['Plastic', 'ui-serif', 'Georgia'],
+      'sans': ['Jost Var', 'Jost', 'ui-sans-serif', 'system-ui'],
+      'serif': ['Plastic Var', 'Plastic', 'ui-serif', 'Georgia'],
       'sans-bold': ['Jost Bold', 'ui-sans-serif', 'system-ui'],
     },
     boxShadow: {
-      tabs: 'inset 1px -2px 4px 0 rgb(0, 0, 0, 0.1)',
+      tabs: '0 2px 6px rgba(0,0,0,0.35)',
       none: 'none',
     }
   },
