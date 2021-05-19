@@ -98,11 +98,11 @@ const DirectionsView = ({ prompts, handleReadMore, showDisclaimer }) => {
           <div className="container mx-auto p-5 flex-grow flex flex-col">
             <div className="w-2/3 sm:5/6">
               <SplitTitle />
-              <p className="mb-8 text-lg md:text-2xl hidden sm:block">Prompts for sensing, making, and navigating public space.</p>
+              <p className="mb-8 text-lg md:text-2xl hidden sm:block">Prompts for sensing, making, and navigating public space</p>
             </div>
             <div className="flex flex-grow overflow-x-auto">
               <div className="w-1/2 flex flex-grow flex-shrink-0 flex-col justify-between mr-2 sm:hidden">
-                  <p className="mb-5 text-lg md:text-2xl">Prompts for sensing, making, and navigating public space.</p>
+                  <p className="mb-5 text-lg md:text-2xl">Prompts for sensing, making, and navigating public space</p>
                   <div className="">
                     <p>Scroll right, select one.</p>
                     <div className="flex justify-end">
