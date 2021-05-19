@@ -542,28 +542,26 @@ h1:hover span {
   .bg-make {
     .card-bg {
       .bg-a {
-        background-image: url('../public/images/card1a.svg');
-        background-size: 110%;
+        background-image: url('../public/images/cardbackground/card-make-a.svg');
+        background-size: 100%;
         background-position: center center;
         background-repeat: no-repeat;
-        opacity: 0.8;
-        animation: rotation 60s infinite linear;
       }
 
       .bg-b {
-        background-image: url('../public/images/card1b.svg');
-        background-size: 110%;
+        background-image: url('../public/images/cardbackground/card-make-b.svg');
+        background-size: 100%;
         background-position: center center;
         background-repeat: no-repeat;
-        opacity: 0.4;
+        animation: rotation 60s infinite linear;
+
       }
 
       .bg-c {
-        background-image: url('../public/images/card1c.svg');
-        background-size: 110%;
+        background-image: url('../public/images/cardbackground/card-make-c.svg');
+        background-size: 100%;
         background-position: center center;
         background-repeat: no-repeat;
-        opacity: 0.5;
       }
     }
   }
@@ -573,27 +571,27 @@ h1:hover span {
   .bg-sense {
     .card-bg {
       .bg-a {
-        background-image: url('../public/images/card2a.svg');
-        background-size: 110%;
+        background-image: url('../public/images/cardbackground/card-sense-a.svg');
+        background-size: 100%;
         background-position: center center;
         background-repeat: no-repeat;
-        opacity: 0.5;
+        animation: rotation 120s infinite linear;
+
       }
 
       .bg-b {
-        background-image: url('../public/images/card2b.svg');
-        background-size: 110%;
+        background-image: url('../public/images/cardbackground/card-sense-b.svg');
+        background-size: 100%;
         background-position: center center;
         background-repeat: no-repeat;
-        opacity: 0.5;
       }
 
       .bg-c {
-        background-image: url('../public/images/card2c.svg');
-        background-size: 110%;
+        background-image: url('../public/images/cardbackground/card-sense-c.svg');
+        background-size: 100%;
         background-position: center center;
         background-repeat: no-repeat;
-        opacity: 0.5;
+
       }
     }
   }
@@ -603,28 +601,25 @@ h1:hover span {
   .bg-care {
     .card-bg {
       .bg-a {
-        background-image: url('../public/images/card3c.svg');
+        background-image: url('../public/images/cardbackground/card-care-a.svg');
         background-size: 90%;
         background-position: center center;
         background-repeat: no-repeat;
-        opacity: 0.8;
-        animation: rotation 60s infinite linear;
+  
       }
 
       .bg-b {
-        background-image: url('../public/images/card3b.svg');
+        background-image: url('../public/images/cardbackground/card-care-b.svg');
         background-size: 90%;
         background-position: center center;
         background-repeat: no-repeat;
-        opacity: 0.8;
       }
 
       .bg-c {
-        background-image: url('../public/images/card3d.svg');
+        background-image: url('../public/images/cardbackground/card-care-c.svg');
         background-size: 90%;
         background-position: center center;
         background-repeat: no-repeat;
-        opacity: 0.8;
       }
     }
   }
@@ -634,28 +629,25 @@ h1:hover span {
   .bg-seek {
     .card-bg {
       .bg-a {
-        background-image: url('../public/images/card4a.svg');
-        background-size: 90%;
+        background-image: url('../public/images/cardbackground/card-seek-a.svg');
+        background-size: 100%;
         background-position: center center;
         background-repeat: no-repeat;
-        opacity: 0.8;
+        animation: rotation 60s infinite linear;
       }
 
       .bg-b {
-        background-image: url('../public/images/card4b.svg');
-        background-size: 90%;
+        background-image: url('../public/images/cardbackground/card-seek-b.svg');
+        background-size: 100%;
         background-position: center center;
         background-repeat: no-repeat;
-        opacity: 1;
-        animation: rotation 20s infinite linear;
       }
 
       .bg-c {
-        background-image: url('../public/images/card4c.svg');
-        background-size: 90%;
+        background-image: url('../public/images/cardbackground/card-seek-c.svg');
+        background-size: 100%;
         background-position: center center;
         background-repeat: no-repeat;
-        opacity: 1;
       }
     }
   }
