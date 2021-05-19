@@ -467,11 +467,6 @@ h1:hover span {
   animation: fadein 0.4s ease-in;
 }
 
-.react-tabs__tab-panel--selected {
-  animation: fadein 0.4s ease-in;
-  padding-bottom: 4rem;
-}
-
 .fade-in {
   animation: fadein 0.5s ease-in;
 }
@@ -666,30 +661,6 @@ h1:hover span {
   background-image: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,1))
 }
 
-.bg-image {
-  background-image: url('../public/doors-bg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: fixed;
-}
-
-.bg-texture {
-  background-image: url('../public/images/texture.png');
-  background-repeat: repeat;
-}
-
-.bg-texture-grey {
-  background-image: url('../public/images/texture-grey.png');
-  background-repeat: repeat;
-}
-
-.bg-galaxy {
-  background-image: url('../public/images/galaxy.svg');
-  background-repeat: no-repeat;
-  background-position: -25vh -25vw;
-  background-attachment: fixed;
-}
-
 .svg-img {
   vector-effect: non-scaling-stroke;
   height: 100%;
@@ -719,33 +690,6 @@ h1:hover span {
 
 .yellow-fill {
   fill: var(--daaps-yellow);
-}
-
-@keyframes sidescroll {
-  0% {
-    right: -40px;
-  }
-
-  100% {
-    right: -60px;
-  }
-}
-
-.scroll-hand {
-  &:after {
-    content: "";
-    position: absolute;
-    height: 50px;
-    width: 30px;
-    top: 0;
-    right: -40px;
-    background-image: url('../public/images/hand.svg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    animation: sidescroll 1.5s infinite ease-in;
-    animation-direction: alternate;
-  }
 }
 
 .scroll-btn-container {

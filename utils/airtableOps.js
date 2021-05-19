@@ -5,6 +5,7 @@ const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(
 );
 
 const promptsTable = base('prompts');
+const journeysTable = base('journeys');
 
 const getPrompts = async () => {
   const records = await promptsTable
@@ -16,5 +17,15 @@ const getPrompts = async () => {
   return prompts
 }
 
+const getJourneys = async () => {
+  const records = await journeysTable
+    .select({ filterByFormula: "{status} = 'published'" })
+    .firstPage();
 
-export { promptsTable, getPrompts };
+  const journeys = records.map(r => ({ id: r.id, fields: r.fields }))
+
+  return journeys
+}
+
+
+export { promptsTable, getPrompts, journeysTable, getJourneys };
