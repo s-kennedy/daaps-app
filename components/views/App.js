@@ -25,7 +25,7 @@ const CustomAccordionItem = ({ uuid, currentItemUid, title, children }) => {
       <AccordionItemHeading className={`tab-heading flex sm:flex-grow relative px-5 py-3 sm:p-8 border-0 border-t sm:border-t-0 sm:border-l border-black ${selected ? "sm:hidden" : ""}`}>
         <AccordionItemButton className={`tab-title flex flex-grow rotate-tab-title ${selected ? "sm:hidden" : "block"}`}>
           <div className="text-xl flex items-center">
-            <div className={`w-4 h-4 border border-green rounded-full mr-2 ${selected ? "bg-green" : "bg-white"}`} />
+            <div className={`dot w-4 h-4 border border-green rounded-full mr-2 ${selected ? "bg-green" : "bg-white"}`} />
             <span>{title}</span>
           </div>
         </AccordionItemButton>
@@ -98,9 +98,9 @@ export default function App({ prompts }) {
 
         <AccordionItem uuid="directions" className={`tab sm:flex ${currentItemUid.includes("directions") ? "flex-grow tab-selected" : "bg-light"}`} dangerouslySetExpanded={currentItemUid.includes("directions")}>
           <AccordionItemHeading className={`tab-heading ${currentItemUid.includes("directions") ? "sm:p-0" : "sm:p-8 "} flex flex-grow-0 sm:flex-grow relative px-5 py-3 border-0 border-black`}>
-            <AccordionItemButton className={`tab-title flex flex-grow rotate-tab-title fancy-btn ${currentItemUid.includes("directions") ? "sm:hidden" : "block"}`}>
+            <AccordionItemButton className={`tab-title flex flex-grow rotate-tab-title ${currentItemUid.includes("directions") ? "sm:hidden" : "block"}`}>
               <div className="text-xl flex items-center">
-                <div className={`w-4 h-4 border border-green rounded-full mr-2 ${currentItemUid.includes("directions") ? "bg-green" : "bg-white"}`} />
+                <div className={`dot w-4 h-4 border border-green rounded-full mr-2 ${currentItemUid.includes("directions") ? "bg-green" : "bg-white"}`} />
                 <span className="">PLAY!</span>
               </div>
             </AccordionItemButton>
@@ -114,9 +114,9 @@ export default function App({ prompts }) {
           <HowTo />
         </CustomAccordionItem>
 
-        <CustomAccordionItem uuid="journeys" currentItemUid={currentItemUid} title="Journeys">
+        {/*<CustomAccordionItem uuid="journeys" currentItemUid={currentItemUid} title="Journeys">
           <Journeys />
-        </CustomAccordionItem>
+        </CustomAccordionItem>*/}
 
         <CustomAccordionItem uuid="about" currentItemUid={currentItemUid} title="About">
           <About />

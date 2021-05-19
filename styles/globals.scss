@@ -1,4 +1,5 @@
 :root {
+  --daaps-light: #f2f6f6;
   --daaps-yellow: #F1E297;
   --daaps-pink: #FCEEF4;
   --daaps-green: #004B55;
@@ -362,7 +363,7 @@ h1:hover span {
 }
 
 .fancy-btn {
-  transition: all 0.5s ease-in, box-shadow 0.2s ease-in;
+  transition: font-variation-settings 0.5s ease-in, font-weight 0.5s ease-in, box-shadow 0.2s ease-in;
   cursor: pointer;
   font-family: 'Plastic Var', 'Plastic', monospace;
   font-weight: 400;
@@ -605,7 +606,7 @@ h1:hover span {
         background-size: 90%;
         background-position: center center;
         background-repeat: no-repeat;
-  
+
       }
 
       .bg-b {
@@ -761,6 +762,7 @@ h1:hover span {
   padding: 10px 15px;
   border-radius: 40px;
   box-shadow: 0 0 4px rgba(0,0,0,0.3);
+  font-size: 1rem;
 
   &:hover, &:focus {
     outline: none;
@@ -773,7 +775,7 @@ h1:hover span {
   }
 
   &:focus {
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    background-color: var(--daaps-yellow);
   }
 }
 
@@ -793,17 +795,19 @@ h1:hover span {
 
 .tab {
 
-  &:hover {
-    .tab-title {
-      outline: none;
-    }
+  &.tab-selected {
+    box-shadow: inset 0 0 4px rgba(0,0,0,0.3);
   }
 
-  &.tab-selected {
-    box-shadow: inset 0 -2px 4px rgba(0,0,0,0.3);
 
-    .tab-heading {
+  .tab-title {
+    &:focus {
+      outline: none;
+      color: var(--daaps-green);
 
+      .dot {
+        background-color: var(--daaps-green);
+      }
     }
   }
 }
@@ -882,6 +886,47 @@ h1:hover span {
     transform-origin: 10px 35px;
     white-space: nowrap;
     width: calc(100vh - 3rem);
+  }
+
+  .tab-title {
+    &:focus {
+      outline: none;
+      color: var(--daaps-green);
+
+      .dot {
+        background-color: var(--daaps-green);
+      }
+    }
+  }
+
+  .tab {
+    .tab-heading {
+      transition: all 0.2s ease-in;
+    }
+
+    &:hover {
+      .tab-heading {
+        background-color: var(--daaps-yellow);
+      }
+    }
+
+    &:focus {
+      .dot {
+        background-color: var(--daaps-green);
+      }
+
+      .tab-title {
+        outline: none;
+      }
+    }
+
+    &.tab-selected {
+      box-shadow: inset 0 -2px 4px rgba(0,0,0,0.3);
+
+      .tab-heading {
+
+      }
+    }
   }
 }
 
