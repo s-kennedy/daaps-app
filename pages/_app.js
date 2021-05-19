@@ -7,7 +7,7 @@ import "../styles/background.css"
 
 export default function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (process.env.NODE_ENV === "production" && typeof window !== 'undefined') {
       const httpTokens = /^http:\/\/(.*)$/.exec(window.location.href);
       if(httpTokens) {
           window.location.replace('https://' + httpTokens[1]);
@@ -27,7 +27,7 @@ export default function MyApp({ Component, pageProps }) {
         <meta name="description" content="Prompts for sensing, making, and navigating public space" />
         <meta name="keywords" content="public space, outdoor game, game, navigation, public and private, The Bentway" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="theme-color" content="#F1E297" />
+        <meta name="theme-color" content="#004B55" />
         <link rel="manifest" href="/manifest.json" />
         <link href="/icons/apple_splash_2048.png" sizes="2048x2732" rel="apple-touch-startup-image" />
         <link href="/icons/apple_splash_1668.png" sizes="1668x2224" rel="apple-touch-startup-image" />
