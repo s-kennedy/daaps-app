@@ -29,7 +29,7 @@ class Prompt extends React.Component {
 
     return (
       <AriaModal titleText={`Prompt #${number}`} onExit={onCancel} focusDialog={true} focusTrapOptions={{returnFocusOnDeactivate: false}}>
-        <div className={`overflow-hidden backdrop absolute inset-0 h-screen w-screen bg-black flex justify-center items-center prompt ${closed ? 'closed' : 'open'}`}>
+        <div className={`backdrop absolute inset-0 w-full max-w-screen h-full max-h-screen flex overflow-hidden bg-black justify-center items-center prompt ${closed ? 'closed' : 'open'}`}>
           <div className={`h-full w-full overflow-hidden card-container relative bg-${category}`}>
             <div className="absolute h-full w-full inset-y-0 inset-x-0 card bg-white" />
             <div className={`absolute h-full w-full inset-y-0 inset-x-0 card-bg`} ref={this.scene}>

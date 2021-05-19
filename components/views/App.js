@@ -93,7 +93,7 @@ export default function App({ prompts }) {
 
   return (
     <>
-    <div className="bg-white w-full max-w-screen h-100 max-h-screen flex overflow-hidden">
+    <div className="bg-white w-full max-w-screen h-full max-h-screen flex overflow-hidden">
       <Accordion className="flex flex-col sm:flex-row flex-grow" onChange={handleChange} preExpanded={["directions"]}>
 
         <AccordionItem uuid="directions" className={`tab sm:flex ${currentItemUid.includes("directions") ? "flex-grow tab-selected" : "bg-light"}`} dangerouslySetExpanded={currentItemUid.includes("directions")}>
