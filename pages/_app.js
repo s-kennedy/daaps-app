@@ -6,14 +6,14 @@ import "../styles/background.css"
 
 
 export default function MyApp({ Component, pageProps }) {
-  // useEffect(() => {
-  //   if (typeof window !== 'undefined') {
-  //     const httpTokens = /^http:\/\/(.*)$/.exec(window.location.href);
-  //     if(httpTokens) {
-  //         window.location.replace('https://' + httpTokens[1]);
-  //     }
-  //   }
-  // })
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const httpTokens = /^http:\/\/(.*)$/.exec(window.location.href);
+      if(httpTokens) {
+          window.location.replace('https://' + httpTokens[1]);
+      }
+    }
+  })
 
   return (
     <>
