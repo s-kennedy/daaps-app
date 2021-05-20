@@ -363,12 +363,16 @@ h1:hover span {
   }
 }
 
+.btn-flat {
+  box-shadow: 0 0 var(--daaps-green);
+}
+
 .fancy-btn {
   transition: font-variation-settings 0.5s ease-in, font-weight 0.5s ease-in, box-shadow 0.2s ease-in;
   cursor: pointer;
   font-family: 'Plastic Var', 'Plastic', monospace;
   font-weight: 400;
-  font-variation-settings: "SRIF" 400, "wght" 200;
+  font-variation-settings: "SRIF" 0, "wght" 400;
   cursor: pointer;
 
   &:hover {
@@ -377,7 +381,7 @@ h1:hover span {
   }
 
   &:focus, &:active {
-    font-weight: 200;
+    font-weight: 400;
     font-variation-settings: "SRIF" 800, "wght" 400;
   }
 }
@@ -724,14 +728,7 @@ h1:hover span {
   }
 }
 
-.read-more-button {
-  &:focus {
-    outline: none;
-  }
-}
-
 .tab {
-
   &.tab-selected {
     box-shadow: inset 0 1px 4px rgba(0,0,0,0.3);
 

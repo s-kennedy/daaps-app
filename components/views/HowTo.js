@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const Hint = ({ title, body, image }) => {
   return (
     <div className="hint py-3 col-span-1">
@@ -44,6 +46,12 @@ const HowTo = () => (
         body="Don’t feel that you have to execute the prompt exactly. Change the prompts to suit your strengths, abilities, and interests. Perhaps just use them to alter the ways you perceive, interpret, and reflect on your relationships to the spaces around you."
       />
 
+      <div className="hint py-3 col-span-1">
+        <img src={`/images/not-literal.svg`} className="h-20 w-20 mb-4" />
+        <h3 className="text-xl mb-2">have a prompt to add?</h3>
+        <p>We’d love to hear from you. Please send us your ideas and suggestions <Link href="/suggestions"><a>here</a></Link>. We may have to make edits before including.</p>
+      </div>
+
       <div className="hint py-5 sm:col-span-3">
         <h2 className="text-2xl mb-5">Code of Conduct</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
@@ -54,7 +62,7 @@ const HowTo = () => (
 
           <div>
             <h3 className="text-xl mb-2">be kind</h3>
-            <p>Care for your community. We do not tolerate hatred, derision, harassment, threatening behavior, or abuse of any kind against any individual or group.</p>
+            <p>Care for community. Hatred, derision, harassment, threatening behavior, or abuse of any kind against any individual or group will not be tolerated.</p>
           </div>
 
           <div>
