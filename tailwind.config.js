@@ -17,7 +17,7 @@ module.exports = {
       light: '#f2f6f6',
     },
     fontFamily: {
-      'sans': ['Jost Var', 'Jost', 'ui-sans-serif', 'system-ui'],
+      'sans': ['Jost', 'ui-sans-serif', 'system-ui'],
       'serif': ['Plastic Var', 'Plastic', 'monospace'],
       'sans-bold': ['Jost Bold', 'ui-sans-serif', 'system-ui'],
     },

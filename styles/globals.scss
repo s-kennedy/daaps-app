@@ -56,10 +56,18 @@
 }
 
 @font-face {
-  font-family: "Jost Bold";
+  font-family: "Jost";
   src: url("/fonts/Jost-SemiBold.ttf");
   font-style: normal;
   font-weight: bold;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Jost";
+  src: url("/fonts/Jost-Italic.ttf");
+  font-style: italic;
+  font-weight: normal;
   font-display: swap;
 }
 

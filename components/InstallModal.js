@@ -26,11 +26,10 @@ const InstallModal = ({ handleClose }) => {
                 <div>
                   <span>To install this web app on your iPhone, tap</span>
                   <img
-                    src="https://help.apple.com/assets/601331154FF818403475D896/6013311F4FF818403475D8DC/en_US/207ee78d2fed6058c49d33266b875a0f.png"
+                    src="/images/iphone-share-icon.png"
                     alt="the Share button"
                     height="30"
                     width="24"
-                    originalimagename="GlobalArt/IL_ShareBlue.png"
                     style={{
                       height: "1.2em",
                       width: "1em",
@@ -40,6 +39,19 @@ const InstallModal = ({ handleClose }) => {
                     }}
                   />
                   <span>then 'Add to home screen'</span>
+                  <img
+                    src="/images/iphone-add-icon.png"
+                    alt="the Add to home screen button"
+                    height="24"
+                    width="30"
+                    style={{
+                      height: "1em",
+                      width: "1em",
+                      display: "inline-block",
+                      marginRight: "0.5em",
+                      marginLeft: "0.5em",
+                    }}
+                  />
                 </div>
               ) : (
                 <div>To install this web app on your phone, open the browser menu then click 'Add to Home screen'</div>
