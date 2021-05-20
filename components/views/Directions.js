@@ -105,7 +105,7 @@ const DirectionsView = ({ prompts, handleReadMore, showDisclaimer }) => {
                   <div className="">
                     <p className="mb-8 text-lg md:text-2xl">Prompts for sensing, making, and navigating public space</p>
                     <div className="flex justify-start items-center">
-                      <span className="mr-2 whitespace-nowrap">Scroll & select</span>
+                      <span className="mr-2 whitespace-nowrap text-green">Scroll & select</span>
                       <div className="scroll-arrow-icon">
                         <img src="/images/scroll-arrow.svg" alt="arrow right" style={{ transform: 'rotate(10deg)' }} />
                       </div>
