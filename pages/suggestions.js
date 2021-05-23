@@ -8,7 +8,7 @@ export default function Suggestions() {
       </div>
       <iframe
         className="airtable-embed"
-        src="https://airtable.com/embed/shrf8TF1efRfZ3ZV6?backgroundColor=yellow"
+        src="https://airtable.com/embed/shr6WwVxuflj8IN9L?backgroundColor=yellow"
         frameBorder="0"
         width="100%"
         height="100%"

@@ -8,7 +8,7 @@ export default function Submit() {
       </div>
       <iframe
         className="airtable-embed"
-        src="https://airtable.com/embed/shrjuDRyFO4rgiHxe?backgroundColor=yellow"
+        src="https://airtable.com/embed/shrgCFbRBSxFA2q8F?backgroundColor=yellow"
         frameBorder="0"
         width="100%"
         height="100%"

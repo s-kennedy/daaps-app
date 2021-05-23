@@ -8,7 +8,7 @@ export default function Contact() {
       </div>
       <iframe
         className="airtable-embed"
-        src="https://airtable.com/embed/shr2eNtCRDY92BMPr?backgroundColor=yellow"
+        src="https://airtable.com/embed/shrHkz7WGV029WDug?backgroundColor=yellow"
         frameBorder="0"
         width="100%"
         height="100%"
