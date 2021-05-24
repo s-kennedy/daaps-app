@@ -36,8 +36,8 @@ export default function MyApp({ Component, pageProps }) {
         <link href="/icons/apple_splash_1242.png" sizes="1242x2208" rel="apple-touch-startup-image" />
         <link href="/icons/apple_splash_750.png" sizes="750x1334" rel="apple-touch-startup-image" />
         <link href="/icons/apple_splash_640.png" sizes="640x1136" rel="apple-touch-startup-image" />
-        <link rel="icon" href="/icons/favicon-v2.svg" sizes="any" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/icons/favicon-v2.svg" sizes="any" type="image/svg+xml" />
+        <link rel="icon" href="/icons/favicon-v3.svg" sizes="any" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/icons/favicon-v3.svg" sizes="any" type="image/svg+xml" />
         <title>Directions to Nowhere in Particular</title>
       </Head>
       <Component {...pageProps} />

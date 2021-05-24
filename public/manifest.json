@@ -2,14 +2,14 @@
   "name": "Directions to Nowhere in Particular",
   "short_name": "Directions",
   "theme_color": "#004B55",
-  "background_color": "#FFFFFF",
+  "background_color": "#004B55",
   "display": "fullscreen",
   "orientation": "portrait",
   "scope": "/",
   "start_url": "/",
   "icons": [
     {
-      "src": "/icons/favicon-v2.svg",
+      "src": "/icons/favicon-v3.svg",
       "sizes": "any",
       "type": "image/svg+xml"
     }
