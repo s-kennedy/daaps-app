@@ -574,9 +574,7 @@ h1:hover span {
       }
     }
   }
-}
 
-.prompt {
   .bg-sense {
     .card-bg {
       .bg-a {
@@ -604,9 +602,7 @@ h1:hover span {
       }
     }
   }
-}
 
-.prompt {
   .bg-care {
     .card-bg {
       .bg-a {
@@ -632,9 +628,7 @@ h1:hover span {
       }
     }
   }
-}
 
-.prompt {
   .bg-seek {
     .card-bg {
       .bg-a {
@@ -654,6 +648,32 @@ h1:hover span {
 
       .bg-c {
         background-image: url('../public/images/cardbackground/card-seek-c.svg');
+        background-size: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  .bg-troll {
+    .card-bg {
+      .bg-a {
+        background-image: url('../public/images/cardbackground/card-troll-a.svg');
+        background-size: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        animation: rotation 60s infinite linear;
+      }
+
+      .bg-b {
+        background-image: url('../public/images/cardbackground/card-troll-b.svg');
+        background-size: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      .bg-c {
+        background-image: url('../public/images/cardbackground/card-troll-c.svg');
         background-size: 100%;
         background-position: center center;
         background-repeat: no-repeat;
