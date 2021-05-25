@@ -26,7 +26,6 @@ class Prompt extends React.Component {
     const content = prompt.fields
     const number = content.uid
     const category = content.category ? content.category : categories[content.uid % 4]
-    console.log("content['help text']", content['help text'].length)
 
     return (
       <AriaModal titleText={`Prompt #${number}`} onExit={onCancel} focusDialog={true} focusTrapOptions={{returnFocusOnDeactivate: false}}>
