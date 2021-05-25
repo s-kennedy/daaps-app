@@ -26,6 +26,7 @@ class Prompt extends React.Component {
     const content = prompt.fields
     const number = content.uid
     const category = content.category ? content.category : categories[content.uid % 4]
+    console.log("content['help text']", content['help text'].length)
 
     return (
       <AriaModal titleText={`Prompt #${number}`} onExit={onCancel} focusDialog={true} focusTrapOptions={{returnFocusOnDeactivate: false}}>
@@ -45,7 +46,7 @@ class Prompt extends React.Component {
               </header>
               <main className="px-14 flex-grow overflow-auto">
                 <ReactMarkdown className="mb-12 font-sans text-lg whitespace-pre-wrap">{unescape(content.prompt)}</ReactMarkdown>
-                { content['help text'] &&
+                { (content['help text'] && content['help text'].length > 1) &&
                   <div className="mb-5">
                     <div className="flex align-center text-green">
                       <span className="font-serif text-green text-2xl mr-1">*</span>
