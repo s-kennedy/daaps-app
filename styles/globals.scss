@@ -346,6 +346,7 @@ h1:hover span {
   transition: all 0.1s ease-out;
   box-shadow: 4px 4px var(--daaps-green);
   cursor: pointer;
+  text-decoration: none;
 
   &:focus, &:active {
     transform: translate(2px, 2px);
