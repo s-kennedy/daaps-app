@@ -47,7 +47,7 @@ const HowTo = () => (
       />
 
       <div className="hint py-3 col-span-1">
-        <img src={`/images/not-literal.svg`} className="h-20 w-20 mb-4" />
+        <img src={`/images/add-more.svg`} className="h-20 w-20 mb-4" />
         <h3 className="text-xl mb-2">have a prompt to add?</h3>
         <p>We’d love to hear from you. Please send us your ideas and suggestions <Link href="/suggestions"><a>here</a></Link>. We may have to make edits before including.</p>
       </div>
