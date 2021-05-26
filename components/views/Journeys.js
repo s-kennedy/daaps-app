@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 
 const Journey = ({ description, media, prompt, status, image, credit, story_url }) => {
   return (
-    <div className="flex flex-col justify-center col-span-3 sm:col-span-1">
+    <div className="flex flex-col items-center col-span-3 sm:col-span-1">
       <figure>
         <img src={image[0].url} alt={description} className="w-full h-auto object-cover border border-black" />
         <figcaption className="mt-1">{`Credit: ${credit}`}</figcaption>
