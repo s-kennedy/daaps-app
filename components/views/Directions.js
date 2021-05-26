@@ -100,7 +100,7 @@ const DirectionsView = ({ prompts, handleReadMore, showDisclaimer }) => {
               <SplitTitle />
               <p className="mb-8 text-lg md:text-2xl hidden sm:block">Prompts for sensing, making, and navigating public space</p>
             </div>
-            <div className="flex sm:grid grid-cols-1 overflow-x-auto h-full">
+            <div className="flex flex-grow sm:grid grid-cols-1 overflow-x-auto h-full">
               <div className="w-1/2 flex flex-grow flex-shrink-0 flex-col justify-between mr-2 sm:hidden relative">
                   <div className="">
                     <p className="mb-8 text-lg md:text-2xl">Prompts for sensing, making, and navigating public space</p>
