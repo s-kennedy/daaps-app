@@ -9,7 +9,7 @@ const Journey = ({ description, media, prompt, status, image, credit, story_url 
         <figcaption className="mt-1">{`Credit: ${credit}`}</figcaption>
       </figure>
       {story_url &&
-        <a href={story_url} target="_blank" rell="noopener noreferrer">Read the full story</a>
+        <a href={story_url} target="_blank" rel="noopener noreferrer">Read the full story</a>
       }
     </div>
   )
