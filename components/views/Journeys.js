@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import Masonry from 'react-masonry-component';
+import dynamic from 'next/dynamic'
+
+const Masonry = dynamic(() => import('react-masonry-component'))
 
 const Journey = ({ description, media, prompt, status, image, credit, story_url }) => {
   return (
