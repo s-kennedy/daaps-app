@@ -1,9 +1,10 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import Masonry from 'react-masonry-component';
 
 const Journey = ({ description, media, prompt, status, image, credit, story_url }) => {
   return (
-    <div className="flex flex-col items-start justify-start col-span-2 sm:col-span-1">
+    <div className="grid-item flex flex-col items-start justify-start my-2">
       <figure>
         <img src={image[0].url} alt={description} className="w-full h-auto object-cover" />
         <figcaption className="mt-1 px-5 sm:px-0">{credit}</figcaption>
@@ -11,6 +12,7 @@ const Journey = ({ description, media, prompt, status, image, credit, story_url 
       {story_url &&
         <a href={story_url} target="_blank" rel="noopener noreferrer" className="px-5 sm:px-0">Read the full story</a>
       }
+      <div className="hidden sm:block border-0 border-b border-yellow w-full my-2" />
     </div>
   )
 }
@@ -22,7 +24,6 @@ const Journeys = () => {
   const populateJourneys = async () => {
     const result = await fetch('/api/journeys')
     const parsed = await result.json()
-    console.log(parsed)
     const { journeys, error, msg } = parsed
     if (journeys) {
       setJourneys(journeys)
@@ -51,13 +52,15 @@ const Journeys = () => {
             <a className="text-center text-green border border-green px-2 py-1 btn inline-flex items-center mb-5">Send us your creation</a>
           </Link>
         </div>
+        <div className="sm:px-5">
         { journeys &&
-          <div className="grid gap-4 grid-cols-2 my-4 sm:px-5">
+          <Masonry options={{ gutter: 10 }}>
             {
               journeys.map(({id, fields}) => <Journey key={id} id={id} {...fields} />)
             }
-          </div>
+          </Masonry>
         }
+        </div>
       </div>
     </div>
   )
