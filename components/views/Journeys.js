@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 
 const Journey = ({ description, media, prompt, status, image, credit, story_url }) => {
   return (
-    <div className="flex flex-col items-start justify-start col-span-3 sm:col-span-1">
+    <div className="flex flex-col items-start justify-start col-span-2 sm:col-span-1">
       <figure>
         <img src={image[0].url} alt={description} className="w-full h-auto object-cover" />
         <figcaption className="mt-1 px-5 sm:px-0">{credit}</figcaption>
@@ -52,7 +52,7 @@ const Journeys = () => {
           </Link>
         </div>
         { journeys &&
-          <div className="grid gap-4 grid-cols-3 my-4 sm:px-5">
+          <div className="grid gap-4 grid-cols-2 my-4 sm:px-5">
             {
               journeys.map(({id, fields}) => <Journey key={id} id={id} {...fields} />)
             }
