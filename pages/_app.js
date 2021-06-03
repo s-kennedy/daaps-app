@@ -24,10 +24,16 @@ export default function MyApp({ Component, pageProps }) {
           name="viewport"
           content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
         />
-        <meta name="description" content="Prompts for sensing, making, and navigating public space" />
+        <meta name="description" content="Directions to Nowhere in Particular is a game of chance that alters the ways you sense, make, and navigate public space." />
         <meta name="keywords" content="public space, outdoor game, game, navigation, public and private, The Bentway" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="theme-color" content="#004B55" />
+        <meta property="og:title" content="Directions to Nowhere in Particular" />
+        <meta property="og:description" content="Directions to Nowhere in Particular is a game of chance that alters the ways you sense, make, and navigate public space." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="images/app-background.svg" />
+        <meta property="og:url" content="https://www.directionstonowhere.com" />
+
         <link rel="manifest" href="/manifest.json" />
         <link href="/icons/apple_splash_2048.png" sizes="2048x2732" rel="apple-touch-startup-image" />
         <link href="/icons/apple_splash_1668.png" sizes="1668x2224" rel="apple-touch-startup-image" />
