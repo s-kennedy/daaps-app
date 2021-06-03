@@ -31,7 +31,7 @@ export default function MyApp({ Component, pageProps }) {
         <meta property="og:title" content="Directions to Nowhere in Particular" />
         <meta property="og:description" content="Directions to Nowhere in Particular is a game of chance that alters the ways you sense, make, and navigate public space." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="images/app-background.svg" />
+        <meta property="og:image" content="https://www.directionstonowhere.com/images/og-image.png" />
         <meta property="og:url" content="https://www.directionstonowhere.com" />
 
         <link rel="manifest" href="/manifest.json" />
