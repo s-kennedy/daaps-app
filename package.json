@@ -12,6 +12,7 @@
     "airtable": "^0.10.1",
     "autoprefixer": "^10.2.5",
     "cors": "^2.8.5",
+    "fathom-client": "^3.0.0",
     "next": "latest",
     "next-pwa": "^3.1.0",
     "parallax-js": "^3.1.0",

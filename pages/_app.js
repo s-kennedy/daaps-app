@@ -1,11 +1,16 @@
 import { useEffect } from 'react'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
+import * as Fathom from 'fathom-client'
+
 import 'tailwindcss/tailwind.css'
 import '../styles/globals.scss'
 import "../styles/background.css"
 
 
 export default function MyApp({ Component, pageProps }) {
+  const router = useRouter()
+
   useEffect(() => {
     if (process.env.NODE_ENV === "production" && typeof window !== 'undefined') {
       const httpTokens = /^http:\/\/(.*)$/.exec(window.location.href);
@@ -14,6 +19,28 @@ export default function MyApp({ Component, pageProps }) {
       }
     }
   })
+
+  useEffect(() => {
+    // Initialize Fathom when the app loads
+    // Example: yourdomain.com
+    //  - Do not include https://
+    //  - This must be an exact match of your domain.
+    //  - If you're using www. for your domain, make sure you include that here.
+    Fathom.load('PEYEISUN', {
+      includedDomains: ['www.directionstonowhere.com'],
+    })
+
+    function onRouteChangeComplete() {
+      Fathom.trackPageview()
+    }
+    // Record a pageview when route changes
+    router.events.on('routeChangeComplete', onRouteChangeComplete)
+
+    // Unassign event listener
+    return () => {
+      router.events.off('routeChangeComplete', onRouteChangeComplete)
+    }
+  }, [])
 
   return (
     <>
@@ -33,6 +60,7 @@ export default function MyApp({ Component, pageProps }) {
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.directionstonowhere.com/images/og-image.png" />
         <meta property="og:url" content="https://www.directionstonowhere.com" />
+        <meta name="google-site-verification" content="x2dQBrS115_1otSk3iMvdutNuEy39nt2KQ73DCKRK3Y" />
 
         <link rel="manifest" href="/manifest.json" />
         <link href="/icons/apple_splash_2048.png" sizes="2048x2732" rel="apple-touch-startup-image" />
