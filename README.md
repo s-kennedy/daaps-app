@@ -18,7 +18,7 @@ yarn
 ```
 
 Create a `.env` file at the project root and add the Airtable credentials:
-```bash
+```
 AIRTABLE_API_KEY=key*************
 AIRTABLE_BASE_ID=app*************
 ```
