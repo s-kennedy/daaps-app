@@ -1,21 +1,34 @@
-# Progressive Web App Example
+# Directions to Nowhere in Particular
 
-This example uses [`next-pwa`](https://github.com/shadowwalker/next-pwa) to create a progressive web app (PWA) powered by [Workbox](https://developers.google.com/web/tools/workbox/).
+Prompts for sensing, making, and navigating public space.
 
-## Deploy your own
+A progressive web app built on Next.js and Airtable, available at [www.directionstonowhere.com](https://www.directionstonowhere.com/).
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/progressive-web-app&project-name=progressive-web-app&repository-name=progressive-web-app)
+## Tech Stack
 
-## How to use
+- The website is created with Next.js using the plugin [`next-pwa`](https://github.com/shadowwalker/next-pwa) to generate a progressive web app.
+- The data store is an [Airtable](https://airtable.com/) base
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+## Local development
 
+Fork or clone the repo, then install the dependencies:
 ```bash
-npx create-next-app --example progressive-web-app progressive-web-app
-# or
-yarn create next-app --example progressive-web-app progressive-web-app
+yarn
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+Create a `.env` file at the project root and add the Airtable credentials:
+```bash
+AIRTABLE_API_KEY=key*************
+AIRTABLE_BASE_ID=app*************
+```
+
+Run the local server:
+```bash
+yarn dev
+```
+
+
+## Hosting and deployment
+
+The app is currently hosted on Heroku can can be deployed via the Heroku CLI.
