@@ -1,6 +1,9 @@
 {
   "name": "progressive-web-app",
   "version": "0.1.0",
+  "engines": {
+    "node": "16.20.2"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
