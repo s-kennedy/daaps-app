@@ -13,12 +13,11 @@ const AboutView = () => (
       <p>The prompts are also just for fun, a sometimes absurd move to tear away the wool of the everyday and notice what you notice. Hopefully, in that way, they can prompt us all to weave a more textured public fabric — online, offline, and all between the lines.</p>
       <p>Directions to Nowhere is part of The Bentway’s <span className="italic">Digital and/as Public Space Initiative</span>, a collaboration between <a href="https://www.thebentway.ca/" target="_blank" rel="noopener noreferrer">The Bentway</a> and <a href="https://fromlater.com/" target="_blank" rel="noopener noreferrer">From Later</a> with design by <a href="https://www.nomadiclabs.ca/" target="_blank" rel="noopener noreferrer">Nomadic Labs.</a> </p>
       <p>Contact us at <a href="mailto:hello@thebentway.ca">hello@thebentway.ca</a>.</p>
-      <p>For press inquiries, contact <a href="mailto:kgladki@thebentway.ca">kgladki@thebentway.ca</a>.</p>
 
       <div className="grid grid-cols-2 gap-8">
         <div className="flex items-center justify-center">
           <a className="max-w-xs" href="https://www.thebentway.ca/" target="_blank" rel="noopener noreferrer">
-            <img className="w-full md:w-3/4 sm:p-5" src="/bentway-logo.jpg" alt="The Bentway" />
+            <img className="w-full md:w-3/4 sm:p-5" src="/bentway-logo.png" alt="The Bentway" />
           </a>
         </div>
         <div className="flex items-center justify-center">
